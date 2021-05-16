@@ -72,8 +72,9 @@
   border: 2px solid #7f5539;
 }
 
-.side-menu-container {
-  position: absolute;
+.side-menu-container,
+.side-menu-closed {
+  position: fixed;
   left: 0;
   width: 20%;
   display: -webkit-box;
@@ -94,13 +95,12 @@
   background: #533826;
   -webkit-box-shadow: 5px 0px 100px black;
           box-shadow: 5px 0px 100px black;
-  -webkit-transition: 1s;
-  transition: 1s;
   -webkit-animation: slidein 0.5s;
           animation: slidein 0.5s;
 }
 
-.side-menu-container h1 {
+.side-menu-container .menu-h1,
+.side-menu-closed .menu-h1 {
   position: absolute;
   top: 0%;
   margin: 20px 0px;
@@ -110,7 +110,21 @@
   border-bottom: 2px solid #ddb892;
 }
 
-.side-menu-container .menu-link-1 {
+.side-menu-container .close-btn,
+.side-menu-closed .close-btn {
+  position: absolute;
+  top: 0%;
+  font-size: 30px;
+  margin: 0px 20px;
+  font-family: "Lobster", cursive;
+  cursor: pointer;
+  right: 0;
+  z-index: 1;
+  color: white;
+}
+
+.side-menu-container .menu-link-1,
+.side-menu-closed .menu-link-1 {
   color: #ddb892;
   font-size: 30px;
   height: 100px;
@@ -124,22 +138,26 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  font-family: "Recursive", sans-serif;
+  font-family: "Lobster", cursive;
   width: 100%;
-  background: #3d291c;
+  background: #533826;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.side-menu-container .menu-link-1:hover {
+.side-menu-container .menu-link-1:hover,
+.side-menu-closed .menu-link-1:hover {
   text-decoration: none;
   background: #291b13;
 }
 
 .side-menu-closed {
-  display: none;
+  position: absolute;
+  left: -100%;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-animation: slideout 1s;
+          animation: slideout 1s;
 }
 
 @-webkit-keyframes slidein {
@@ -165,6 +183,32 @@
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideout {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-400px);
+            transform: translateX(-400px);
+  }
+}
+
+@keyframes slideout {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-400px);
+            transform: translateX(-400px);
   }
 }
 /*# sourceMappingURL=navbar.css.map */

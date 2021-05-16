@@ -51,9 +51,7 @@ function Home() {
           </Container>
         </Slide>
         <Slide>
-          <Container fluid className="second-fl-cnt">
-            <Test />
-          </Container>
+          <Container fluid className="second-fl-cnt"></Container>
         </Slide>
       </FullPage>
     </div>

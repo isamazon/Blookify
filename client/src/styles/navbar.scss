@@ -61,8 +61,9 @@ $font2: "Lobster", cursive;
   }
 }
 
-.side-menu-container {
-  position: absolute;
+.side-menu-container,
+.side-menu-closed {
+  position: fixed;
   left: 0;
   width: 20%;
   display: flex;
@@ -73,9 +74,9 @@ $font2: "Lobster", cursive;
   height: 100vh;
   background: #533826;
   box-shadow: 5px 0px 100px black;
-  transition: 1s;
+
   animation: slidein 0.5s;
-  h1 {
+  .menu-h1 {
     position: absolute;
     top: 0%;
     margin: 20px 0px;
@@ -83,6 +84,17 @@ $font2: "Lobster", cursive;
     font-family: $font2;
     font-size: 60px;
     border-bottom: 2px solid #ddb892;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0%;
+    font-size: 30px;
+    margin: 0px 20px;
+    font-family: $font2;
+    cursor: pointer;
+    right: 0;
+    z-index: 1;
+    color: white;
   }
   .menu-link-1 {
     color: #ddb892;
@@ -92,9 +104,9 @@ $font2: "Lobster", cursive;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: $font1;
+    font-family: $font2;
     width: 100%;
-    background: #3d291c;
+    background: #533826;
     transition: 0.5s;
     &:hover {
       text-decoration: none;
@@ -103,8 +115,10 @@ $font2: "Lobster", cursive;
   }
 }
 .side-menu-closed {
-  display: none;
+  position: absolute;
+  left: -100%;
   transition: 1s;
+  animation: slideout 1s;
 }
 
 @keyframes slidein {
@@ -115,5 +129,15 @@ $font2: "Lobster", cursive;
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes slideout {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-400px);
   }
 }
