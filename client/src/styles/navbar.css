@@ -99,6 +99,13 @@
           animation: slidein 0.5s;
 }
 
+@media screen and (max-width: 1360px) {
+  .side-menu-container,
+  .side-menu-closed {
+    width: 50%;
+  }
+}
+
 .side-menu-container .menu-h1,
 .side-menu-closed .menu-h1 {
   position: absolute;
@@ -140,7 +147,7 @@
   text-align: center;
   font-family: "Lobster", cursive;
   width: 100%;
-  background: #533826;
+  background: #4b3322;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

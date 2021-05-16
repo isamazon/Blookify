@@ -29,12 +29,14 @@ function Nav() {
           X
         </h1>
         <h1 className="menu-h1">Menu</h1>
-        <Link to="/" className="menu-link-1 link-mid">
-          Link 1
+        <Link onClick={closeMobileMenu} className="menu-link-1">
+          Home
         </Link>
-        <Link className="menu-link-1">Link 2</Link>
-        <Link className="menu-link-1">Link 3</Link>
-        <Link className="menu-link-1">Link 4</Link>
+        <Link to="/" className="menu-link-1 link-mid">
+          My books
+        </Link>
+        <Link className="menu-link-1">Currently reading</Link>
+        <Link className="menu-link-1">About</Link>
       </div>
     </div>
   );

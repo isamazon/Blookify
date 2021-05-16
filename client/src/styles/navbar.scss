@@ -74,8 +74,10 @@ $font2: "Lobster", cursive;
   height: 100vh;
   background: #533826;
   box-shadow: 5px 0px 100px black;
-
   animation: slidein 0.5s;
+  @media screen and (max-width: 1360px) {
+    width: 50%;
+  }
   .menu-h1 {
     position: absolute;
     top: 0%;
@@ -106,7 +108,7 @@ $font2: "Lobster", cursive;
     text-align: center;
     font-family: $font2;
     width: 100%;
-    background: #533826;
+    background: #4b3322;
     transition: 0.5s;
     &:hover {
       text-decoration: none;
