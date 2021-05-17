@@ -3,6 +3,8 @@
 $font1: "Recursive", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 $font2: "Lobster", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+$font3: "Pacifico", cursive;
 
 .nav-bar {
   position: fixed;
@@ -75,6 +77,7 @@ $font2: "Lobster", cursive;
   background: #533826;
   box-shadow: 5px 0px 100px black;
   animation: slidein 0.5s;
+
   @media screen and (max-width: 1360px) {
     width: 50%;
   }
@@ -83,7 +86,7 @@ $font2: "Lobster", cursive;
     top: 0%;
     margin: 20px 0px;
     color: #ede0d4;
-    font-family: $font2;
+    font-family: $font3;
     font-size: 60px;
     border-bottom: 2px solid #ddb892;
   }

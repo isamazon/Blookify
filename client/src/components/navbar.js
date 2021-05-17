@@ -20,7 +20,7 @@ function Nav() {
         <Link to="/" className="homepagelink">
           Blookify
         </Link>
-        <Link to="/" className="loginlink">
+        <Link to="/Login" className="loginlink">
           Login
         </Link>
       </nav>

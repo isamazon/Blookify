@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 .landingpage-fl-cnt {
   position: relative;
   height: 100vh;
@@ -58,6 +59,12 @@
           justify-content: center;
 }
 
+@media screen and (max-width: 1360px) {
+  .landingpage-fl-cnt .row-1 {
+    width: 100%;
+  }
+}
+
 .landingpage-fl-cnt .row-1 .text-container {
   position: relative;
   height: 100vh;
@@ -87,6 +94,7 @@
             justify-content: start;
     top: 10%;
     height: 50%;
+    width: 100%;
   }
 }
 
@@ -106,6 +114,12 @@
   .landingpage-fl-cnt .row-1 .text-container h1 {
     position: relative;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .landingpage-fl-cnt .row-1 .text-container h1 {
+    font-size: 50px;
   }
 }
 
@@ -150,9 +164,9 @@
 @media screen and (max-width: 1360px) {
   .landingpage-fl-cnt .row-1 .text-container .button-cont {
     top: 10%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     width: 60%;
   }
 }

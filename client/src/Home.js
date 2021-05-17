@@ -39,7 +39,7 @@ function Home() {
                   own personal library.
                 </p>
                 <div className="button-cont">
-                  <Link to="/" className="btn-1 b-1">
+                  <Link to="/Login" className="btn-1 b-1">
                     Login
                   </Link>
                   <Link to="/" className="btn-1 b-2">

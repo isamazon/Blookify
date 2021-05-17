@@ -3,6 +3,8 @@
 $font1: "Recursive", sans-serif;
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 $font2: "Lobster", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+$font3: "Pacifico", cursive;
 
 .landingpage-fl-cnt {
   position: relative;
@@ -38,6 +40,9 @@ $font2: "Lobster", cursive;
     background: none;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 1360px) {
+      width: 100%;
+    }
     .text-container {
       position: relative;
       height: 100vh;
@@ -51,6 +56,7 @@ $font2: "Lobster", cursive;
         justify-content: start;
         top: 10%;
         height: 50%;
+        width: 100%;
       }
       h1 {
         position: relative;
@@ -65,6 +71,9 @@ $font2: "Lobster", cursive;
         @media screen and (max-width: 1360px) {
           position: relative;
           width: 100%;
+        }
+        @media screen and (max-width: 620px) {
+          font-size: 50px;
         }
       }
       p {
@@ -92,7 +101,7 @@ $font2: "Lobster", cursive;
         align-items: center;
         @media screen and (max-width: 1360px) {
           top: 10%;
-          justify-content: space-between;
+          justify-content: space-evenly;
           width: 60%;
         }
         .btn-1 {
