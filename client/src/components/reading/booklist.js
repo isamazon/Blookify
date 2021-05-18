@@ -4,12 +4,12 @@ import "./profile.css";
 function Booklist(props) {
   return (
     <div className="booklist">
-      <ul>
-        <li>
-          <img src={props.imgurl} alt="" />
-          <p>{props.title}</p>
-        </li>
-      </ul>
+      <img src={props.imgurl} className="img" alt="" />
+      <h1 className="h1">{props.title}</h1>
+      <p>{props.synopsis}</p>
+      <a href={props.link} target="_blank">
+        {props.link}
+      </a>
     </div>
   );
 }

@@ -7,26 +7,23 @@ function Search(props) {
       <h1>Search for a new book:</h1>
       <div className="search-cont">
         <input
-          value={props.title}
-          onChange={props.change}
+          value={props.value}
           type="text"
-          name="booktitle"
           className="book-search"
           placeholder={props.placeholder}
+          onChange={props.onChange}
         />
         <input
-          value={props.author}
           type="text"
-          name="author"
           className="book-search"
           placeholder={props.placeholder2}
         />
-        <input
+        {/* <input
           type="button"
           className="submit-btn"
           onClick={props.submit}
           value="search"
-        />
+        /> */}
       </div>
     </div>
   );

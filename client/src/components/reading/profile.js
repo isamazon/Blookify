@@ -13,19 +13,20 @@ import Booklist from "../reading/booklist";
 function Profile() {
   const [section, setSection] = useState([]);
   const [input, setInput] = useState("");
-  const [input2, setInput2] = useState("");
+
+  //   const [input2, setInput2] = useState("");
 
   const changeInput = (e) => {
     setInput(e.target.value);
-    setInput(e.target.value);
+    // setInput2(e.target.value);
   };
 
   useEffect(() => {
     const request = () => {
-      if (input.length && input2.length >= 3) {
+      if (input.length >= 3) {
         axios
           .get(
-            `https://www.googleapis.com/books/v1/volumes?q=${input}+inauthor:${input2}&key= AIzaSyDLVd6ZQY0u7IWA0fqW2U8lUhrZSBF2ZI4`
+            `https://www.googleapis.com/books/v1/volumes?q=intitle:${input}&key=AIzaSyDLVd6ZQY0u7IWA0fqW2U8lUhrZSBF2ZI4`
           )
           .then((res) => {
             setSection(res.data.items);
@@ -38,22 +39,31 @@ function Profile() {
       }
     };
     request();
-  }, [input, setInput, input2, setInput2]);
+  }, [input, setInput]);
 
   return (
     <div>
       <Nav />
       <Container fluid className="profile-cont">
         <Search
-          title={input}
-          author={input2}
+          inputvalue={input}
+          //   author={input2}
+          onChange={changeInput}
           placeholder="Book title"
           placeholder2="Author"
-          submit={changeInput}
+          //   submit={changeInput}
         />
-        {section.map((data) => (
-          <Booklist imgurl={data.thumbnail} title={data.title} />
-        ))}
+
+        <div className="booklist-cont">
+          {section.map((data) => (
+            <Booklist
+              imgurl={data.thumbnail}
+              title={data.volumeInfo.title}
+              link={data.selfLink}
+            />
+          ))}
+        </div>
+
         <div className="profile-container">
           <Bookrow />
         </div>

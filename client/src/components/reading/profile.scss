@@ -8,7 +8,7 @@ $font3: "Pacifico", cursive;
 
 .profile-cont {
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: #ede0d4;
   display: flex;
@@ -21,7 +21,7 @@ $font3: "Pacifico", cursive;
     width: 90%;
     height: 100px;
     margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 100px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -54,6 +54,9 @@ $font3: "Pacifico", cursive;
         &::placeholder {
           color: white;
         }
+        &:focus {
+          color: #e6ccb2;
+        }
       }
       .submit-btn {
         background: #e6ccb2;
@@ -71,30 +74,34 @@ $font3: "Pacifico", cursive;
       }
     }
   }
-  .booklist {
+  .booklist-cont {
     position: relative;
     height: 100px;
     width: 90%;
-    background: #e6ccb2;
-    border: 3px solid #7f5539;
-    border-radius: 20px;
-    margin: 0px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
     overflow-y: auto;
-    ul {
+    .booklist {
       position: relative;
+      height: 100%;
+      width: 90%;
+      background: #e6ccb2;
+      border: 3px solid #7f5539;
+      border-radius: 20px;
+      margin: 0px;
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
-      background: none;
-      height: 90%;
-      width: 100%;
-      li {
+
+      .img {
         position: relative;
-        list-style: none;
+        height: 100%;
+        background: red;
+      }
+      h1 {
+        position: relative;
+        font-size: 20px;
+        background: none;
       }
     }
   }
