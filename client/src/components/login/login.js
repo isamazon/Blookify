@@ -9,21 +9,30 @@ function Login() {
       <Nav />
       <Container fluid className="form-cont">
         <Row className="row-1">
-          <Col className="col-1" lg={6}>
+          <Col className="col-1" lg={12}>
             <div className="select-h1">
-              <h1 className="login-h1 selected-h1">Signin</h1>
+              <h1 className="login-h1 selected-h1">Sign in</h1>
               <h1 className="sign-h1">Sign up</h1>
             </div>
-            <form>
-              <label>
-                Name:
-                <input type="text" name="name" />
-              </label>
-              <input type="submit" value="Submit" />
+            {/* Form */}
+            <form className="form-1">
+              <div className="email-container">
+                <div className="email-input">
+                  <label className="custom-field-2">
+                    <input type="text" name="email" required />
+                    <span className="placeholder">Your Email</span>
+                  </label>
+                </div>
+              </div>
+              <div className="email-container">
+                <div className="email-input">
+                  <label className="custom-field-2">
+                    <input type="text" name="passowrd" required />
+                    <span className="placeholder">Password</span>
+                  </label>
+                </div>
+              </div>
             </form>
-          </Col>
-          <Col className="col-2" lg={6}>
-            <Svg2 width="100%" height="100%" />
           </Col>
         </Row>
       </Container>

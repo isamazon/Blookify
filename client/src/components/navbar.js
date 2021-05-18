@@ -29,10 +29,10 @@ function Nav() {
           X
         </h1>
         <h1 className="menu-h1">Menu</h1>
-        <Link onClick={closeMobileMenu} className="menu-link-1">
+        <Link to="/" onClick={closeMobileMenu} className="menu-link-1">
           Home
         </Link>
-        <Link to="/" className="menu-link-1 link-mid">
+        <Link to="/Profile" className="menu-link-1 link-mid">
           My books
         </Link>
         <Link className="menu-link-1">Currently reading</Link>
