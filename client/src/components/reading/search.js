@@ -8,17 +8,18 @@ function Search(props) {
       <div className="search-cont">
         <input
           value={props.title}
+          onChange={props.change}
           type="text"
           name="booktitle"
           className="book-search"
-          placeholder="book title"
+          placeholder={props.placeholder}
         />
         <input
           value={props.author}
           type="text"
-          name="booktitle"
-          className="author-search"
-          placeholder="Authors last name"
+          name="author"
+          className="book-search"
+          placeholder={props.placeholder2}
         />
         <input
           type="button"
