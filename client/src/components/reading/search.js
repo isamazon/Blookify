@@ -13,11 +13,11 @@ function Search(props) {
           placeholder={props.placeholder}
           onChange={props.onChange}
         />
-        <input
+        {/* <input
           type="text"
           className="book-search"
           placeholder={props.placeholder2}
-        />
+        /> */}
         {/* <input
           type="button"
           className="submit-btn"
