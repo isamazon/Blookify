@@ -48,15 +48,13 @@ $font3: "Pacifico", cursive;
         width: 200px;
         font-family: $font2;
         transition: 0.5s;
+        color: white;
         &:focus {
           outline: none;
           color: white;
         }
         &::placeholder {
           color: white;
-        }
-        &:focus {
-          color: #e6ccb2;
         }
       }
       .submit-btn {
@@ -78,7 +76,7 @@ $font3: "Pacifico", cursive;
   }
   .booklist-cont {
     position: relative;
-    height: 150px;
+    height: 100%;
     width: 90%;
     background: none;
     overflow-x: auto;
@@ -88,19 +86,19 @@ $font3: "Pacifico", cursive;
     padding: 10px 0px;
     .booklist {
       position: relative;
-      height: 100%;
+      height: 150px;
       width: 100%;
-      background: #e6ccb2;
+      background: #d1a880;
       border: 3px solid #7f5539;
       border-radius: 20px;
       margin: 10px 0px;
       display: flex;
+      align-items: center;
       flex-direction: row;
-
-      cursor: pointer;
       transition: 0.5s;
       &:hover {
         transform: translateY(-5px);
+        box-shadow: 0px 5px 10px black;
       }
       .img {
         position: relative;
@@ -140,6 +138,22 @@ $font3: "Pacifico", cursive;
         color: black;
         background: none;
         overflow-y: auto;
+      }
+      .check-btn {
+        position: absolute;
+        right: 20px;
+        background: none;
+        border: 2px solid #7f5539;
+        border-radius: 50%;
+        color: #ede0d4;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        z-index: 10;
+        cursor: pointer;
       }
     }
   }

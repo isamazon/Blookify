@@ -1,13 +1,8 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+import mongoose from "mongoose";
 
-const Book = new Schema({
-  title: String,
-  date: {
+const bookShema = mongoose.Schema({
+  createdAt: {
     type: Date,
-    default: Date.now,
+    default: new Date(),
   },
-  finished: Boolean,
 });
-
-module.exports.Book = mongoose.model("Book", Book);

@@ -2,9 +2,8 @@ import React from "react";
 import "./profile.css";
 
 function Booklist(props) {
-  console.log(props.imgurl);
   return (
-    <div className="booklist">
+    <div onClick={props.onclick} className="booklist">
       <img
         src={props.imgurl ? props.imgurl["thumbnail"] : ""}
         className="img"
@@ -12,7 +11,8 @@ function Booklist(props) {
       />
       <h1 className="title-header">{props.title}</h1>
       <p className="author-p">Author: {props.author}</p>
-      <a href={props.link}>link</a>
+      {/* <a href={props.link}>link</a> */}
+      <button className="check-btn">X</button>
     </div>
   );
 }

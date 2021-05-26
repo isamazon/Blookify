@@ -1,50 +1,29 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoos = require("mongoose");
-const cors = require("cors");
-const { Book } = require("./model/Book.model");
+import express from "express";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import cors from "cors";
+
+import postRoutes from "./routes/posts.js";
+
 const app = express();
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
+app.use("/posts", postRoutes);
+
 const CONNECTION_URL =
-  "mongodb+srv://isamazon:Bighead0622@cluster0.c3xnu.mongodb.net/test";
+  "mongodb+srv://isamazon:Bighead0622@cluster0.si8ft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
 
-mongoos
-  .connect(CONNECTION_URL, {
-    useNEwUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose
+  .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
-    app.listen(PORT, () => console.log(`Server running on port: ${PORT} `))
+    app.listen(PORT, () =>
+      console.log(`Server Running on Port: http://localhost:${PORT}`)
+    )
   )
-  //   What kobi taught me
-  .catch((error) => console.log(error.message));
+  .catch((error) => console.log(`${error} did not connect`));
 
-app.get("/books", (req, res) => {
-  Book.find({}, (err, result) => {
-    if (err) {
-      res.json(err);
-    } else {
-      res.json(result);
-    }
-  });
-});
-
-app.post("/addBook", (req, res) => {
-  let title = req.params.title;
-  let finished = req.params.finished;
-  const newBook = new Book({
-    title: title,
-    finished: finished,
-  });
-  newBook.save();
-  res.json(newBook);
-});
-
-mongoos.set("useFindAndModify", false);
-
-// Mongo db basek
+mongoose.set("useFindAndModify", false);

@@ -31,7 +31,6 @@ function Profile() {
             `https://www.googleapis.com/books/v1/volumes?q=intitle:${input}&key=AIzaSyDLVd6ZQY0u7IWA0fqW2U8lUhrZSBF2ZI4`
           )
           .then((book) => {
-            console.log(book.data);
             setSection(book.data.items);
           })
           .catch((error) => console.log(error));
@@ -41,6 +40,8 @@ function Profile() {
     };
     request();
   }, [input, setInput]);
+
+  // Adding booklist row to container
 
   return (
     <div>
@@ -66,8 +67,6 @@ function Profile() {
             />
           ))}
         </div>
-
-        <div className="profile-container"></div>
       </Container>
     </div>
   );

@@ -33,9 +33,12 @@ function Nav() {
           Home
         </Link>
         <Link to="/Profile" className="menu-link-1 link-mid">
-          My books
+          Add a book!
         </Link>
         <Link className="menu-link-1">Currently reading</Link>
+        <Link to="/" className="menu-link-1 link-mid">
+          My finished books
+        </Link>
         <Link className="menu-link-1">About</Link>
       </div>
     </div>
