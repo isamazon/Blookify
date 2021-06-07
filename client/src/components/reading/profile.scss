@@ -5,7 +5,71 @@ $font1: "Recursive", sans-serif;
 $font2: "Lobster", cursive;
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 $font3: "Pacifico", cursive;
-
+.left {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  z-index: 2;
+  left: 0%;
+  margin-top: 100px;
+  margin-right: 10px;
+  height: 80px;
+  width: 200px;
+  transition: 0.5s;
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-10px);
+  }
+  .arrow-left {
+    position: absolute;
+    left: 5%;
+    color: #7f5539;
+  }
+  h1 {
+    color: #ddb892;
+    font-size: 25px;
+    margin: 0px 20px;
+    text-align: center;
+    font-family: $font2;
+  }
+}
+.right {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  z-index: 2;
+  right: 0%;
+  margin-top: 100px;
+  margin-right: 10px;
+  height: 80px;
+  width: 200px;
+  transition: 0.5s;
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-10px);
+  }
+  .arrow-right {
+    position: absolute;
+    right: 0%;
+    color: #7f5539;
+  }
+  h1 {
+    position: absolute;
+    left: 0;
+    color: #ddb892;
+    font-size: 25px;
+    margin: 0px 25px;
+    text-align: center;
+    font-family: $font2;
+    letter-spacing: -1px;
+  }
+}
 .profile-cont {
   position: relative;
   height: 100%;
@@ -18,7 +82,7 @@ $font3: "Pacifico", cursive;
   // Search bar
   .search-bar {
     position: relative;
-    width: 90%;
+    width: 80%;
     height: 80px;
     margin-bottom: 20px;
     margin-top: 100px;
@@ -139,21 +203,31 @@ $font3: "Pacifico", cursive;
         background: none;
         overflow-y: auto;
       }
-      .check-btn {
+      .add-book {
         position: absolute;
-        right: 20px;
-        background: none;
-        border: 2px solid #7f5539;
-        border-radius: 50%;
-        color: #ede0d4;
-        height: 35px;
-        width: 35px;
+        height: 100%;
+        padding-right: 20px;
+        right: 0;
         display: flex;
-        align-items: center;
         justify-content: center;
-        font-size: 15px;
-        z-index: 10;
-        cursor: pointer;
+        align-items: center;
+        background-color: none;
+        p {
+          color: black;
+          font-size: 15px;
+          padding-top: 10px;
+          text-align: center;
+          font-family: $font2;
+        }
+        .check-mark {
+          color: #442d1e;
+          transition: 0.5s;
+          &:hover {
+            color: #1d130d;
+            cursor: pointer;
+            animation: upandshake 1s infinite ease-in-out;
+          }
+        }
       }
     }
   }
@@ -181,5 +255,20 @@ $font3: "Pacifico", cursive;
       flex-direction: row;
       align-items: center;
     }
+  }
+}
+
+@keyframes upandshake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
   }
 }

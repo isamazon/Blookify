@@ -42,7 +42,7 @@ function Home() {
                   <Link to="/Login" className="btn-1 b-1">
                     Login
                   </Link>
-                  <Link to="/" className="btn-1 b-2">
+                  <Link to="/Addbook" className="btn-1 b-2">
                     Get started
                   </Link>
                 </div>

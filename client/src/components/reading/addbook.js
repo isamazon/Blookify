@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./profile.css";
 import axios from "axios";
 import noimg from "../../assets/Capture.PNG";
@@ -8,15 +8,15 @@ import noimg from "../../assets/Capture.PNG";
 // components
 import Search from "./search";
 import Nav from "../navbar";
-import Bookrow from "../reading/bookrow";
-import Booklist from "../reading/booklist";
+import Bookrow from "./bookrow";
+import Booklist from "./booklist";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function Profile() {
+function Profile(props) {
   const [section, setSection] = useState([]);
   const [input, setInput] = useState("");
-  const [bookContainer, setBook] = useState([]);
-
-  //   const [input2, setInput2] = useState("");
+  const [bookContainer, setBook] = useState({ data: "" });
 
   const changeInput = (e) => {
     setInput(e.target.value);
@@ -42,10 +42,22 @@ function Profile() {
   }, [input, setInput]);
 
   // Adding booklist row to container
-
+  // Function to send the book to another component
+  const moveBook = () => {
+    setBook([]);
+    console.log(bookContainer);
+  };
   return (
     <div>
-      <Nav />
+      <Nav />{" "}
+      <Link to="/" className="left">
+        <FaArrowLeft size="30px" className="arrow-left" />
+        <h1>Home</h1>
+      </Link>
+      <Link to="/" className="right">
+        <h1>Currently reading</h1>
+        <FaArrowRight size="30px" className="arrow-right" />
+      </Link>
       <Container fluid className="profile-cont">
         <Search
           inputvalue={input}
@@ -59,10 +71,19 @@ function Profile() {
         <div className="booklist-cont">
           {section.map((data) => (
             <Booklist
+              key={data.id ? data.id : ""}
+              onclick2={moveBook}
               imgurl={data.volumeInfo.imageLinks}
               alt={data.volumeInfo.title}
-              title={data.volumeInfo.title}
-              author={data.volumeInfo.authors}
+              title={
+                data.volumeInfo.title ? data.volumeInfo.title : "no title found"
+              }
+              author={
+                data.volumeInfo.authors
+                  ? data.volumeInfo.authors
+                  : "No author found"
+              }
+              pgcount={data.volumeInfo.pageCount}
               link={data.selfLink}
             />
           ))}

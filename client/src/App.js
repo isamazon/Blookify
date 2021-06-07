@@ -6,7 +6,7 @@ import "./App.css";
 import Home from "./Home";
 import Test from "./components/test";
 import Login from "./components/login/login";
-import Profile from "./components/reading/profile";
+import Addbook from "./components/reading/addbook";
 
 const FourOhFour = () => {
   const { pathname } = useLocation();
@@ -23,7 +23,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/Login" component={Login} />
-        <Route exact path="/Profile" component={Profile} />
+        <Route exact path="/Addbook" component={Addbook} />
         <Route path="*">
           <FourOhFour />
         </Route>

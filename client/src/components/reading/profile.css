@@ -1,6 +1,101 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: none;
+  z-index: 2;
+  left: 0%;
+  margin-top: 100px;
+  margin-right: 10px;
+  height: 80px;
+  width: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.left:hover {
+  text-decoration: none;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.left .arrow-left {
+  position: absolute;
+  left: 5%;
+  color: #7f5539;
+}
+
+.left h1 {
+  color: #ddb892;
+  font-size: 25px;
+  margin: 0px 20px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+}
+
+.right {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: none;
+  z-index: 2;
+  right: 0%;
+  margin-top: 100px;
+  margin-right: 10px;
+  height: 80px;
+  width: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.right:hover {
+  text-decoration: none;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.right .arrow-right {
+  position: absolute;
+  right: 0%;
+  color: #7f5539;
+}
+
+.right h1 {
+  position: absolute;
+  left: 0;
+  color: #ddb892;
+  font-size: 25px;
+  margin: 0px 25px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  letter-spacing: -1px;
+}
+
 .profile-cont {
   position: relative;
   height: 100%;
@@ -23,7 +118,7 @@
 
 .profile-cont .search-bar {
   position: relative;
-  width: 90%;
+  width: 80%;
   height: 80px;
   margin-bottom: 20px;
   margin-top: 100px;
@@ -223,27 +318,42 @@
   overflow-y: auto;
 }
 
-.profile-cont .booklist-cont .booklist .check-btn {
+.profile-cont .booklist-cont .booklist .add-book {
   position: absolute;
-  right: 20px;
-  background: none;
-  border: 2px solid #7f5539;
-  border-radius: 50%;
-  color: #ede0d4;
-  height: 35px;
-  width: 35px;
+  height: 100%;
+  padding-right: 20px;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: none;
+}
+
+.profile-cont .booklist-cont .booklist .add-book p {
+  color: black;
   font-size: 15px;
-  z-index: 10;
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+}
+
+.profile-cont .booklist-cont .booklist .add-book .check-mark {
+  color: #442d1e;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.profile-cont .booklist-cont .booklist .add-book .check-mark:hover {
+  color: #1d130d;
   cursor: pointer;
+  -webkit-animation: upandshake 1s infinite ease-in-out;
+          animation: upandshake 1s infinite ease-in-out;
 }
 
 .profile-cont .profile-container {
@@ -286,5 +396,43 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@-webkit-keyframes upandshake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes upandshake {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
 }
 /*# sourceMappingURL=profile.css.map */
