@@ -32,7 +32,7 @@ function Nav() {
         <Link to="/" onClick={closeMobileMenu} className="menu-link-1">
           Home
         </Link>
-        <Link to="/Profile" className="menu-link-1 link-mid">
+        <Link to="/Addbook" className="menu-link-1 link-mid">
           Add a book!
         </Link>
         <Link className="menu-link-1">Currently reading</Link>

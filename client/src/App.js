@@ -7,6 +7,7 @@ import Home from "./Home";
 import Test from "./components/test";
 import Login from "./components/login/login";
 import Addbook from "./components/reading/addbook";
+import Currently from "./components/reading/currentlyreading";
 
 const FourOhFour = () => {
   const { pathname } = useLocation();
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Addbook" component={Addbook} />
+        <Route exact path="/Currently" component={Currently} />
         <Route path="*">
           <FourOhFour />
         </Route>

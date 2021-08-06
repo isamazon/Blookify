@@ -12,7 +12,7 @@ function Booklist(props) {
       <h1 className="title-header">{props.title}</h1>
       <p className="author-p">Author: {props.author}</p>
       {/* <a href={props.link}>link</a> */}
-      <p>Pg count: {props.pgcount} </p>
+      <p className="pg-count">Pg count: {props.pgcount} </p>
       <div className="add-book">
         <p>Click to add book to reading</p>
         <FaCheckSquare

@@ -203,6 +203,19 @@ $font3: "Pacifico", cursive;
         background: none;
         overflow-y: auto;
       }
+      .pg-count {
+        position: relative;
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font2;
+        font-size: 20px;
+        color: black;
+        background: none;
+        overflow-y: auto;
+      }
       .add-book {
         position: absolute;
         height: 100%;
@@ -231,9 +244,18 @@ $font3: "Pacifico", cursive;
       }
     }
   }
+}
+// Currently reading
+.profile-main-cnt {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .profile-container {
     position: relative;
-    height: 50vh;
+    height: 80vh;
+    top: 0px;
     width: 90%;
     display: flex;
     margin-top: 20px;

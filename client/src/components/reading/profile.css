@@ -318,6 +318,26 @@
   overflow-y: auto;
 }
 
+.profile-cont .booklist-cont .booklist .pg-count {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+  color: black;
+  background: none;
+  overflow-y: auto;
+}
+
 .profile-cont .booklist-cont .booklist .add-book {
   position: absolute;
   height: 100%;
@@ -356,9 +376,24 @@
           animation: upandshake 1s infinite ease-in-out;
 }
 
-.profile-cont .profile-container {
+.profile-main-cnt {
   position: relative;
-  height: 50vh;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile-main-cnt .profile-container {
+  position: relative;
+  height: 80vh;
+  top: 0px;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -378,7 +413,7 @@
           box-shadow: 0px 0px 20px black;
 }
 
-.profile-cont .profile-container .row-cont {
+.profile-main-cnt .profile-container .row-cont {
   position: relative;
   margin: 20px;
   width: 95%;

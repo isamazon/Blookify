@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 function Profile(props) {
   const [section, setSection] = useState([]);
   const [input, setInput] = useState("");
-  const [bookContainer, setBook] = useState({ data: "" });
+  const [bookContainer, setBook] = useState([]);
 
   const changeInput = (e) => {
     setInput(e.target.value);
@@ -41,20 +41,26 @@ function Profile(props) {
     request();
   }, [input, setInput]);
 
-  // Adding booklist row to container
   // Function to send the book to another component
-  const moveBook = () => {
-    setBook([]);
-    console.log(bookContainer);
+  const moveBook = (data) => {
+    data.preventDefault();
+    console.log("button clicked");
+    const newBook = {
+      books: "data",
+    };
+    axios.put();
+    setBook({});
+    console.log(setBook);
   };
+
   return (
     <div>
-      <Nav />{" "}
+      <Nav />
       <Link to="/" className="left">
         <FaArrowLeft size="30px" className="arrow-left" />
         <h1>Home</h1>
       </Link>
-      <Link to="/" className="right">
+      <Link to="/Currently" className="right">
         <h1>Currently reading</h1>
         <FaArrowRight size="30px" className="arrow-right" />
       </Link>
@@ -72,6 +78,7 @@ function Profile(props) {
           {section.map((data) => (
             <Booklist
               key={data.id ? data.id : ""}
+              // handle function
               onclick2={moveBook}
               imgurl={data.volumeInfo.imageLinks}
               alt={data.volumeInfo.title}
