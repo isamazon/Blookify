@@ -6,6 +6,6 @@ const postBookSchema = mongoose.Schema({
   pageCount: String,
 });
 
-const postBook = mongoose.model("postBook", postBookSchema);
+const PostBook = mongoose.model("postBook", postBookSchema);
 
-export default postBook;
+export default PostBook;
