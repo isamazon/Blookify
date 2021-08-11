@@ -12,9 +12,16 @@ export const readingPosts = async (req, res) => {
 };
 
 // Functionality to add/create new posts
-export const createreadingPost = (req, res) => {
-  const body = req.body;
+export const createreadingPost = async (req, res) => {
+  const bookPost = req.body;
+
+  const newBookPost = new postBooks(bookPost);
 
   try {
-  } catch (error) {}
+    await newBookPost.save();
+
+    res.status(201).json(newBookPost);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
 };
