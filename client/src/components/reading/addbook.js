@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import "./profile.css";
 import axios from "axios";
+// Redux
+import { useDispatch } from "react-redux";
 import noimg from "../../assets/Capture.PNG";
+import { getPosts } from "../../actions/posts.js";
 // API url
 
 // components
@@ -53,6 +56,12 @@ function Profile(props) {
     console.log(setBook);
   };
 
+  // Dispatch
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch();
+  }, []);
   return (
     <div>
       <Nav />
