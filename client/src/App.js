@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import "./App.css";
 // Main pages
@@ -9,16 +9,16 @@ import Login from "./components/login/login";
 import Addbook from "./components/reading/addbook";
 import Currently from "./components/reading/currentlyreading";
 
-const FourOhFour = () => {
-  const { pathname } = useLocation();
-
-  return (
-    <h3>
-      No match for <code>{pathname}</code>
-    </h3>
-  );
-};
+// redux
+import { getPosts } from "./actions/posts.js";
+import { useDispatch } from "react-redux";
 function App() {
+  // Dispatch
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, []);
   return (
     <div className="app">
       <Switch>
@@ -26,9 +26,7 @@ function App() {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Addbook" component={Addbook} />
         <Route exact path="/Currently" component={Currently} />
-        <Route path="*">
-          <FourOhFour />
-        </Route>
+        <Route path="*"></Route>
       </Switch>
     </div>
   );

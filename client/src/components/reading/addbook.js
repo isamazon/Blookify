@@ -56,12 +56,6 @@ function Profile(props) {
     console.log(setBook);
   };
 
-  // Dispatch
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch();
-  }, []);
   return (
     <div>
       <Nav />
