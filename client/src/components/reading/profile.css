@@ -376,6 +376,27 @@
           animation: upandshake 1s infinite ease-in-out;
 }
 
+.currently-h1 {
+  position: absolute;
+  height: 200px;
+  padding-top: 0px;
+  z-index: 2;
+  width: 100%;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Lobster", cursive;
+  font-size: 80px;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.288);
+}
+
 .profile-main-cnt {
   position: relative;
   height: 100vh;
@@ -392,7 +413,7 @@
 
 .profile-main-cnt .profile-container {
   position: relative;
-  height: 80vh;
+  height: 75vh;
   top: 0px;
   width: 90%;
   display: -webkit-box;

@@ -246,6 +246,20 @@ $font3: "Pacifico", cursive;
   }
 }
 // Currently reading
+.currently-h1 {
+  position: absolute;
+  height: 200px;
+  padding-top: 0px;
+  z-index: 2;
+  width: 100%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font2;
+  font-size: 80px;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.288);
+}
 .profile-main-cnt {
   position: relative;
   height: 100vh;
@@ -254,7 +268,7 @@ $font3: "Pacifico", cursive;
   justify-content: center;
   .profile-container {
     position: relative;
-    height: 80vh;
+    height: 75vh;
     top: 0px;
     width: 90%;
     display: flex;
