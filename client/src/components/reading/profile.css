@@ -1,106 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-.left {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.main-container {
+  position: relative;
+  background: #ede0d4;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: none;
-  z-index: 2;
-  left: 0%;
-  margin-top: 100px;
-  margin-right: 10px;
-  height: 80px;
-  width: 200px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  width: 100%;
+  height: 100%;
 }
 
-.left:hover {
-  text-decoration: none;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+.main-container .profile-row {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: none;
 }
 
-.left .arrow-left {
-  position: absolute;
-  left: 5%;
-  color: #7f5539;
-}
-
-.left h1 {
-  color: #ddb892;
-  font-size: 25px;
-  margin: 0px 20px;
-  text-align: center;
-  font-family: "Lobster", cursive;
-}
-
-.right {
-  position: absolute;
+.main-container .profile-row .sidebar-container {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #5a3e2d00;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: none;
-  z-index: 2;
-  right: 0%;
-  margin-top: 100px;
-  margin-right: 10px;
-  height: 80px;
-  width: 200px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.right:hover {
-  text-decoration: none;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+.main-container .profile-row .sidebar-container .nav-side-bar {
+  position: relative;
+  height: 90%;
+  width: 60%;
+  border-radius: 50px;
+  background: #573a27;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
+  top: 3%;
 }
 
-.right .arrow-right {
-  position: absolute;
-  right: 0%;
-  color: #7f5539;
-}
-
-.right h1 {
-  position: absolute;
-  left: 0;
-  color: #ddb892;
-  font-size: 25px;
-  margin: 0px 25px;
-  text-align: center;
-  font-family: "Lobster", cursive;
-  letter-spacing: -1px;
-}
-
-.profile-cont {
+.main-container .profile-row .profile-cont {
   position: relative;
   height: 100%;
-  width: 100%;
-  background: #ede0d4;
+  width: 90%;
+  background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,9 +71,9 @@
           flex-direction: column;
 }
 
-.profile-cont .search-bar {
+.main-container .profile-row .profile-cont .search-bar {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 80px;
   margin-bottom: 20px;
   margin-top: 100px;
@@ -141,20 +96,20 @@
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
 }
 
-.profile-cont .search-bar h1 {
+.main-container .profile-row .profile-cont .search-bar h1 {
   font-family: "Lobster", cursive;
   color: #f7ece1;
   margin-right: 50px;
   margin-left: 50px;
 }
 
-.profile-cont .search-bar .search-cont {
+.main-container .profile-row .profile-cont .search-bar .search-cont {
   position: relative;
   right: 2%;
 }
 
-.profile-cont .search-bar .search-cont .book-search,
-.profile-cont .search-bar .search-cont .author-search {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search,
+.main-container .profile-row .profile-cont .search-bar .search-cont .author-search {
   border-radius: 20px;
   border: 3px solid #e6ccb2;
   background: #7f5539;
@@ -167,33 +122,33 @@
   color: white;
 }
 
-.profile-cont .search-bar .search-cont .book-search:focus,
-.profile-cont .search-bar .search-cont .author-search:focus {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search:focus,
+.main-container .profile-row .profile-cont .search-bar .search-cont .author-search:focus {
   outline: none;
   color: white;
 }
 
-.profile-cont .search-bar .search-cont .book-search::-webkit-input-placeholder,
-.profile-cont .search-bar .search-cont .author-search::-webkit-input-placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::-webkit-input-placeholder,
+.main-container .profile-row .profile-cont .search-bar .search-cont .author-search::-webkit-input-placeholder {
   color: white;
 }
 
-.profile-cont .search-bar .search-cont .book-search:-ms-input-placeholder,
-.profile-cont .search-bar .search-cont .author-search:-ms-input-placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search:-ms-input-placeholder,
+.main-container .profile-row .profile-cont .search-bar .search-cont .author-search:-ms-input-placeholder {
   color: white;
 }
 
-.profile-cont .search-bar .search-cont .book-search::-ms-input-placeholder,
-.profile-cont .search-bar .search-cont .author-search::-ms-input-placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::-ms-input-placeholder,
+.main-container .profile-row .profile-cont .search-bar .search-cont .author-search::-ms-input-placeholder {
   color: white;
 }
 
-.profile-cont .search-bar .search-cont .book-search::placeholder,
-.profile-cont .search-bar .search-cont .author-search::placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::placeholder,
+.main-container .profile-row .profile-cont .search-bar .search-cont .author-search::placeholder {
   color: white;
 }
 
-.profile-cont .search-bar .search-cont .submit-btn {
+.main-container .profile-row .profile-cont .search-bar .search-cont .submit-btn {
   background: #e6ccb2;
   border: 3px solid #7f5539;
   border-radius: 20px;
@@ -204,13 +159,13 @@
   transition: 0.5s;
 }
 
-.profile-cont .search-bar .search-cont .submit-btn:hover {
+.main-container .profile-row .profile-cont .search-bar .search-cont .submit-btn:hover {
   color: #e6ccb2;
   background: #7f5539;
   border: 3px solid #e6ccb2;
 }
 
-.profile-cont .booklist-cont {
+.main-container .profile-row .profile-cont .booklist-cont {
   position: relative;
   height: 100%;
   width: 90%;
@@ -229,7 +184,7 @@
   padding: 10px 0px;
 }
 
-.profile-cont .booklist-cont .booklist {
+.main-container .profile-row .profile-cont .booklist-cont .booklist {
   position: relative;
   height: 150px;
   width: 100%;
@@ -251,14 +206,14 @@
   transition: 0.5s;
 }
 
-.profile-cont .booklist-cont .booklist:hover {
+.main-container .profile-row .profile-cont .booklist-cont .booklist:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: 0px 5px 10px black;
           box-shadow: 0px 5px 10px black;
 }
 
-.profile-cont .booklist-cont .booklist .img {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .img {
   position: relative;
   height: 100px;
   margin: 5px 0px;
@@ -278,7 +233,7 @@
   background: none;
 }
 
-.profile-cont .booklist-cont .booklist .title-header {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .title-header {
   position: relative;
   height: 100%;
   width: 20%;
@@ -298,7 +253,7 @@
   overflow-y: auto;
 }
 
-.profile-cont .booklist-cont .booklist .author-p {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .author-p {
   position: relative;
   height: 100%;
   width: 20%;
@@ -318,7 +273,7 @@
   overflow-y: auto;
 }
 
-.profile-cont .booklist-cont .booklist .pg-count {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .pg-count {
   position: relative;
   height: 100%;
   width: 20%;
@@ -338,7 +293,7 @@
   overflow-y: auto;
 }
 
-.profile-cont .booklist-cont .booklist .add-book {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .add-book {
   position: absolute;
   height: 100%;
   padding-right: 20px;
@@ -355,7 +310,7 @@
   background-color: none;
 }
 
-.profile-cont .booklist-cont .booklist .add-book p {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .add-book p {
   color: black;
   font-size: 15px;
   padding-top: 10px;
@@ -363,13 +318,13 @@
   font-family: "Lobster", cursive;
 }
 
-.profile-cont .booklist-cont .booklist .add-book .check-mark {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .add-book .check-mark {
   color: #442d1e;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.profile-cont .booklist-cont .booklist .add-book .check-mark:hover {
+.main-container .profile-row .profile-cont .booklist-cont .booklist .add-book .check-mark:hover {
   color: #1d130d;
   cursor: pointer;
   -webkit-animation: upandshake 1s infinite ease-in-out;
@@ -430,8 +385,8 @@
   border-radius: 10px;
   background: #ddb892;
   overflow-y: auto;
-  -webkit-box-shadow: 0px 0px 20px black;
-          box-shadow: 0px 0px 20px black;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.493);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.493);
 }
 
 .profile-main-cnt .profile-container .row-cont {

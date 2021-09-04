@@ -35,12 +35,12 @@ function Nav() {
         <Link to="/Addbook" className="menu-link-1 link-mid">
           Add a book!
         </Link>
-        <Link to="/currentlyreading" className="menu-link-1">
+        {/* <Link to="/currentlyreading" className="menu-link-1">
           Currently reading
         </Link>
         <Link to="/" className="menu-link-1 link-mid">
           My finished books
-        </Link>
+        </Link> */}
         <Link className="menu-link-1">About</Link>
       </div>
     </div>
