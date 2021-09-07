@@ -29,12 +29,71 @@ $font3: "Pacifico", cursive;
       align-items: center;
       .nav-side-bar {
         position: relative;
-        height: 90%;
+        height: 85%;
         width: 60%;
-        border-radius: 50px;
+        border-radius: 30px;
         background: #573a27;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
         top: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .home-link {
+          position: relative;
+          width: 100%;
+          height: 50px;
+          left: 0%;
+          background-color: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .home-icon {
+            color: #e6ccb2;
+            transition: 0.5s;
+            &:hover {
+              transform: translateY(-5px);
+              color: #e5bd95;
+            }
+          }
+        }
+        .nav-list {
+          position: relative;
+          height: 80%;
+          width: 100%;
+          background-color: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0px;
+          .nav-items {
+            position: relative;
+            height: 100px;
+            width: 100%;
+            left: 0;
+            list-style-type: none;
+            background-color: none;
+
+            .link-area {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              p {
+                position: absolute;
+                color: #e6ccb2;
+                bottom: 0;
+                font-family: $font2;
+                transition: 0.5s;
+                &:hover {
+                  color: #cc955e;
+                }
+              }
+            }
+          }
+        }
       }
     }
     .profile-cont {
