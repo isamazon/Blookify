@@ -167,6 +167,14 @@
   color: #cc955e;
 }
 
+.main-container .profile-row .sidebar-container .nav-side-bar .logout-section {
+  position: absolute;
+  bottom: 0%;
+  background-color: none;
+  height: 20%;
+  width: 100%;
+}
+
 .main-container .profile-row .profile-cont {
   position: relative;
   height: 100%;
@@ -264,21 +272,91 @@
   color: white;
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .submit-btn {
-  background: #e6ccb2;
-  border: 3px solid #7f5539;
-  border-radius: 20px;
-  padding: 0px 20px;
-  font-family: "Lobster", cursive;
-  color: #7f5539;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt {
+  position: absolute;
+  right: 10%;
+  height: 100%;
+  width: 200px;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .submit-btn:hover {
-  color: #e6ccb2;
-  background: #7f5539;
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  border: none;
+  border-radius: 20px;
   border: 3px solid #e6ccb2;
+  background: #7f5539;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button:hover {
+  cursor: pointer;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button p {
+  color: white;
+  font-family: "Lobster", cursive;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box {
+  position: relative;
+  height: 80%;
+  width: 70%;
+  background: #7f5539;
+  border-radius: 20px;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .closebutton {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border: 2px solid #492710;
+  background: #e6ccb2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .closebutton:hover {
+  cursor: pointer;
 }
 
 .main-container .profile-row .profile-cont .booklist-cont {
