@@ -74,19 +74,25 @@ $font3: "Pacifico", cursive;
             left: 0;
             list-style-type: none;
             background-color: none;
-
+            margin-bottom: 20px;
             .link-area {
               position: absolute;
               height: 100%;
               width: 100%;
               display: flex;
+              flex-direction: column;
+              align-items: center;
+              background-color: none;
               justify-content: center;
+
               p {
-                position: absolute;
+                position: relative;
                 color: #e6ccb2;
                 bottom: 0;
+                background: none;
                 font-family: $font2;
                 transition: 0.5s;
+                margin-top: 0px;
                 &:hover {
                   color: #cc955e;
                 }
@@ -96,6 +102,7 @@ $font3: "Pacifico", cursive;
         }
       }
     }
+
     .profile-cont {
       position: relative;
       height: 100%;
