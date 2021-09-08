@@ -84,6 +84,11 @@ $font3: "Pacifico", cursive;
               align-items: center;
               background-color: none;
               justify-content: center;
+              transition: 0.5s;
+              &:hover {
+                transform: translateY(-5px);
+                text-decoration: none;
+              }
 
               p {
                 position: relative;
