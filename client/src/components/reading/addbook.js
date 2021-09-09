@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./profile.css";
 import axios from "axios";
 // Redux
+import { useSelector } from "react-redux";
 
 import noimg from "../../assets/Capture.PNG";
 
@@ -24,7 +25,7 @@ function Profile(props) {
     setInput(e.target.value);
     // setInput2(e.target.value);
   };
-
+  // API fetch request
   useEffect(() => {
     const request = () => {
       if (input.length >= 3) {
@@ -55,6 +56,9 @@ function Profile(props) {
     console.log(setBook);
   };
 
+  // Redux/Selectors
+  const posts = useSelector((state) => state.posts);
+  console.log(posts);
   return (
     <Container fluid className="main-container">
       <Nav />

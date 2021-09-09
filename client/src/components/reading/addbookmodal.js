@@ -1,7 +1,10 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
+import { useSelector } from "react-redux";
+
 class BookModal extends React.Component {
+  // Redux
   constructor(props) {
     super(props);
     this.state = {
@@ -27,13 +30,13 @@ class BookModal extends React.Component {
         </button>
         <Fade when={this.state.show}>
           <div className={this.state.modal}>
-            <Slide up when={this.state.show}>
+            <Slide up opposite when={this.state.show}>
               <div className="modal-box">
                 <div
                   onClick={() => {
                     this.setState({
                       show: false,
-                      modal: " ",
+                      modal: "",
                     });
                   }}
                   className="closebutton"

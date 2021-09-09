@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getPosts());
-  }, []);
+  }, [dispatch]);
   return (
     <div className="app">
       <Switch>

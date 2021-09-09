@@ -1,4 +1,4 @@
-const reducer = (posts = [], action) => {
+export default (posts = [], action) => {
   switch (action) {
     case "FETCH_ALL":
       return action.payload;

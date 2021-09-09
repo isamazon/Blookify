@@ -203,12 +203,13 @@ $font3: "Pacifico", cursive;
             align-items: center;
             justify-content: center;
             z-index: 100;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
             .modal-box {
               position: relative;
               height: 80%;
               width: 70%;
               background: #7f5539;
+              box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.411);
               border-radius: 20px;
               .closebutton {
                 position: absolute;
@@ -222,8 +223,12 @@ $font3: "Pacifico", cursive;
                 border-radius: 50%;
                 height: 45px;
                 width: 45px;
+                transition: 0.5s;
+                color: black;
                 &:hover {
                   cursor: pointer;
+                  background: #9c6644;
+                  color: white;
                 }
               }
             }
