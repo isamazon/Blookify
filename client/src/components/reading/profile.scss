@@ -225,11 +225,18 @@ $font3: "Pacifico", cursive;
                 width: 45px;
                 transition: 0.5s;
                 color: black;
+                z-index: 10;
                 &:hover {
                   cursor: pointer;
                   background: #9c6644;
                   color: white;
                 }
+              }
+              .form {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                background: #b08968;
               }
             }
           }

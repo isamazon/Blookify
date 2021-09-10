@@ -358,12 +358,20 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: black;
+  z-index: 10;
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .closebutton:hover {
   cursor: pointer;
   background: #9c6644;
   color: white;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #b08968;
 }
 
 .main-container .profile-row .profile-cont .booklist-cont {

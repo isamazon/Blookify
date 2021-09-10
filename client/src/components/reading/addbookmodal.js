@@ -2,8 +2,10 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import { useSelector } from "react-redux";
-
+// Components
+import Form from "./form";
 class BookModal extends React.Component {
+  // Data values
   // Redux
   constructor(props) {
     super(props);
@@ -43,6 +45,8 @@ class BookModal extends React.Component {
                 >
                   X
                 </div>
+                {/* Form inside modal */}
+                <Form />
               </div>
             </Slide>
           </div>
