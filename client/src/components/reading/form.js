@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // CSS
 import "./profile.css";
 function Form() {
@@ -25,7 +25,17 @@ function Form() {
         </label>
         <label>
           Authors name:
-          <input type="text" name="title" />
+          <input
+            type="text"
+            name="author"
+            value={bookData.author}
+            onChange={(e) =>
+              setBookData({
+                ...bookData,
+                author: e.target.value,
+              })
+            }
+          />
         </label>
       </form>
     </div>
