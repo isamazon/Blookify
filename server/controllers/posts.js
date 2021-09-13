@@ -15,7 +15,7 @@ export const readingPosts = async (req, res) => {
 export const createreadingPost = async (req, res) => {
   const bookPost = req.body;
 
-  const newBookPost = new postBooks(bookPost);
+  const newBookPost = new PostBook(bookPost);
 
   try {
     await newBookPost.save();

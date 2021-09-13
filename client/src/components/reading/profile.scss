@@ -30,7 +30,7 @@ $font3: "Pacifico", cursive;
       .nav-side-bar {
         position: relative;
         height: 85%;
-        width: 60%;
+        width: 80px;
         border-radius: 30px;
         background: #573a27;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
@@ -208,10 +208,13 @@ $font3: "Pacifico", cursive;
               position: relative;
               height: 80%;
               top: 3%;
-              width: 40%;
+              width: 700px;
               background: #7f5539;
               box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.411);
               border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               .closebutton {
                 position: absolute;
                 top: -20px;
@@ -237,16 +240,19 @@ $font3: "Pacifico", cursive;
                 position: relative;
                 height: 100%;
                 width: 100%;
-
                 display: flex;
+                background: none;
                 flex-direction: column;
                 .main-header {
                   position: absolute;
-                  top: -20%;
-                  align-self: center;
+                  top: -38%;
+                  margin: 0%;
+                  text-align: center;
+                  width: 100%;
+                  background: none;
                   color: #ede0d4;
                   font-size: 50px;
-                  text-shadow: 0px -5px 15px #442d1e;
+                  text-shadow: 0px 5px 15px #442d1e;
                 }
                 .file-base-cnt {
                   position: relative;
@@ -255,6 +261,50 @@ $font3: "Pacifico", cursive;
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                }
+                .label-cnt {
+                  position: relative;
+                  background: none;
+                  width: 100%;
+                  height: 100px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  color: #e5bd95;
+                  font-family: $font2;
+                  font-size: 30px;
+                  .input {
+                    position: relative;
+                    height: 30px;
+                    width: 300px;
+                    font-family: sans-serif;
+                    border: none;
+                    border-radius: 20px;
+                    padding-left: 20px;
+                    background: #e6ccb2;
+                    color: #1d130d;
+                    font-size: 15px;
+                  }
+                }
+                .submit-button {
+                  position: relative;
+                  align-self: center;
+                  width: 300px;
+                  height: 50px;
+                  margin-top: 20px;
+                  border: none;
+                  border-radius: 30px;
+                  background: #492710;
+                  color: #e6ccb2;
+                  font-family: $font1;
+                  font-size: 30px;
+                  transition: 0.5s;
+                  &:hover {
+                    background: #e6ccb2;
+                    color: #492710;
+                    transform: translateY(-5px);
+                  }
                 }
               }
             }

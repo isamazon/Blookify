@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 // dependencies
 import FileBase from "react-file-base64";
 import { Col } from "react-bootstrap";
+// Redux dispatch
+import { useDispatch } from "react-redux";
 // CSS
 import "./profile.css";
+//
+import { createPost } from "../../actions/posts";
 function Form() {
   const [bookData, setBookData] = useState({
     title: "",
@@ -11,9 +15,16 @@ function Form() {
     pageLength: "",
     selectedFile: "",
   });
+  const dispatch = useDispatch();
+
+  // This handle submit function will be able to handle the dispatch actions
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(createPost(bookData));
+  };
   return (
     <div className="book-form-cont">
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <h1 className="main-header">Upload your own book!</h1>
         <div className="file-base-cnt">
           <FileBase
@@ -25,9 +36,10 @@ function Form() {
           />
         </div>
         {/* Book title */}
-        <label>
+        <label className="label-cnt">
           Book title:
           <input
+            className="input"
             type="text"
             name="title"
             value={bookData.title}
@@ -37,9 +49,10 @@ function Form() {
           />
         </label>
         {/* author name */}
-        <label>
+        <label className="label-cnt">
           Authors name:
           <input
+            className="input"
             type="text"
             name="author"
             value={bookData.author}
@@ -49,9 +62,10 @@ function Form() {
           />
         </label>
         {/* Page length */}
-        <label>
-          Page length
+        <label className="label-cnt">
+          Page length:
           <input
+            className="input"
             type="text"
             name="pageLength"
             value={bookData.pageLength}

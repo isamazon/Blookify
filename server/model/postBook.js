@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const postBookSchema = mongoose.Schema({
-  bookTitle: String,
+  title: String,
   author: String,
-  pageCount: String,
+  pageLength: String,
 });
 
 const PostBook = mongoose.model("postBook", postBookSchema);
