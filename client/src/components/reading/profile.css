@@ -330,7 +330,8 @@
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box {
   position: relative;
   height: 80%;
-  width: 70%;
+  top: 3%;
+  width: 40%;
   background: #7f5539;
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.411);
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.411);
@@ -371,7 +372,39 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background: #b08968;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form .main-header {
+  position: absolute;
+  top: -20%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #ede0d4;
+  font-size: 50px;
+  text-shadow: 0px -5px 15px #442d1e;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form .file-base-cnt {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-container .profile-row .profile-cont .booklist-cont {
