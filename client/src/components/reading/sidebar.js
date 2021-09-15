@@ -23,7 +23,7 @@ class Sidebar extends React.Component {
               {/* Reading link */}
               <Fade top>
                 <li className="nav-items">
-                  <Link to="/" className="link-area">
+                  <Link to="/currentlyreading" className="link-area">
                     <Booksvg width="80%" height="60%" />
                     <p>Reading</p>
                   </Link>
@@ -39,7 +39,7 @@ class Sidebar extends React.Component {
               </Slide>
               <Slide top>
                 <li className="nav-items">
-                  <Link to="/" className="link-area">
+                  <Link to="/Addbook" className="link-area">
                     <Mag classname="svg" width="100%" height="80%" />
                     <p>Add book</p>
                   </Link>

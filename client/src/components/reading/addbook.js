@@ -12,7 +12,7 @@ import noimg from "../../assets/Capture.PNG";
 // components
 import Search from "./search";
 import Nav from "../navbar";
-import Bookrow from "./bookrow";
+
 import Booklist from "./booklist";
 import Sidebar from "./sidebar";
 

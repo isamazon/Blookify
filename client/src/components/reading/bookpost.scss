@@ -1,0 +1,62 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
+$font1: "Recursive", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+$font2: "Lobster", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+$font3: "Pacifico", cursive;
+
+.book-card {
+  position: relative;
+  width: 200px;
+  height: 550px;
+  background: none;
+  margin-bottom: 20px;
+  .inner-card {
+    position: relative;
+    height: 100%;
+    width: 95%;
+    background: #e6ccb2;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.466);
+  }
+  .top-info {
+    position: relative;
+    height: 55%;
+    background: #7f5539;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    h4 {
+      position: absolute;
+      bottom: 0%;
+      left: 20px;
+      color: white;
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.39);
+    }
+  }
+  .bottom-info {
+    position: relative;
+    height: 45%;
+    h3 {
+      position: relative;
+      top: 5%;
+      left: 20px;
+    }
+    .pagecount-p {
+      position: relative;
+      top: 10%;
+      left: 20px;
+    }
+    .date-added {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      font-size: 10px;
+    }
+    .delete-button {
+      position: absolute;
+      bottom: 0%;
+      right: 5px;
+    }
+  }
+}

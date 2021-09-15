@@ -32,7 +32,7 @@ class BookModal extends React.Component {
         </button>
         <Fade when={this.state.show}>
           <div className={this.state.modal}>
-            <Slide up opposite when={this.state.show}>
+            <Slide up when={this.state.show}>
               <div className="modal-box">
                 <div
                   onClick={() => {

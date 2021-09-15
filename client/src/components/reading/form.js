@@ -29,7 +29,7 @@ function Form() {
         <div className="file-base-cnt">
           <FileBase
             type="file"
-            mutiple="false"
+            mutiple={false}
             onDone={({ base64 }) =>
               setBookData({ ...bookData, selectedFile: base64 })
             }
