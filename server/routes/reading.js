@@ -1,9 +1,14 @@
-import express from "express";
+import express from 'express';
 // imported controller functions
-import { readingPosts, createreadingPost } from "../controllers/posts.js";
+import {
+  readingPosts,
+  createreadingPost,
+  updatePost,
+} from '../controllers/posts.js';
 const router = express.Router();
 
-router.get("/", readingPosts);
-router.post("/", createreadingPost);
+router.get('/', readingPosts);
+router.post('/', createreadingPost);
+router.patch('/:id', updatePost);
 
 export default router;

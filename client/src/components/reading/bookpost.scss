@@ -25,13 +25,42 @@ $font3: 'Pacifico', cursive;
     background: #7f5539;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    .edit-button {
+      position: absolute;
+      z-index: 5;
+      color: white;
+      right: 0px;
+      top: 0px;
+      height: 40px;
+      width: 30px;
+      border-top-right-radius: 20px;
+    }
+    .blank {
+      display: none;
+    }
+    .edit-container {
+      position: absolute;
+      height: 300px;
+      width: 250px;
+      right: 0px;
+      top: 30px;
+      border-radius: 10px;
+      z-index: 4;
+      box-shadow: 0px 5px 20px black;
+      background: #b08868;
+      box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.637);
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
     h4 {
       position: absolute;
       bottom: 10%;
       left: 20px;
       color: white;
-      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.39);
+      text-shadow: 0px 2px 10px rgb(0, 0, 0);
       z-index: 2;
+      font-family: $font2;
+      font-size: 25 px;
     }
     .post-image {
       position: absolute;
@@ -48,6 +77,7 @@ $font3: 'Pacifico', cursive;
       position: relative;
       top: 5%;
       left: 20px;
+      font-family: $font2;
     }
     .pagecount-p {
       position: relative;
@@ -60,10 +90,32 @@ $font3: 'Pacifico', cursive;
       left: 20px;
       font-size: 10px;
     }
-    .delete-button {
+    .button-container {
       position: absolute;
       bottom: 0%;
-      right: 5px;
+      right: 0px;
+      background: none;
+      width: 120px;
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      .done-button {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 50%;
+        width: 50%;
+      }
+      .delete-button {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 50%;
+        width: 50%;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
     }
   }
 }
