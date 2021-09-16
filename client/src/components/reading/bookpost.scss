@@ -126,6 +126,51 @@ $font3: 'Pacifico', cursive;
     .blank-delete {
       display: none;
     }
+    .done-reading-cont {
+      position: absolute;
+      height: 60px;
+      left: 2.5%;
+      width: 95%;
+      border-radius: 20px;
+      background: #7f5539;
+      bottom: 0px;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.568);
+      z-index: 5;
+      p {
+        height: 100%;
+        width: 50%;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #e6ccb2;
+        font-family: $font2;
+      }
+      .delete-buttons {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        flex-direction: row;
+        background: none;
+        .no-btn,
+        .yes-btn {
+          position: relative;
+          height: 100%;
+          width: 50%;
+          font-family: $font2;
+          font-size: 15px;
+          color: #e6ccb2;
+          background: none;
+          transition: 0.5s;
+          &:hover {
+            color: #b08868;
+          }
+        }
+      }
+    }
     .delete-book-container {
       position: absolute;
       height: 60px;
@@ -140,7 +185,7 @@ $font3: 'Pacifico', cursive;
       z-index: 4;
       p {
         height: 100%;
-        width: 60%;
+        width: 50%;
         font-size: 20px;
         display: flex;
         align-items: center;
@@ -152,7 +197,7 @@ $font3: 'Pacifico', cursive;
       .delete-buttons {
         position: relative;
         height: 100%;
-        width: 35%;
+        width: 50%;
         flex-direction: row;
         background: none;
         .no-btn,

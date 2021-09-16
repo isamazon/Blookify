@@ -19,6 +19,9 @@ const BookPost = ({ post }) => {
   const ToggleDelete = () => {
     setDeleteBook(!deleteBook);
   };
+  const ToggleRead = () => {
+    setReadBook(!readBook);
+  };
   return (
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
       <div className="inner-card">
@@ -40,20 +43,26 @@ const BookPost = ({ post }) => {
           <p className="pagecount-p">Page count: {post.pageLength}</p>
           <div className="button-container">
             {/* Done reading button */}
-            <Button className="done-button">
+            <Button className="done-button" onClick={ToggleRead}>
               <FaCheck size="20px" />
             </Button>
-            <div className="done-reading-cont">
-              <Button className="yes-btn">yes</Button>
-              <Button className="no-btn" onClick={ToggleDelete}>
-                no
-              </Button>
-            </div>
             {/* Delete book  */}
             <Button className="delete-button" onClick={ToggleDelete}>
               <DeleteIcon fontSize="medium" />
             </Button>
           </div>
+          {/* Read container */}
+          <Slide down>
+            <div className={readBook ? 'blank-delete' : 'done-reading-cont'}>
+              <p>Finished reading?</p>
+              <div className="delete-buttons">
+                <Button className="yes-btn">yes</Button>
+                <Button className="no-btn" onClick={ToggleRead}>
+                  no
+                </Button>
+              </div>
+            </div>
+          </Slide>
           {/* Delete book modal */}
           <Slide down>
             <div
