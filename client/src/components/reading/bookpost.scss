@@ -47,10 +47,14 @@ $font3: 'Pacifico', cursive;
       border-radius: 10px;
       z-index: 4;
       box-shadow: 0px 5px 20px black;
+      padding: 10px 0px;
       background: #b08868;
       box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.637);
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
     h4 {
       position: absolute;
@@ -73,6 +77,8 @@ $font3: 'Pacifico', cursive;
   .bottom-info {
     position: relative;
     height: 45%;
+    display: flex;
+    flex-direction: column;
     h3 {
       position: relative;
       top: 5%;
@@ -115,6 +121,53 @@ $font3: 'Pacifico', cursive;
         border-bottom-right-radius: 20px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 0px;
+      }
+    }
+    .blank-delete {
+      display: none;
+    }
+    .delete-book-container {
+      position: absolute;
+      height: 60px;
+      left: 2.5%;
+      width: 95%;
+      border-radius: 20px;
+      background: #7f5539;
+      bottom: 0px;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.568);
+      z-index: 4;
+      p {
+        height: 100%;
+        width: 60%;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #e6ccb2;
+        font-family: $font2;
+      }
+      .delete-buttons {
+        position: relative;
+        height: 100%;
+        width: 35%;
+        flex-direction: row;
+        background: none;
+        .no-btn,
+        .yes-btn {
+          position: relative;
+          height: 100%;
+          width: 50%;
+          font-family: $font2;
+          font-size: 15px;
+          color: #e6ccb2;
+          transition: 0.5s;
+          &:hover {
+            color: #b08868;
+          }
+        }
       }
     }
   }

@@ -23,9 +23,9 @@ const CurrentlyReading = () => {
     <Container fluid className="main-container">
       <Nav />
       <Row className="profile-row">
+        {/* <h1>Currently reading:</h1> */}
         <Sidebar />
         <div className="reading-container">
-          <h1>Currently reading:</h1>
           {posts.map((post) => (
             <BookPost key={post._id} post={post} />
           ))}

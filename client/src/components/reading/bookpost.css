@@ -51,11 +51,22 @@
   z-index: 4;
   -webkit-box-shadow: 0px 5px 20px black;
           box-shadow: 0px 5px 20px black;
+  padding: 10px 0px;
   background: #b08868;
   -webkit-box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.637);
           box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.637);
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .book-card .top-info h4 {
@@ -80,6 +91,13 @@
 .book-card .bottom-info {
   position: relative;
   height: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .book-card .bottom-info h3 {
@@ -135,5 +153,75 @@
   border-bottom-right-radius: 20px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+.book-card .bottom-info .blank-delete {
+  display: none;
+}
+
+.book-card .bottom-info .delete-book-container {
+  position: absolute;
+  height: 60px;
+  left: 2.5%;
+  width: 95%;
+  border-radius: 20px;
+  background: #7f5539;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.568);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.568);
+  z-index: 4;
+}
+
+.book-card .bottom-info .delete-book-container p {
+  height: 100%;
+  width: 60%;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #e6ccb2;
+  font-family: "Lobster", cursive;
+}
+
+.book-card .bottom-info .delete-book-container .delete-buttons {
+  position: relative;
+  height: 100%;
+  width: 35%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: none;
+}
+
+.book-card .bottom-info .delete-book-container .delete-buttons .no-btn,
+.book-card .bottom-info .delete-book-container .delete-buttons .yes-btn {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  font-family: "Lobster", cursive;
+  font-size: 15px;
+  color: #e6ccb2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.book-card .bottom-info .delete-book-container .delete-buttons .no-btn:hover,
+.book-card .bottom-info .delete-book-container .delete-buttons .yes-btn:hover {
+  color: #b08868;
 }
 /*# sourceMappingURL=bookpost.css.map */

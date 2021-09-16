@@ -11,8 +11,13 @@ import './bookpost.css';
 const BookPost = ({ post }) => {
   // Setting the edit container on/off
   const [BookEdit, setBookEdit] = useState('false');
+  const [deleteBook, setDeleteBook] = useState('false');
+  const [readBook, setReadBook] = useState('false');
   const ToggleEdit = () => {
     setBookEdit(!BookEdit);
+  };
+  const ToggleDelete = () => {
+    setDeleteBook(!deleteBook);
   };
   return (
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
@@ -21,6 +26,7 @@ const BookPost = ({ post }) => {
           <Button className="edit-button" onClick={ToggleEdit}>
             <MoreHorizon fontSize="large" />
           </Button>
+          {/* Book edit container */}
           <Slide bottom cascade>
             <div className={BookEdit ? 'blank' : 'edit-container'}>
               <h3>Edit book info!</h3>
@@ -33,14 +39,35 @@ const BookPost = ({ post }) => {
           <h3>Author: {post.author}</h3>
           <p className="pagecount-p">Page count: {post.pageLength}</p>
           <div className="button-container">
+            {/* Done reading button */}
             <Button className="done-button">
               <FaCheck size="20px" />
             </Button>
-            <Button className="delete-button">
+            <div className="done-reading-cont">
+              <Button className="yes-btn">yes</Button>
+              <Button className="no-btn" onClick={ToggleDelete}>
+                no
+              </Button>
+            </div>
+            {/* Delete book  */}
+            <Button className="delete-button" onClick={ToggleDelete}>
               <DeleteIcon fontSize="medium" />
             </Button>
           </div>
-
+          {/* Delete book modal */}
+          <Slide down>
+            <div
+              className={deleteBook ? 'blank-delete' : 'delete-book-container'}
+            >
+              <p>Delete book?</p>
+              <div className="delete-buttons">
+                <Button className="yes-btn">yes</Button>
+                <Button className="no-btn" onClick={ToggleDelete}>
+                  no
+                </Button>
+              </div>
+            </div>
+          </Slide>
           <p className="date-added">
             Book added {moment(post.createdAt).fromNow()}
           </p>
