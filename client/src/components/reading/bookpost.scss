@@ -1,10 +1,10 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
-$font1: "Recursive", sans-serif;
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-$font2: "Lobster", cursive;
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-$font3: "Pacifico", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
+$font1: 'Recursive', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$font2: 'Lobster', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+$font3: 'Pacifico', cursive;
 
 .book-card {
   position: relative;
@@ -28,10 +28,18 @@ $font3: "Pacifico", cursive;
     border-top-right-radius: 20px;
     h4 {
       position: absolute;
-      bottom: 0%;
+      bottom: 10%;
       left: 20px;
       color: white;
       text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.39);
+      z-index: 2;
+    }
+    .post-image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
   }
   .bottom-info {
