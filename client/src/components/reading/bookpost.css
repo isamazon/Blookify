@@ -16,6 +16,13 @@
   border-radius: 20px;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.466);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.466);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.book-card .inner-card:hover {
+  -webkit-box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.719);
+          box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.719);
 }
 
 .book-card .top-info {
@@ -43,20 +50,15 @@
 
 .book-card .top-info .edit-container {
   position: absolute;
-  height: 300px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
   right: 0px;
-  top: 30px;
-  border-radius: 10px;
+  top: 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   z-index: 4;
-  -webkit-box-shadow: 0px 5px 20px black;
-          box-shadow: 0px 5px 20px black;
   padding: 10px 0px;
-  background: #b08868;
-  -webkit-box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.637);
-          box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.637);
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  background: #7f5539;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,10 +72,75 @@
 }
 
 .book-card .top-info .edit-container h3 {
-  position: relative;
+  position: absolute;
   font-family: "Lobster", cursive;
   color: #e6ccb2;
+  top: -9%;
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.555);
+}
+
+.book-card .top-info .edit-container .update-form {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.book-card .top-info .edit-container .update-form .update-title {
+  position: relative;
+  text-align: center;
+  color: #e6ccb2;
+  font-family: "Recursive", sans-serif;
+}
+
+.book-card .top-info .edit-container .update-form .input {
+  position: relative;
+  width: 50%;
+  border: none;
+  background: #b08868;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  padding-left: 10px;
+  color: #e6ccb2;
+}
+
+.book-card .top-info .edit-container .update-form .input:focus {
+  outline: none;
+}
+
+.book-card .top-info .edit-container .update-form .update-button {
+  position: relative;
+  width: 50%;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  background: #e6ccb2;
+  color: #7f5539;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.book-card .top-info .edit-container .update-form .update-button:hover {
+  background: #3b2719;
+  color: #e6ccb2;
 }
 
 .book-card .top-info h4 {
@@ -91,8 +158,17 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.book-card .top-info .post-image:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 
 .book-card .bottom-info {

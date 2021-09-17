@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
-import { Slide } from 'react-reveal';
+import { Zoom, Slide } from 'react-reveal';
 import { FaCheck } from 'react-icons/fa';
 // CSS
 import './bookpost.css';
@@ -36,11 +36,22 @@ const BookPost = ({ post }) => {
             <MoreHorizon fontSize="large" />
           </Button>
           {/* Book edit container */}
-          <Slide bottom cascade>
+          <Zoom>
             <div className={BookEdit ? 'blank' : 'edit-container'}>
               <h3>Edit book info!</h3>
+              <form className="update-form">
+                <label className="update-title">Update title:</label>
+                <input className="input" type="text" name="title" />
+                <label className="update-title">Update author:</label>
+                <input className="input" type="text" name="author" />
+                <label className="update-title">Update Pg count:</label>
+                <input className="input" type="text" name="author" />
+                <button className="update-button" type="submit">
+                  Submit
+                </button>
+              </form>
             </div>
-          </Slide>
+          </Zoom>
           <h4>{post.title}</h4>
           <img className="post-image" src={post.selectedFile} alt="" />
         </div>

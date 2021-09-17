@@ -11,6 +11,7 @@ $font3: 'Pacifico', cursive;
   height: 550px;
   background: none;
   margin-bottom: 20px;
+
   .inner-card {
     position: relative;
     height: 100%;
@@ -18,6 +19,10 @@ $font3: 'Pacifico', cursive;
     background: #e6ccb2;
     border-radius: 20px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.466);
+    transition: 0.6s;
+    &:hover {
+      box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.719);
+    }
   }
   .top-info {
     position: relative;
@@ -40,26 +45,72 @@ $font3: 'Pacifico', cursive;
     }
     .edit-container {
       position: absolute;
-      height: 300px;
-      width: 250px;
+      height: 100%;
+      width: 100%;
       right: 0px;
-      top: 30px;
-      border-radius: 10px;
+      top: 0px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
       z-index: 4;
-      box-shadow: 0px 5px 20px black;
       padding: 10px 0px;
-      background: #b08868;
-      box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.637);
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
+      background: #7f5539;
       display: flex;
       flex-direction: row;
       justify-content: center;
       h3 {
-        position: relative;
+        position: absolute;
         font-family: $font2;
         color: #e6ccb2;
+        top: -9%;
         text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.555);
+      }
+      .update-form {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .update-title {
+          position: relative;
+          text-align: center;
+          color: #e6ccb2;
+          font-family: $font1;
+        }
+        .input {
+          position: relative;
+          width: 50%;
+          border: none;
+          background: #b08868;
+          border-radius: 20px;
+          margin-bottom: 10px;
+          margin-top: -10px;
+          padding-left: 10px;
+          color: #e6ccb2;
+          &:focus {
+            outline: none;
+          }
+        }
+        .update-button {
+          position: relative;
+          width: 50%;
+          height: 30px;
+          border: none;
+          border-radius: 20px;
+          margin-top: 10px;
+          background: #e6ccb2;
+          color: #7f5539;
+          font-family: $font2;
+          font-size: 20px;
+          transition: 0.6s;
+          &:hover {
+            background: #3b2719;
+            color: #e6ccb2;
+          }
+        }
       }
     }
     h4 {
@@ -76,8 +127,13 @@ $font3: 'Pacifico', cursive;
       position: absolute;
       height: 100%;
       width: 100%;
+      filter: brightness(80%);
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
+      transition: 0.6s;
+      &:hover {
+        filter: brightness(100%);
+      }
     }
   }
   .bottom-info {
