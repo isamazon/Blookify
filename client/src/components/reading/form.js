@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 // dependencies
-import FileBase from "react-file-base64";
-import { Col } from "react-bootstrap";
+import FileBase from 'react-file-base64';
+import { Col } from 'react-bootstrap';
 // Redux dispatch
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 // CSS
-import "./profile.css";
+import './profile.css';
 //
-import { createPost } from "../../actions/posts";
+import { createPost } from '../../actions/posts';
 function Form() {
   const [bookData, setBookData] = useState({
-    title: "",
-    author: "",
-    pageLength: "",
-    selectedFile: "",
+    title: '',
+    author: '',
+    pageLength: '',
+    selectedFile: '',
   });
   const dispatch = useDispatch();
 

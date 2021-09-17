@@ -9,6 +9,7 @@ import { FaCheck } from 'react-icons/fa';
 // CSS
 import './bookpost.css';
 const BookPost = ({ post }) => {
+  const [currentId, setCurrentId] = useState(null);
   // Setting the edit container on/off
   const [BookEdit, setBookEdit] = useState('false');
   const [deleteBook, setDeleteBook] = useState('false');
@@ -26,7 +27,12 @@ const BookPost = ({ post }) => {
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
       <div className="inner-card">
         <div className="top-info">
-          <Button className="edit-button" onClick={ToggleEdit}>
+          <Button
+            className="edit-button"
+            onClick={() => {
+              ToggleEdit();
+            }}
+          >
             <MoreHorizon fontSize="large" />
           </Button>
           {/* Book edit container */}

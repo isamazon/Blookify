@@ -25,7 +25,7 @@
           align-items: center;
 }
 
-.main-container .profile-row h1 {
+.main-container .profile-row .currently-reading-h1 {
   position: absolute;
   top: 8%;
   text-align: center;

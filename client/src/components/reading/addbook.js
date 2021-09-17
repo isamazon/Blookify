@@ -1,25 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import "./profile.css";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import './profile.css';
+import axios from 'axios';
 // Redux
-import { useSelector } from "react-redux";
-
-import noimg from "../../assets/Capture.PNG";
+import { useDispatch } from 'react-redux';
+import { createPost } from '../../actions/posts';
+import noimg from '../../assets/Capture.PNG';
 
 // API url
 
 // components
-import Search from "./search";
-import Nav from "../navbar";
+import Search from './search';
+import Nav from '../navbar';
 
-import Booklist from "./booklist";
-import Sidebar from "./sidebar";
+import Booklist from './booklist';
+import Sidebar from './sidebar';
 
-function Profile(props) {
+function Profile() {
   const [section, setSection] = useState([]);
-  const [input, setInput] = useState("");
-  const [bookContainer, setBook] = useState([]);
+  const [input, setInput] = useState('');
 
   const changeInput = (e) => {
     setInput(e.target.value);
@@ -43,22 +42,19 @@ function Profile(props) {
     };
     request();
   }, [input, setInput]);
+  //
+  // const [bookData, setBookData] = useState({
+  //   title: '',
+  //   author: '',
+  //   pageLength: '',
+  //   selectedFile: '',
+  // });
+  // const dispatch = useDispatch();
 
-  // Function to send the book to another component
-  const moveBook = (data) => {
-    data.preventDefault();
-    console.log("button clicked");
-    const newBook = {
-      books: "data",
-    };
-    axios.put();
-    setBook({});
-    console.log(setBook);
-  };
-
-  // Redux/Selectors
-  const posts = useSelector((state) => state.posts);
-  console.log(posts);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   dispatch(createPost(bookData));
+  // };
   return (
     <Container fluid className="main-container">
       <Nav />
@@ -77,20 +73,21 @@ function Profile(props) {
           <div className="booklist-cont">
             {section.map((data) => (
               <Booklist
-                key={data.id ? data.id : ""}
+                key={data.id ? data.id : ''}
                 // handle function
-                onclick2={moveBook}
+                // img data/value
                 imgurl={data.volumeInfo.imageLinks}
                 alt={data.volumeInfo.title}
+                // title data/value
                 title={
                   data.volumeInfo.title
                     ? data.volumeInfo.title
-                    : "no title found"
+                    : 'no title found'
                 }
                 author={
                   data.volumeInfo.authors
                     ? data.volumeInfo.authors
-                    : "No author found"
+                    : 'No author found'
                 }
                 pgcount={data.volumeInfo.pageCount}
                 link={data.selfLink}

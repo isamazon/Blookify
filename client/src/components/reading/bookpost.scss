@@ -55,6 +55,12 @@ $font3: 'Pacifico', cursive;
       display: flex;
       flex-direction: row;
       justify-content: center;
+      h3 {
+        position: relative;
+        font-family: $font2;
+        color: #e6ccb2;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.555);
+      }
     }
     h4 {
       position: absolute;

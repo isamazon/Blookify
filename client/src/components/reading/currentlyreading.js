@@ -23,7 +23,7 @@ const CurrentlyReading = () => {
     <Container fluid className="main-container">
       <Nav />
       <Row className="profile-row">
-        {/* <h1>Currently reading:</h1> */}
+        {/* <h1 className='currently-reading-h1'>Currently reading:</h1> */}
         <Sidebar />
         <div className="reading-container">
           {posts.map((post) => (
