@@ -73,7 +73,7 @@ function Profile() {
           <div className="booklist-cont">
             {section.map((data) => (
               <Booklist
-                key={data.id ? data.id : ''}
+                key={data.id ? data.id : ' '}
                 // handle function
                 // img data/value
                 imgurl={data.volumeInfo.imageLinks}

@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Container, Col, Row } from "react-bootstrap";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import "./styles/landingpage.css";
-import { FullPage, Slide } from "react-full-page";
-import Svg1 from "./components/svgs/reading1";
-import Nav from "./components/navbar";
-import Test from "./components/test";
+import React, { useState, useEffect } from 'react';
+import { Container, Col, Row } from 'react-bootstrap';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './styles/landingpage.css';
+import { FullPage, Slide } from 'react-full-page';
+import Svg1 from './components/svgs/reading1';
+import Nav from './components/navbar';
+import Test from './components/test';
 // SVGs
 
 function Home() {
   const [results, setResults] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:5000/books").then((response) => {
-      setResults(response.data);
-    });
-  }, []);
 
   return (
     <div>

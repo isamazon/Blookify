@@ -1,9 +1,9 @@
-import React from "react";
-import Fade from "react-reveal/Fade";
-import Slide from "react-reveal/Slide";
-import { useSelector } from "react-redux";
+import React from 'react';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+import { useSelector } from 'react-redux';
 // Components
-import Form from "./form";
+import Form from './form';
 class BookModal extends React.Component {
   // Data values
   // Redux
@@ -11,7 +11,8 @@ class BookModal extends React.Component {
     super(props);
     this.state = {
       show: false,
-      modal: " ",
+      show1: true,
+      modal: '',
     };
   }
 
@@ -24,21 +25,21 @@ class BookModal extends React.Component {
           onClick={() => {
             this.setState({
               show: true,
-              modal: "modal",
+              modal: 'modal',
             });
           }}
         >
           <p>Add your own book</p>
         </button>
-        <Fade when={this.state.show}>
+        <Fade opposite when={this.state.show}>
           <div className={this.state.modal}>
-            <Slide up when={this.state.show}>
+            <Slide up opposite when={this.state.show1}>
               <div className="modal-box">
                 <div
                   onClick={() => {
                     this.setState({
                       show: false,
-                      modal: "",
+                      modal: '',
                     });
                   }}
                   className="closebutton"
@@ -46,7 +47,14 @@ class BookModal extends React.Component {
                   X
                 </div>
                 {/* Form inside modal */}
-                <Form />
+                <Form
+                // closeModal={() => {
+                //   this.setState({
+                //     show: false,
+                //     show1: true,
+                //   });
+                // }}
+                />
               </div>
             </Slide>
           </div>

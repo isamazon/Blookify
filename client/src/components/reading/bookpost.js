@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col } from 'react-bootstrap';
 import { Button } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
-import { Zoom, Slide } from 'react-reveal';
+import { Zoom, Slide, Flip } from 'react-reveal';
+import Fade from 'react-reveal/Fade';
 import { FaCheck } from 'react-icons/fa';
+
+// Actions
+import { deletePost } from '../../actions/posts';
+import { useDispatch } from 'react-redux';
+// components
+import EditForm from './editform';
 // CSS
 import './bookpost.css';
-const BookPost = ({ post }) => {
-  const [currentId, setCurrentId] = useState(null);
+
+const BookPost = ({ post, currentId, setCurrentId }) => {
   // Setting the edit container on/off
   const [BookEdit, setBookEdit] = useState('false');
   const [deleteBook, setDeleteBook] = useState('false');
   const [readBook, setReadBook] = useState('false');
+
   const ToggleEdit = () => {
     setBookEdit(!BookEdit);
   };
@@ -23,6 +31,7 @@ const BookPost = ({ post }) => {
   const ToggleRead = () => {
     setReadBook(!readBook);
   };
+  const dispatch = useDispatch();
   return (
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
       <div className="inner-card">
@@ -31,27 +40,18 @@ const BookPost = ({ post }) => {
             className="edit-button"
             onClick={() => {
               ToggleEdit();
+              setCurrentId(post._id);
             }}
           >
             <MoreHorizon fontSize="large" />
           </Button>
           {/* Book edit container */}
-          <Zoom>
+          <Fade opposite when={!BookEdit}>
             <div className={BookEdit ? 'blank' : 'edit-container'}>
               <h3>Edit book info!</h3>
-              <form className="update-form">
-                <label className="update-title">Update title:</label>
-                <input className="input" type="text" name="title" />
-                <label className="update-title">Update author:</label>
-                <input className="input" type="text" name="author" />
-                <label className="update-title">Update Pg count:</label>
-                <input className="input" type="text" name="author" />
-                <button className="update-button" type="submit">
-                  Submit
-                </button>
-              </form>
+              <EditForm currentId={currentId} />
             </div>
-          </Zoom>
+          </Fade>
           <h4>{post.title}</h4>
           <img className="post-image" src={post.selectedFile} alt="" />
         </div>
@@ -69,7 +69,7 @@ const BookPost = ({ post }) => {
             </Button>
           </div>
           {/* Read container */}
-          <Slide down>
+          <Flip top oppposite when={!readBook}>
             <div className={readBook ? 'blank-delete' : 'done-reading-cont'}>
               <p>Finished reading?</p>
               <div className="delete-buttons">
@@ -79,21 +79,34 @@ const BookPost = ({ post }) => {
                 </Button>
               </div>
             </div>
-          </Slide>
+          </Flip>
           {/* Delete book modal */}
-          <Slide down>
+          <Flip top opposite when={!deleteBook}>
             <div
               className={deleteBook ? 'blank-delete' : 'delete-book-container'}
             >
               <p>Delete book?</p>
               <div className="delete-buttons">
-                <Button className="yes-btn">yes</Button>
-                <Button className="no-btn" onClick={ToggleDelete}>
+                <Button
+                  className="yes-btn"
+                  onClick={() => {
+                    dispatch(deletePost(post._id));
+                    window.location.reload(false);
+                  }}
+                >
+                  yes
+                </Button>
+                <Button
+                  className="no-btn"
+                  onClick={() => {
+                    ToggleDelete();
+                  }}
+                >
                   no
                 </Button>
               </div>
             </div>
-          </Slide>
+          </Flip>
           <p className="date-added">
             Book added {moment(post.createdAt).fromNow()}
           </p>

@@ -10,7 +10,7 @@ $font3: 'Pacifico', cursive;
   position: relative;
   height: 550px;
   background: none;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   .inner-card {
     position: relative;
@@ -60,9 +60,9 @@ $font3: 'Pacifico', cursive;
       h3 {
         position: absolute;
         font-family: $font2;
-        color: #e6ccb2;
+        color: #3b2719;
         top: -9%;
-        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.555);
+        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.336);
       }
       .update-form {
         position: relative;

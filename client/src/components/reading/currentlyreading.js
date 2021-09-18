@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 // Components
@@ -8,13 +8,23 @@ import BookPost from './bookpost';
 import Emptybook from './emptybook';
 // redux
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { getPosts } from '../../actions/posts';
 // styles
 import './profile.css';
 import './bookpost.css';
 
 const CurrentlyReading = () => {
+  const [currentId, setCurrentId] = useState(null);
+  const dispatch = useDispatch();
+
+  // Retrieving post Data
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [currentId, dispatch]);
+
   const posts = useSelector((state) => state.posts);
-  console.log(posts);
+
   // Ternary operator keeping page blank if no posts are there
   return !posts.length ? (
     // Component that has an empty box since no books have been posted
@@ -27,7 +37,13 @@ const CurrentlyReading = () => {
         <Sidebar />
         <div className="reading-container">
           {posts.map((post) => (
-            <BookPost key={post._id} post={post} />
+            <BookPost
+              key={post._id}
+              post={post}
+              setCurrentId={setCurrentId}
+              // This is only from edit form component
+              currentId={currentId}
+            />
           ))}
         </div>
       </Row>
