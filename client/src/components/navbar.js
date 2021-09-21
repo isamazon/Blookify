@@ -1,7 +1,7 @@
-import React, { useState, Component } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
-import "../styles/navbar.css";
+import React, { useState, Component } from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineMenu } from 'react-icons/ai';
+import '../styles/navbar.css';
 
 function Nav() {
   const [click, setClick] = useState(false);
@@ -24,7 +24,7 @@ function Nav() {
           Login
         </Link>
       </nav>
-      <div className={click ? "side-menu-container" : "side-menu-closed"}>
+      <div className={click ? 'side-menu-container' : 'side-menu-closed'}>
         <h1 onClick={handleClick} className="close-btn">
           X
         </h1>
@@ -35,12 +35,12 @@ function Nav() {
         <Link to="/Addbook" className="menu-link-1 link-mid">
           Add a book!
         </Link>
-        {/* <Link to="/currentlyreading" className="menu-link-1">
+        <Link to="/currentlyreading" className="menu-link-1">
           Currently reading
         </Link>
-        <Link to="/" className="menu-link-1 link-mid">
+        <Link to="/read" className="menu-link-1 link-mid">
           My finished books
-        </Link> */}
+        </Link>
         <Link className="menu-link-1">About</Link>
       </div>
     </div>
