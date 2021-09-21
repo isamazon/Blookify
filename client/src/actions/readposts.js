@@ -11,9 +11,9 @@ export const getReadBook = () => async (dispatch) => {
 };
 
 // Create post function
-export const createReadBook = (post) => async (dispatch) => {
+export const createReadBook = (read) => async (dispatch) => {
   try {
-    const { data } = await api.createReadBook(post);
+    const { data } = await api.createReadBook(read);
 
     dispatch({ type: 'CREATE_READ_BOOK', payload: data });
   } catch (error) {

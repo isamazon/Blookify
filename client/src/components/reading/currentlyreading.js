@@ -28,7 +28,11 @@ const CurrentlyReading = () => {
   // Ternary operator keeping page blank if no posts are there
   return !posts.length ? (
     // Component that has an empty box since no books have been posted
-    <Emptybook />
+    <Emptybook
+      emptybookp="No Books has been uploaded here yet!"
+      routeto="/Addbook"
+      linktext="Add a book here!"
+    />
   ) : (
     <Container fluid className="main-container">
       <Nav />

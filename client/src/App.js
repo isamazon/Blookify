@@ -11,13 +11,14 @@ import Currently from './components/reading/currentlyreading';
 import Read from './components/read/read.js';
 // redux
 import { getPosts } from './actions/posts.js';
+import { getReadBook } from './actions/readposts.js';
 import { useDispatch } from 'react-redux';
 function App() {
   // Dispatch
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getPosts());
+    dispatch(getReadBook());
   }, [dispatch]);
   return (
     <div className="app">

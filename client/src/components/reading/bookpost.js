@@ -21,7 +21,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
   // Data for read Books
   const readBookData = {
     title: post.title,
-    author: post.author[0],
+    author: post.author,
     pageLength: post.pageLength,
     selectedFile: post.selectedFile,
   };
