@@ -10,6 +10,7 @@ import { FaCheck } from 'react-icons/fa';
 
 // Actions
 import { deletePost } from '../../actions/posts';
+import { createReadBook } from '../../actions/readposts';
 import { useDispatch } from 'react-redux';
 // components
 import EditForm from './editform';
@@ -17,6 +18,14 @@ import EditForm from './editform';
 import './bookpost.css';
 
 const BookPost = ({ post, currentId, setCurrentId }) => {
+  // Data for read Books
+  const readBookData = {
+    title: post.title,
+    author: post.author[0],
+    pageLength: post.pageLength,
+    selectedFile: post.selectedFile,
+  };
+  const dispatch = useDispatch();
   // Setting the edit container on/off
   const [BookEdit, setBookEdit] = useState('false');
   const [deleteBook, setDeleteBook] = useState('false');
@@ -31,7 +40,12 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
   const ToggleRead = () => {
     setReadBook(!readBook);
   };
-  const dispatch = useDispatch();
+
+  // Submit function to send read bookdata to be sent to api/route
+  const handleSubmit = () => {
+    console.log(readBookData);
+    dispatch(createReadBook(readBookData));
+  };
   return (
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
       <div className="inner-card">
@@ -73,7 +87,16 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
             <div className={readBook ? 'blank-delete' : 'done-reading-cont'}>
               <p>Finished reading?</p>
               <div className="delete-buttons">
-                <Button className="yes-btn">yes</Button>
+                <Button
+                  className="yes-btn"
+                  onClick={(e) => {
+                    handleSubmit();
+                    dispatch(deletePost(post._id));
+                    window.location.reload(false);
+                  }}
+                >
+                  yes
+                </Button>
                 <Button className="no-btn" onClick={ToggleRead}>
                   no
                 </Button>

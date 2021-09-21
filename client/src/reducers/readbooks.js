@@ -1,10 +1,10 @@
-export default (read = [], action) => {
+export default (posts = [], action) => {
   switch (action.type) {
     case 'FETCH_READ_BOOKS':
       return action.payload;
     case 'CREATE_READ_BOOK':
-      return [...read, action.payload];
+      return [...posts, action.payload];
     default:
-      return read;
+      return posts;
   }
 };

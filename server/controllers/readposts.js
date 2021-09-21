@@ -23,6 +23,6 @@ export const createReadPost = async (req, res) => {
 
     res.status(201).json(newReadPost);
   } catch (error) {
-    res.status(409).json({ message: error.message });
+    res.status(409).json({ message: error });
   }
 };
