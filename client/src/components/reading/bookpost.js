@@ -48,93 +48,97 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
   };
   return (
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
-      <div className="inner-card">
-        <div className="top-info">
-          <Button
-            className="edit-button"
-            onClick={() => {
-              ToggleEdit();
-              setCurrentId(post._id);
-            }}
-          >
-            <MoreHorizon fontSize="large" />
-          </Button>
-          {/* Book edit container */}
-          <Fade opposite when={!BookEdit}>
-            <div className={BookEdit ? 'blank' : 'edit-container'}>
-              <h3>Edit book info!</h3>
-              <EditForm currentId={currentId} />
-            </div>
-          </Fade>
-          <h4>{post.title}</h4>
-          <img className="post-image" src={post.selectedFile} alt="" />
-        </div>
-        <div className="bottom-info">
-          <h3>Author: {post.author}</h3>
-          <p className="pagecount-p">Page count: {post.pageLength}</p>
-          <div className="button-container">
-            {/* Done reading button */}
-            <Button className="done-button" onClick={ToggleRead}>
-              <FaCheck size="20px" />
-            </Button>
-            {/* Delete book  */}
-            <Button className="delete-button" onClick={ToggleDelete}>
-              <DeleteIcon fontSize="medium" />
-            </Button>
-          </div>
-          {/* Read container */}
-          <Flip top oppposite when={!readBook}>
-            <div className={readBook ? 'blank-delete' : 'done-reading-cont'}>
-              <p>Finished reading?</p>
-              <div className="delete-buttons">
-                <Button
-                  className="yes-btn"
-                  onClick={(e) => {
-                    handleSubmit();
-                    dispatch(deletePost(post._id));
-                    window.location.reload(false);
-                  }}
-                >
-                  yes
-                </Button>
-                <Button className="no-btn" onClick={ToggleRead}>
-                  no
-                </Button>
-              </div>
-            </div>
-          </Flip>
-          {/* Delete book modal */}
-          <Flip top opposite when={!deleteBook}>
-            <div
-              className={deleteBook ? 'blank-delete' : 'delete-book-container'}
+      <Slide right>
+        <div className="inner-card">
+          <div className="top-info">
+            <Button
+              className="edit-button"
+              onClick={() => {
+                ToggleEdit();
+                setCurrentId(post._id);
+              }}
             >
-              <p>Delete book?</p>
-              <div className="delete-buttons">
-                <Button
-                  className="yes-btn"
-                  onClick={() => {
-                    dispatch(deletePost(post._id));
-                    window.location.reload(false);
-                  }}
-                >
-                  yes
-                </Button>
-                <Button
-                  className="no-btn"
-                  onClick={() => {
-                    ToggleDelete();
-                  }}
-                >
-                  no
-                </Button>
+              <MoreHorizon fontSize="large" />
+            </Button>
+            {/* Book edit container */}
+            <Fade opposite when={!BookEdit}>
+              <div className={BookEdit ? 'blank' : 'edit-container'}>
+                <h3>Edit book info!</h3>
+                <EditForm currentId={currentId} />
               </div>
+            </Fade>
+            <h4>{post.title}</h4>
+            <img className="post-image" src={post.selectedFile} alt="" />
+          </div>
+          <div className="bottom-info">
+            <h3>Author: {post.author}</h3>
+            <p className="pagecount-p">Page count: {post.pageLength}</p>
+            <div className="button-container">
+              {/* Done reading button */}
+              <Button className="done-button" onClick={ToggleRead}>
+                <FaCheck size="20px" />
+              </Button>
+              {/* Delete book  */}
+              <Button className="delete-button" onClick={ToggleDelete}>
+                <DeleteIcon fontSize="medium" />
+              </Button>
             </div>
-          </Flip>
-          <p className="date-added">
-            Book added {moment(post.createdAt).fromNow()}
-          </p>
+            {/* Read container */}
+            <Flip top oppposite when={!readBook}>
+              <div className={readBook ? 'blank-delete' : 'done-reading-cont'}>
+                <p>Finished reading?</p>
+                <div className="delete-buttons">
+                  <Button
+                    className="yes-btn"
+                    onClick={(e) => {
+                      handleSubmit();
+                      dispatch(deletePost(post._id));
+                      window.location.reload(false);
+                    }}
+                  >
+                    yes
+                  </Button>
+                  <Button className="no-btn" onClick={ToggleRead}>
+                    no
+                  </Button>
+                </div>
+              </div>
+            </Flip>
+            {/* Delete book modal */}
+            <Flip top opposite when={!deleteBook}>
+              <div
+                className={
+                  deleteBook ? 'blank-delete' : 'delete-book-container'
+                }
+              >
+                <p>Delete book?</p>
+                <div className="delete-buttons">
+                  <Button
+                    className="yes-btn"
+                    onClick={() => {
+                      dispatch(deletePost(post._id));
+                      window.location.reload(false);
+                    }}
+                  >
+                    yes
+                  </Button>
+                  <Button
+                    className="no-btn"
+                    onClick={() => {
+                      ToggleDelete();
+                    }}
+                  >
+                    no
+                  </Button>
+                </div>
+              </div>
+            </Flip>
+            <p className="date-added">
+              Book added {moment(post.createdAt).fromNow()}
+            </p>
+          </div>
         </div>
-      </div>
+      </Slide>
     </Col>
   );
 };

@@ -12,7 +12,7 @@ import '../reading/bookpost.css';
 
 const Read = () => {
   const readBooks = useSelector((state) => state.read);
-  console.log(readBooks);
+  // console.log(readBooks);
 
   return (
     <Container fluid className="main-container">

@@ -520,6 +520,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: none;
+  overflow-x: hidden;
 }
 
 .main-container .profile-row .blank-reading-container {

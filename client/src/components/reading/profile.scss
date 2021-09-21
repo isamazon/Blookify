@@ -341,6 +341,7 @@ $font3: 'Pacifico', cursive;
       flex-direction: row;
       flex-wrap: wrap;
       background: none;
+      overflow-x: hidden;
     }
     .blank-reading-container {
       position: relative;
