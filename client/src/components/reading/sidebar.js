@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { AiFillHome } from "react-icons/ai";
-import Booksvg from "../svgs/booksvg";
-import Readsvg from "../svgs/read";
-import Mag from "../svgs/add";
+import React, { Component } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai';
+import Booksvg from '../svgs/booksvg';
+import Readsvg from '../svgs/read';
+import Mag from '../svgs/add';
 // React reveal
-import Slide from "react-reveal/Slide";
-import Fade from "react-reveal/Fade";
-import "./profile.css";
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+import './profile.css';
 
 class Sidebar extends React.Component {
   render() {
@@ -31,7 +31,7 @@ class Sidebar extends React.Component {
               </Fade>
               <Slide top>
                 <li className="nav-items">
-                  <Link to="/" className="link-area">
+                  <Link to="/read" className="link-area">
                     <Readsvg classname="svg" width="100%" height="100%" />
                     <p>Read </p>
                   </Link>

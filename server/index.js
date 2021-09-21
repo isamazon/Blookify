@@ -1,21 +1,23 @@
-import express from "express";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import cors from "cors";
+import express from 'express';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import cors from 'cors';
 
-import readingRoutes from "./routes/reading.js";
+import readingRoutes from './routes/reading.js';
+import readRoutes from './routes/read.js';
 
 const app = express();
 
-app.use(bodyParser.json({ limit: "30mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(bodyParser.json({ limit: '30mb', extended: true }));
+app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 // Endpoints
-app.use("/reading", readingRoutes);
+app.use('/reading', readingRoutes);
+app.use('/read', readRoutes);
 
 const CONNECTION_URL =
-  "mongodb+srv://isamazon:Bighead0622@cluster0.si8ft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  'mongodb+srv://isamazon:Bighead0622@cluster0.si8ft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
 mongoose
@@ -27,4 +29,4 @@ mongoose
   )
   .catch((error) => console.log(`${error} did not connect`));
 
-mongoose.set("useFindAndModify", false);
+mongoose.set('useFindAndModify', false);

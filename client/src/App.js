@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
-import "./App.css";
+import React, { useEffect } from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import './App.css';
 // Main pages
 
-import Home from "./Home";
-import Test from "./components/test";
-import Login from "./components/login/login";
-import Addbook from "./components/reading/addbook";
-import Currently from "./components/reading/currentlyreading";
-
+import Home from './Home';
+import Test from './components/test';
+import Login from './components/login/login';
+import Addbook from './components/reading/addbook';
+import Currently from './components/reading/currentlyreading';
+import Read from './components/read/read.js';
 // redux
-import { getPosts } from "./actions/posts.js";
-import { useDispatch } from "react-redux";
+import { getPosts } from './actions/posts.js';
+import { useDispatch } from 'react-redux';
 function App() {
   // Dispatch
   const dispatch = useDispatch();
@@ -26,6 +26,7 @@ function App() {
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Addbook" component={Addbook} />
         <Route exact path="/currentlyreading" component={Currently} />
+        <Route exact path="/read" component={Read} />
         <Route path="*"></Route>
       </Switch>
     </div>
