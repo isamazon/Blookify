@@ -13,7 +13,7 @@ import './profile.css';
 class Sidebar extends React.Component {
   render() {
     return (
-      <Col xl={1} className="sidebar-container">
+      <Col xl={1} lg={12} className="sidebar-container">
         <Fade>
           <div className="nav-side-bar">
             <Link to="/" className="home-link">
@@ -46,7 +46,6 @@ class Sidebar extends React.Component {
                 </li>
               </Slide>
             </ul>
-            <ul className="logout-section"></ul>
           </div>
         </Fade>
       </Col>

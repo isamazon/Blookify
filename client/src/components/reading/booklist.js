@@ -18,6 +18,7 @@ function Booklist(props) {
     console.log(bookData);
     dispatch(createPost(bookData));
   };
+
   return (
     <div className="booklist">
       <img
@@ -35,7 +36,10 @@ function Booklist(props) {
       <div className="add-book">
         <p>Click to add book to reading</p>
         <FaCheckSquare
-          onClick={handleSubmit}
+          onClick={(e) => {
+            handleSubmit(e);
+            props.Toggle(e);
+          }}
           className="check-mark"
           size="40px"
         />

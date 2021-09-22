@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Fade, Row } from 'react-bootstrap';
 import './profile.css';
 import axios from 'axios';
 // Redux
@@ -12,7 +12,7 @@ import noimg from '../../assets/Capture.PNG';
 // components
 import Search from './search';
 import Nav from '../navbar';
-
+import AddedPopup from './addedpopup';
 import Booklist from './booklist';
 import Sidebar from './sidebar';
 
@@ -55,9 +55,23 @@ function Profile() {
   //   e.preventDefault();
   //   dispatch(createPost(bookData));
   // };
+
+  // Toggle the sucess modal
+  const [modal, setModal] = useState('false');
+  const toggleModal = () => {
+    setModal(!modal);
+  };
   return (
     <Container fluid className="main-container">
       <Nav />
+
+      <div className={modal ? 'empty' : 'added-modal'}>
+        <div className="added-inner-modal">
+          <h1>Successfully added book!</h1>
+          <button onClick={toggleModal}>X</button>
+        </div>
+      </div>
+
       <Row className="profile-row">
         <Sidebar />
         <Col xl={11} className="profile-cont">
@@ -91,6 +105,8 @@ function Profile() {
                 }
                 pgcount={data.volumeInfo.pageCount}
                 link={data.selfLink}
+                // Success modal
+                Toggle={toggleModal}
               />
             ))}
           </div>

@@ -47,7 +47,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
     dispatch(createReadBook(readBookData));
   };
   return (
-    <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
+    <Col xl={3} lg={4} sm={6} xs={12} className="book-card">
       <Zoom>
         <div className="inner-card">
           <div className="top-info">

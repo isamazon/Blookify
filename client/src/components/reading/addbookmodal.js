@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import Form from './form';
 class BookModal extends React.Component {
   // Data values
-  // Redux
+
   constructor(props) {
     super(props);
     this.state = {
