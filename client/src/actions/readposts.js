@@ -20,3 +20,13 @@ export const createReadBook = (read) => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const deleteReadBook = (id2) => async (dispatch) => {
+  try {
+    await api.deleteReadBook(id2);
+
+    dispatch({ type: 'DELETE_READ_BOOK', payload: id2 });
+  } catch (error) {
+    console.log(error);
+  }
+};

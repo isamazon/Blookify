@@ -48,7 +48,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
   };
   return (
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
-      <Slide right>
+      <Zoom>
         <div className="inner-card">
           <div className="top-info">
             <Button
@@ -138,7 +138,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
             </p>
           </div>
         </div>
-      </Slide>
+      </Zoom>
     </Col>
   );
 };

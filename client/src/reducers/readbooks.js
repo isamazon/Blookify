@@ -4,6 +4,8 @@ export default (read = [], action) => {
       return action.payload;
     case 'CREATE_READ_BOOK':
       return [...read, action.payload];
+    case 'DELETE_READ_BOOK':
+      return read.filter((post) => read._id !== action.payload);
     default:
       return read;
   }

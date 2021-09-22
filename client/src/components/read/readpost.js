@@ -8,6 +8,7 @@ import { Zoom, Slide, Flip } from 'react-reveal';
 import Fade from 'react-reveal/Fade';
 import { FaCheck } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
+import { deleteReadBook } from '../../actions/readposts';
 // Actions
 
 // components
@@ -20,7 +21,7 @@ const ReadPost = ({ post }) => {
   const ToggleDelete = () => {
     setDeleteBook(!deleteBook);
   };
-
+  const dispatch = useDispatch();
   return (
     <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
       <Zoom>
@@ -50,10 +51,10 @@ const ReadPost = ({ post }) => {
                 <div className="delete-buttons">
                   <Button
                     className="yes-btn"
-                    //   onClick={() => {
-                    //     dispatch(deletePost(post._id));
-                    //     window.location.reload(false);
-                    //   }}
+                    onClick={() => {
+                      dispatch(deleteReadBook(post._id));
+                      window.location.reload(false);
+                    }}
                   >
                     yes
                   </Button>

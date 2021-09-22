@@ -12,3 +12,4 @@ export const deletePost = (id) => axios.delete(`${url}/${id}`);
 // Read route
 export const fetchReadBooks = () => axios.get(url2);
 export const createReadBook = (newReadBook) => axios.post(url2, newReadBook);
+export const deleteReadBook = (id2) => axios.delete(`${url2}/${id2}`);
