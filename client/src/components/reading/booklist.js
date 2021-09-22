@@ -4,12 +4,15 @@ import './booklist.css';
 import { FaCheckSquare } from 'react-icons/fa';
 //
 import { createPost } from '../../actions/posts';
+// img
+import pic1 from '../../assets/noimage.png';
 function Booklist(props) {
   const bookData = {
     title: props.title,
     author: props.author[0],
     pageLength: props.pgcount,
-    selectedFile: props.imgurl ? props.imgurl['thumbnail'] : '',
+    selectedFile: props.imgurl ? props.imgurl['thumbnail'] : pic1,
+    description: props.description ? props.description : 'No description',
   };
   const dispatch = useDispatch();
 
@@ -23,7 +26,7 @@ function Booklist(props) {
     <div className="booklist">
       <img
         value={props.imgvalue}
-        src={props.imgurl ? props.imgurl['thumbnail'] : ''}
+        src={props.imgurl ? props.imgurl['thumbnail'] : pic1}
         className="img"
         alt={props.alt}
       />
@@ -32,7 +35,9 @@ function Booklist(props) {
       </h1>
       <p className="author-p">Author: {props.author}</p>
       {/* <a href={props.link}>link</a> */}
-      <p className="pg-count">Pg count: {props.pgcount} </p>
+      <p className="pg-count">
+        Pg count: {props.pgcount ? props.pgcount : 'N/A'}
+      </p>
       <div className="add-book">
         <p>Click to add book to reading</p>
         <FaCheckSquare

@@ -28,22 +28,33 @@ $font3: 'Pacifico', cursive;
     align-items: center;
     flex-direction: row;
     transition: 0.5s;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      height: 100%;
+    }
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.658);
+      box-shadow: 0px 10px 10px #442d1e81;
     }
     .img {
       position: relative;
-      height: 100px;
+      height: 150px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-right: 3px solid #ebc9a7;
       margin: 5px 0px;
       left: 0;
-      width: 100px;
-      border-radius: 50%;
-      border: 4px solid #7f5539;
+      width: 150px;
+      margin-right: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: none;
+      @media screen and (max-width: 800px) {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 4px solid #7f5539;
+      }
     }
     .title-header {
       position: relative;
@@ -57,6 +68,11 @@ $font3: 'Pacifico', cursive;
       color: black;
       background: none;
       overflow-y: auto;
+      @media screen and (max-width: 800px) {
+        height: 50px;
+        width: 100%;
+        margin: 10px 0px;
+      }
     }
     .author-p {
       position: relative;
@@ -70,6 +86,11 @@ $font3: 'Pacifico', cursive;
       color: black;
       background: none;
       overflow-y: auto;
+      @media screen and (max-width: 800px) {
+        height: 50px;
+        width: 100%;
+        margin: 10px 0px;
+      }
     }
     .pg-count {
       position: relative;
@@ -83,16 +104,27 @@ $font3: 'Pacifico', cursive;
       color: black;
       background: none;
       overflow-y: auto;
+      @media screen and (max-width: 800px) {
+        height: 50px;
+        width: 100%;
+        margin: 10px 0px;
+      }
     }
     .add-book {
-      position: absolute;
+      position: relative;
       height: 100%;
-      padding-right: 20px;
+      padding-right: 30px;
       right: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: none;
+      @media screen and (max-width: 800px) {
+        height: 50px;
+        width: 100%;
+        margin: 10px 0px;
+        padding-right: 0px;
+      }
       p {
         color: black;
         font-size: 15px;
@@ -103,6 +135,7 @@ $font3: 'Pacifico', cursive;
       .check-mark {
         color: #442d1e;
         transition: 0.5s;
+        padding-left: 10px;
         &:hover {
           color: #1d130d;
           cursor: pointer;

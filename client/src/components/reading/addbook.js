@@ -34,6 +34,7 @@ function Profile() {
           )
           .then((book) => {
             setSection(book.data.items);
+            console.log(book.data.items);
           })
           .catch((error) => console.log(error));
       } else {
@@ -42,19 +43,6 @@ function Profile() {
     };
     request();
   }, [input, setInput]);
-  //
-  // const [bookData, setBookData] = useState({
-  //   title: '',
-  //   author: '',
-  //   pageLength: '',
-  //   selectedFile: '',
-  // });
-  // const dispatch = useDispatch();
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   dispatch(createPost(bookData));
-  // };
 
   // Toggle the sucess modal
   const [modal, setModal] = useState('false');
@@ -99,11 +87,14 @@ function Profile() {
                     : 'no title found'
                 }
                 author={
-                  data.volumeInfo.authors
-                    ? data.volumeInfo.authors
-                    : 'No author found'
+                  data.volumeInfo.authors ? data.volumeInfo.authors : 'N/A'
                 }
                 pgcount={data.volumeInfo.pageCount}
+                description={
+                  data.volumeInfo.description
+                    ? data.volumeInfo.description
+                    : 'no description'
+                }
                 link={data.selfLink}
                 // Success modal
                 Toggle={toggleModal}

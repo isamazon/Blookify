@@ -23,6 +23,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
     title: post.title,
     author: post.author,
     pageLength: post.pageLength,
+    description: post.description,
     selectedFile: post.selectedFile,
   };
   const dispatch = useDispatch();
@@ -73,6 +74,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
           <div className="bottom-info">
             <h3>Author: {post.author}</h3>
             <p className="pagecount-p">Page count: {post.pageLength}</p>
+            <p className="description"> {post.description} </p>
             <div className="button-container">
               {/* Done reading button */}
               <Button className="done-button" onClick={ToggleRead}>

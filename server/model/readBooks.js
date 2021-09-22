@@ -5,6 +5,7 @@ const readBookSchema = mongoose.Schema({
   author: String,
   pageLength: String,
   selectedFile: String,
+  description: String,
   createdAt: {
     type: Date,
     default: new Date(),
