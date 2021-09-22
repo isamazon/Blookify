@@ -28,9 +28,10 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100px;
+    height: 100vh;
     width: 100%;
     overflow-y: visible;
+    padding: 0px 0px;
   }
 }
 
@@ -146,7 +147,7 @@
             flex-direction: row;
     height: 60px;
     width: 100%;
-    top: 70%;
+    top: 10%;
     background: none;
   }
 }
@@ -183,6 +184,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-container .profile-row .sidebar-container .nav-side-bar {
+    border-radius: 20px;
   }
 }
 
@@ -674,8 +681,10 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
-    top: 100%;
-    height: 650px;
+    top: 10%;
+    padding: 85px 10px;
+    padding-left: 20px;
+    height: 95%;
   }
 }
 

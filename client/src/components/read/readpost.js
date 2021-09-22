@@ -23,7 +23,7 @@ const ReadPost = ({ post }) => {
   };
   const dispatch = useDispatch();
   return (
-    <Col xl={3} lg={6} sm={6} xs={12} className="book-card">
+    <Col xxl={2} xl={3} lg={4} sm={6} xs={12} className="book-card">
       <Zoom>
         <div className="inner-card">
           <div className="top-info">

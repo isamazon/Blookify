@@ -19,9 +19,10 @@ $font3: 'Pacifico', cursive;
   // Added Modal
   @media screen and (max-width: 1200px) {
     flex-direction: column;
-    height: 100px;
+    height: 100vh;
     width: 100%;
     overflow-y: visible;
+    padding: 0px 0px;
   }
   .empty {
     display: none;
@@ -93,7 +94,7 @@ $font3: 'Pacifico', cursive;
         flex-direction: row;
         height: 60px;
         width: 100%;
-        top: 70%;
+        top: 10%;
         background: none;
       }
       .nav-side-bar {
@@ -112,6 +113,9 @@ $font3: 'Pacifico', cursive;
           height: 100%;
           width: 100%;
           flex-direction: row;
+        }
+        @media screen and (max-width: 500px) {
+          border-radius: 20px;
         }
         .home-link {
           position: relative;
@@ -428,9 +432,10 @@ $font3: 'Pacifico', cursive;
       @media screen and (max-width: 1200px) {
         flex-direction: row;
         width: 100%;
-        top: 100%;
-
-        height: 650px;
+        top: 10%;
+        padding: 85px 10px;
+        padding-left: 20px;
+        height: 95%;
       }
     }
     .blank-reading-container {

@@ -11,7 +11,10 @@ $font3: 'Pacifico', cursive;
   height: 550px;
   background: none;
   margin-bottom: 40px;
-
+  @media screen and (max-width: 500px) {
+    height: 500px;
+    padding-top: 20px;
+  }
   .inner-card {
     position: relative;
     height: 100%;
@@ -156,6 +159,11 @@ $font3: 'Pacifico', cursive;
       position: relative;
       top: 10%;
       left: 20px;
+      @media screen and (max-width: 1500px) {
+        font-size: 20px;
+        left: 0px;
+        text-align: center;
+      }
     }
     .date-added {
       position: absolute;
@@ -250,6 +258,10 @@ $font3: 'Pacifico', cursive;
       flex-direction: row;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.568);
       z-index: 4;
+      @media screen and (max-width: 400px) {
+        width: 100%;
+        left: 0px;
+      }
       p {
         height: 100%;
         width: 50%;
@@ -260,6 +272,9 @@ $font3: 'Pacifico', cursive;
         text-align: center;
         color: #e6ccb2;
         font-family: $font2;
+        @media screen and (max-width: 400px) {
+          width: 45%;
+        }
       }
       .delete-buttons {
         position: relative;
@@ -267,6 +282,9 @@ $font3: 'Pacifico', cursive;
         width: 50%;
         flex-direction: row;
         background: none;
+        @media screen and (max-width: 400px) {
+          width: 55%;
+        }
         .no-btn,
         .yes-btn {
           position: relative;
@@ -278,6 +296,9 @@ $font3: 'Pacifico', cursive;
           transition: 0.5s;
           &:hover {
             color: #b08868;
+          }
+          @media screen and (max-width: 350px) {
+            width: 40%;
           }
         }
       }

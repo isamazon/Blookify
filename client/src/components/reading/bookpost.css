@@ -8,6 +8,13 @@
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 500px) {
+  .book-card {
+    height: 500px;
+    padding-top: 20px;
+  }
+}
+
 .book-card .inner-card {
   position: relative;
   height: 100%;
@@ -204,6 +211,14 @@
   left: 20px;
 }
 
+@media screen and (max-width: 1500px) {
+  .book-card .bottom-info .pagecount-p {
+    font-size: 20px;
+    left: 0px;
+    text-align: center;
+  }
+}
+
 .book-card .bottom-info .date-added {
   position: absolute;
   bottom: 0;
@@ -337,6 +352,13 @@
   z-index: 4;
 }
 
+@media screen and (max-width: 400px) {
+  .book-card .bottom-info .delete-book-container {
+    width: 100%;
+    left: 0px;
+  }
+}
+
 .book-card .bottom-info .delete-book-container p {
   height: 100%;
   width: 50%;
@@ -355,6 +377,12 @@
   font-family: "Lobster", cursive;
 }
 
+@media screen and (max-width: 400px) {
+  .book-card .bottom-info .delete-book-container p {
+    width: 45%;
+  }
+}
+
 .book-card .bottom-info .delete-book-container .delete-buttons {
   position: relative;
   height: 100%;
@@ -364,6 +392,12 @@
       -ms-flex-direction: row;
           flex-direction: row;
   background: none;
+}
+
+@media screen and (max-width: 400px) {
+  .book-card .bottom-info .delete-book-container .delete-buttons {
+    width: 55%;
+  }
 }
 
 .book-card .bottom-info .delete-book-container .delete-buttons .no-btn,
@@ -381,5 +415,12 @@
 .book-card .bottom-info .delete-book-container .delete-buttons .no-btn:hover,
 .book-card .bottom-info .delete-book-container .delete-buttons .yes-btn:hover {
   color: #b08868;
+}
+
+@media screen and (max-width: 350px) {
+  .book-card .bottom-info .delete-book-container .delete-buttons .no-btn,
+  .book-card .bottom-info .delete-book-container .delete-buttons .yes-btn {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=bookpost.css.map */
