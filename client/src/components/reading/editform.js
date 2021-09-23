@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { createPost, updatePost } from '../../actions/posts';
 import './bookpost.css';
 
-const EditForm = ({ currentId }) => {
+const EditForm = ({ currentId, setCurrentId }) => {
   const [bookData, setBookData] = useState({
     title: '',
     author: '',
@@ -26,56 +26,54 @@ const EditForm = ({ currentId }) => {
   // Redux
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (currentId) {
-      dispatch(updatePost(currentId, bookData));
-    } else {
-      dispatch(createPost(bookData));
-    }
+  const handleSubmit = async (e) => {
+    dispatch(updatePost(currentId, bookData));
   };
   //
   return (
     <form className="update-form" onSubmit={handleSubmit}>
-      <FileBase
-        type="file"
-        mutiple={false}
-        onDone={({ base64 }) =>
-          setBookData({ ...bookData, selectedFile: base64 })
-        }
-      />
-      <label
-        className="update-title"
-        type="text"
-        name="title"
-        value={bookData.title}
-        onChange={(e) => setBookData({ ...bookData, title: e.target.value })}
-      >
+      <div className="filebase-container">
+        <FileBase
+          type="file"
+          className="filebase"
+          mutiple={false}
+          onDone={({ base64 }) =>
+            setBookData({ ...bookData, selectedFile: base64 })
+          }
+        />
+      </div>
+      <label className="update-title" type="text" name="title">
         Update title:
       </label>
-      <input className="input" type="text" name="title" />
-      <label
-        className="update-title"
+      <input
+        className="input"
+        type="text"
+        name="title "
+        value={bookData.title}
+        onChange={(e) => setBookData({ ...bookData, title: e.target.value })}
+      />
+      <label className="update-title" type="text" name="author">
+        Update author:
+      </label>
+      <input
+        className="input"
         type="text"
         name="author"
         value={bookData.author}
         onChange={(e) => setBookData({ ...bookData, author: e.target.value })}
-      >
-        Update author:
+      />
+      <label className="update-title" type="text" name="pageLength">
+        Update Pg count:
       </label>
-      <input className="input" type="text" name="author" />
-      <label
-        className="update-title"
+      <input
+        className="input"
         type="text"
-        name="pageLength"
+        name="author"
         value={bookData.pageLength}
         onChange={(e) =>
           setBookData({ ...bookData, pageLength: e.target.value })
         }
-      >
-        Update Pg count:
-      </label>
-      <input className="input" type="text" name="author" />
+      />
       <button className="update-button" type="submit">
         Submit
       </button>

@@ -57,6 +57,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
               onClick={() => {
                 ToggleEdit();
                 setCurrentId(post._id);
+                console.log(post._id);
               }}
             >
               <MoreHorizon fontSize="large" />

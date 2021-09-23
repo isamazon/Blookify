@@ -43,6 +43,25 @@ $font3: 'Pacifico', cursive;
       transform: translateY(-5px);
     }
   }
+  .user-profile {
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    width: 150px;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .user-img {
+      position: relative;
+      height: 50px;
+      width: 50px;
+      border: 3px solid #7f5539;
+      border-radius: 50%;
+      background: #ddb892;
+    }
+  }
   .loginlink {
     position: absolute;
     right: 20px;

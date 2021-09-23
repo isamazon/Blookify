@@ -3,16 +3,12 @@ import { Col, Container, Fade, Row } from 'react-bootstrap';
 import './profile.css';
 import axios from 'axios';
 // Redux
-import { useDispatch } from 'react-redux';
-import { createPost } from '../../actions/posts';
-import noimg from '../../assets/Capture.PNG';
 
 // API url
 
 // components
 import Search from './search';
-import Nav from '../navbar';
-import AddedPopup from './addedpopup';
+
 import Booklist from './booklist';
 import Sidebar from './sidebar';
 
@@ -51,8 +47,6 @@ function Profile() {
   };
   return (
     <Container fluid className="main-container">
-      <Nav />
-
       <div className={modal ? 'empty' : 'added-modal'}>
         <div className="added-inner-modal">
           <h1>Successfully added book!</h1>

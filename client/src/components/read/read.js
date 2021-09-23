@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 // Components
-import Nav from '../navbar';
+
 import ReadPost from './readpost';
 import Sidebar from '../reading/sidebar';
 // CSS
@@ -16,7 +16,6 @@ const Read = () => {
 
   return (
     <Container fluid className="main-container">
-      <Nav />
       <Row className="profile-row">
         <Sidebar />
         <div className="reading-container">

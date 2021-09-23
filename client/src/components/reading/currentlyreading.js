@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 // Components
-import Nav from '../navbar';
+
 import Sidebar from './sidebar';
 import BookPost from './bookpost';
 import Emptybook from './emptybook';
@@ -35,7 +35,6 @@ const CurrentlyReading = () => {
     />
   ) : (
     <Container fluid className="main-container">
-      <Nav />
       <Row className="profile-row">
         {/* <h1 className='currently-reading-h1'>Currently reading:</h1> */}
         <Sidebar />

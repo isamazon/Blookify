@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // dependencies
 import FileBase from 'react-file-base64';
-import { Col } from 'react-bootstrap';
 // Redux dispatch
 import { useDispatch } from 'react-redux';
 // CSS

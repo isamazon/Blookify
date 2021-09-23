@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./profile.css";
-import Slide from "react-reveal/Slide";
-import Bookmodal from "./addbookmodal";
+import React from 'react';
+import './profile.css';
+import Slide from 'react-reveal/Slide';
+import Bookmodal from './addbookmodal';
 function Search(props) {
   return (
     <Slide bottom>

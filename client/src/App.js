@@ -9,6 +9,8 @@ import Login from './components/login/login';
 import Addbook from './components/reading/addbook';
 import Currently from './components/reading/currentlyreading';
 import Read from './components/read/read.js';
+// Nav
+import Nav from './components/navbar';
 // redux
 import { getPosts } from './actions/posts.js';
 import { getReadBook } from './actions/readposts.js';
@@ -22,6 +24,7 @@ function App() {
   }, [dispatch]);
   return (
     <div className="app">
+      <Nav />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/Login" component={Login} />

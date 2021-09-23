@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './styles/landingpage.css';
 
 import Svg1 from './components/svgs/reading1';
-import Nav from './components/navbar';
+
 import Test from './components/test';
 
 // SVGs
@@ -15,7 +15,6 @@ function Home() {
 
   return (
     <div>
-      <Nav />
       <Container fluid className="landingpage-fl-cnt">
         <div className="svg-cont">
           <Svg1 className="svg1" />

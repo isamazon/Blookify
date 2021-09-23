@@ -5,6 +5,10 @@ $font1: 'Recursive', sans-serif;
 $font2: 'Lobster', cursive;
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 $font3: 'Pacifico', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+$font4: 'Playball', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+$font5: 'Marvel', sans-serif;
 
 .book-card {
   position: relative;
@@ -62,7 +66,8 @@ $font3: 'Pacifico', cursive;
       justify-content: center;
       h3 {
         position: absolute;
-        font-family: $font2;
+        font-family: $font4;
+        font-weight: 500;
         color: #3b2719;
         top: -9%;
         text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.336);
@@ -77,11 +82,21 @@ $font3: 'Pacifico', cursive;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        .filebase-container {
+          position: relative;
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: row;
+          padding-left: 20%;
+          margin-bottom: 10px;
+        }
         .update-title {
           position: relative;
           text-align: center;
           color: #e6ccb2;
-          font-family: $font1;
+          font-family: $font5;
         }
         .input {
           position: relative;

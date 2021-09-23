@@ -52,6 +52,36 @@
           transform: translateY(-5px);
 }
 
+.nav-bar .user-profile {
+  position: absolute;
+  right: 20px;
+  height: 100%;
+  width: 150px;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-bar .user-profile .user-img {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border: 3px solid #7f5539;
+  border-radius: 50%;
+  background: #ddb892;
+}
+
 .nav-bar .loginlink {
   position: absolute;
   right: 20px;

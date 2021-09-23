@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
+import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 import Booksvg from '../svgs/booksvg';
