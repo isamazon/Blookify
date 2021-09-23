@@ -216,7 +216,24 @@
 
 .second-fl-cnt {
   height: 100vh;
-  background: #7f5539;
+  background: #e6ccb2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.second-fl-cnt .spline-book-cnt {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 /* width */

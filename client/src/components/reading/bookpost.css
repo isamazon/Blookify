@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 500px) {
   .book-card {
-    height: 500px;
+    height: 5 00px;
     padding-top: 20px;
   }
 }
@@ -34,7 +34,7 @@
 
 .book-card .top-info {
   position: relative;
-  height: 55%;
+  height: 50%;
   background: #7f5539;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -180,7 +180,7 @@
 
 .book-card .bottom-info {
   position: relative;
-  height: 45%;
+  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,8 +207,9 @@
 
 .book-card .bottom-info .pagecount-p {
   position: relative;
-  top: 10%;
+  top: 5%;
   left: 20px;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1500px) {
@@ -217,6 +218,28 @@
     left: 0px;
     text-align: center;
   }
+}
+
+.book-card .bottom-info .description-h3 {
+  position: relative;
+  height: 20px;
+  left: 0px;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background: none;
+  font-family: sans-serif;
+}
+
+.book-card .bottom-info .description {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  top: 0%;
+  padding: 10px 20px;
+  background: none;
+  overflow-y: scroll;
+  font-family: "Lobster", cursive;
 }
 
 .book-card .bottom-info .date-added {

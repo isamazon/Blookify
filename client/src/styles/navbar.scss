@@ -1,10 +1,10 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
-$font1: "Recursive", sans-serif;
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-$font2: "Lobster", cursive;
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-$font3: "Pacifico", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
+$font1: 'Recursive', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$font2: 'Lobster', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+$font3: 'Pacifico', cursive;
 
 .nav-bar {
   position: fixed;
@@ -67,6 +67,7 @@ $font3: "Pacifico", cursive;
 .side-menu-closed {
   position: fixed;
   left: 0;
+  top: 0;
   width: 20%;
   display: flex;
   flex-direction: column;
@@ -80,6 +81,9 @@ $font3: "Pacifico", cursive;
 
   @media screen and (max-width: 1360px) {
     width: 50%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
   }
   .menu-h1 {
     position: absolute;

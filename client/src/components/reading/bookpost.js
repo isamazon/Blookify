@@ -74,6 +74,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
           <div className="bottom-info">
             <h3>Author: {post.author}</h3>
             <p className="pagecount-p">Page count: {post.pageLength}</p>
+            <h3 className="description-h3">Description: </h3>
             <p className="description"> {post.description} </p>
             <div className="button-container">
               {/* Done reading button */}
