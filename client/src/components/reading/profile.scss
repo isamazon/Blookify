@@ -19,6 +19,7 @@ $font5: 'Marvel', sans-serif;
   align-items: center;
   justify-content: center;
   overflow-y: hidden;
+  overflow-x: hidden;
   // Added Modal
   @media screen and (max-width: 1200px) {
     flex-direction: column;
@@ -26,6 +27,7 @@ $font5: 'Marvel', sans-serif;
     width: 100%;
     overflow-y: visible;
     padding: 0px 0px;
+    margin: 0px 0px;
   }
   .empty {
     display: none;
@@ -202,7 +204,7 @@ $font5: 'Marvel', sans-serif;
         flex-direction: row;
         height: 60px;
         width: 100%;
-        top: 10%;
+        top: 8%;
         background: none;
       }
       .nav-side-bar {
@@ -221,6 +223,7 @@ $font5: 'Marvel', sans-serif;
           height: 100%;
           width: 100%;
           flex-direction: row;
+          box-shadow: none;
         }
         @media screen and (max-width: 500px) {
           border-radius: 20px;
@@ -335,6 +338,9 @@ $font5: 'Marvel', sans-serif;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+      }
       // Search bar
       .search-bar {
         position: relative;
@@ -349,15 +355,49 @@ $font5: 'Marvel', sans-serif;
         flex-direction: row;
         background: #b08968;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
+        @media screen and (max-width: 1200px) {
+          width: 100%;
+          top: 6%;
+          border-radius: 30px;
+          z-index: 20;
+          justify-content: center;
+        }
+        @media screen and (max-width: 830px) {
+          padding: 50px 0px;
+          padding-left: 0px;
+        }
+
         h1 {
           font-family: $font2;
           color: #f7ece1;
+          height: 100%;
           margin-right: 50px;
           margin-left: 50px;
+          display: flex;
+          align-items: center;
+          @media screen and (max-width: 1105px) {
+            font-size: 30px;
+          }
+          @media screen and (max-width: 830px) {
+            margin-left: 0px;
+            margin-right: 10px;
+            font-size: 25px;
+            position: absolute;
+            top: -40%;
+          }
+          @media screen and (max-width: 610px) {
+            font-size: 25px;
+            text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
+          }
         }
         .search-cont {
           position: relative;
           right: 2%;
+
+          @media screen and (max-width: 400px) {
+            width: 50%;
+            left: 0px;
+          }
           .book-search,
           .author-search {
             border-radius: 20px;
@@ -369,6 +409,11 @@ $font5: 'Marvel', sans-serif;
             font-family: $font2;
             transition: 0.5s;
             color: white;
+            @media screen and (max-width: 1105px) {
+              width: 150px;
+              right: 0px;
+            }
+
             &:focus {
               outline: none;
               color: white;
@@ -380,13 +425,22 @@ $font5: 'Marvel', sans-serif;
         }
         .modal-btn-cnt {
           position: absolute;
-          right: 10%;
+          right: 20%;
           height: 100%;
           width: 200px;
           background: none;
           display: flex;
           justify-content: center;
           align-items: center;
+          @media screen and (max-width: 1200px) {
+            width: 150px;
+            right: 0px;
+            position: relative;
+          }
+          @media screen and (max-width: 400px) {
+            width: 50%;
+            right: 0px;
+          }
           .modal-button {
             position: absolute;
             z-index: 1;
@@ -396,12 +450,21 @@ $font5: 'Marvel', sans-serif;
             border-radius: 20px;
             border: 3px solid #e6ccb2;
             background: #7f5539;
+            color: white;
+            font-family: $font2;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.39);
+            @media screen and (max-width: 1200px) {
+              height: 32px;
+              width: 150px;
+            }
+            @media screen and (max-width: 400px) {
+              width: 150px;
+              font-size: 15px;
+              border: none;
+            }
+
             &:hover {
               cursor: pointer;
-            }
-            p {
-              color: white;
-              font-family: $font2;
             }
           }
           .modal {
@@ -552,10 +615,11 @@ $font5: 'Marvel', sans-serif;
       @media screen and (max-width: 1200px) {
         flex-direction: row;
         width: 100%;
-        top: 10%;
+        top: 0%;
         padding: 85px 10px;
+        padding-bottom: 0px;
         padding-left: 20px;
-        height: 95%;
+        height: 90%;
       }
     }
     .blank-reading-container {

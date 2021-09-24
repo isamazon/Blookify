@@ -1,43 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import axios from 'axios';
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import { Link } from 'react-router-dom';
 import './styles/landingpage.css';
 
 import Svg1 from './components/svgs/reading1';
 
 import Test from './components/test';
-
-// SVGs
-
 function Home() {
-  const [results, setResults] = useState([]);
-
   return (
     <div>
       <Container fluid className="landingpage-fl-cnt">
-        <div className="svg-cont">
-          <Svg1 className="svg1" />
-        </div>
-        {results.map((item) => (
-          <div key={item.title}>{item.title}</div>
-        ))}
+        <Fade>
+          <div className="svg-cont">
+            <Svg1 className="svg1" />
+          </div>
+        </Fade>
         <Row className="row-1">
           <div className="text-container">
-            <h1>Welcome to Blookify,</h1>
-            <p>
-              Utilize over 7 million books and store the books youre currently
-              reading and the books that youve finished into your own personal
-              library.
-            </p>
-            <div className="button-cont">
-              <Link to="/Login" className="btn-1 b-1">
-                Login
-              </Link>
-              <Link to="/Addbook" className="btn-1 b-2">
-                Get started
-              </Link>
-            </div>
+            <Slide bottom cascade>
+              <h1>Welcome to Blookify,</h1>
+              <p>
+                Utilize over 7 million books and store the books youre currently
+                reading and the books that youve finished into your own personal
+                library.
+              </p>
+            </Slide>
+            <Slide bottom cascade>
+              <div className="button-cont">
+                <Link to="/Login" className="btn-1 b-1">
+                  Login
+                </Link>
+
+                <Link to="/Addbook" className="btn-1 b-2">
+                  Get started
+                </Link>
+              </div>
+            </Slide>
           </div>
         </Row>
       </Container>

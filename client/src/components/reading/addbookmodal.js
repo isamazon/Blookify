@@ -29,7 +29,7 @@ class BookModal extends React.Component {
             });
           }}
         >
-          <p>Add your own book</p>
+          Add your own book
         </button>
         <Fade opposite when={this.state.show}>
           <div className={this.state.modal}>

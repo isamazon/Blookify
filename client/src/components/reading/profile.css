@@ -22,6 +22,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1200px) {
@@ -34,6 +35,7 @@
     width: 100%;
     overflow-y: visible;
     padding: 0px 0px;
+    margin: 0px 0px;
   }
 }
 
@@ -305,7 +307,7 @@
             flex-direction: row;
     height: 60px;
     width: 100%;
-    top: 10%;
+    top: 8%;
     background: none;
   }
 }
@@ -342,6 +344,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
@@ -523,6 +527,12 @@
           flex-direction: column;
 }
 
+@media screen and (max-width: 1200px) {
+  .main-container .profile-row .profile-cont {
+    width: 100%;
+  }
+}
+
 .main-container .profile-row .profile-cont .search-bar {
   position: relative;
   width: 90%;
@@ -548,16 +558,72 @@
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
 }
 
+@media screen and (max-width: 1200px) {
+  .main-container .profile-row .profile-cont .search-bar {
+    width: 100%;
+    top: 6%;
+    border-radius: 30px;
+    z-index: 20;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .main-container .profile-row .profile-cont .search-bar {
+    padding: 50px 0px;
+    padding-left: 0px;
+  }
+}
+
 .main-container .profile-row .profile-cont .search-bar h1 {
   font-family: "Lobster", cursive;
   color: #f7ece1;
+  height: 100%;
   margin-right: 50px;
   margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1105px) {
+  .main-container .profile-row .profile-cont .search-bar h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .main-container .profile-row .profile-cont .search-bar h1 {
+    margin-left: 0px;
+    margin-right: 10px;
+    font-size: 25px;
+    position: absolute;
+    top: -40%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .main-container .profile-row .profile-cont .search-bar h1 {
+    font-size: 25px;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
+  }
 }
 
 .main-container .profile-row .profile-cont .search-bar .search-cont {
   position: relative;
   right: 2%;
+}
+
+@media screen and (max-width: 400px) {
+  .main-container .profile-row .profile-cont .search-bar .search-cont {
+    width: 50%;
+    left: 0px;
+  }
 }
 
 .main-container .profile-row .profile-cont .search-bar .search-cont .book-search,
@@ -572,6 +638,14 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: white;
+}
+
+@media screen and (max-width: 1105px) {
+  .main-container .profile-row .profile-cont .search-bar .search-cont .book-search,
+  .main-container .profile-row .profile-cont .search-bar .search-cont .author-search {
+    width: 150px;
+    right: 0px;
+  }
 }
 
 .main-container .profile-row .profile-cont .search-bar .search-cont .book-search:focus,
@@ -602,7 +676,7 @@
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt {
   position: absolute;
-  right: 10%;
+  right: 20%;
   height: 100%;
   width: 200px;
   background: none;
@@ -617,6 +691,21 @@
           align-items: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt {
+    width: 150px;
+    right: 0px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt {
+    width: 50%;
+    right: 0px;
+  }
+}
+
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button {
   position: absolute;
   z-index: 1;
@@ -626,15 +715,29 @@
   border-radius: 20px;
   border: 3px solid #e6ccb2;
   background: #7f5539;
+  color: white;
+  font-family: "Lobster", cursive;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.39);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.39);
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button {
+    height: 32px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button {
+    width: 150px;
+    font-size: 15px;
+    border: none;
+  }
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button:hover {
   cursor: pointer;
-}
-
-.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button p {
-  color: white;
-  font-family: "Lobster", cursive;
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal {
@@ -863,10 +966,11 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
-    top: 10%;
+    top: 0%;
     padding: 85px 10px;
+    padding-bottom: 0px;
     padding-left: 20px;
-    height: 95%;
+    height: 90%;
   }
 }
 

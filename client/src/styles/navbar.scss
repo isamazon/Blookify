@@ -75,6 +75,11 @@ $font3: 'Pacifico', cursive;
     background: #7f5539;
     transition: 0.5s;
 
+    @media screen and (max-width: 650px) {
+      right: 0px;
+      font-size: 15px;
+      padding: 5px 20px;
+    }
     &:hover {
       text-decoration: none;
       background: #ede0d4;
@@ -106,6 +111,7 @@ $font3: 'Pacifico', cursive;
   }
   @media screen and (max-width: 600px) {
     width: 100%;
+    box-shadow: 5px 0px 100px rgba(0, 0, 0, 0);
   }
 
   .side-menu-parent {
@@ -116,6 +122,9 @@ $font3: 'Pacifico', cursive;
     background: none;
     cursor: pointer;
     left: 350px;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   .menu-h1 {
     position: absolute;

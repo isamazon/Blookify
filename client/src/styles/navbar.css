@@ -96,6 +96,14 @@
   transition: 0.5s;
 }
 
+@media screen and (max-width: 650px) {
+  .nav-bar .loginlink {
+    right: 0px;
+    font-size: 15px;
+    padding: 5px 20px;
+  }
+}
+
 .nav-bar .loginlink:hover {
   text-decoration: none;
   background: #ede0d4;
@@ -143,6 +151,8 @@
   .side-menu-container,
   .side-menu-closed {
     width: 100%;
+    -webkit-box-shadow: 5px 0px 100px rgba(0, 0, 0, 0);
+            box-shadow: 5px 0px 100px rgba(0, 0, 0, 0);
   }
 }
 
@@ -155,6 +165,13 @@
   background: none;
   cursor: pointer;
   left: 350px;
+}
+
+@media screen and (max-width: 600px) {
+  .side-menu-container .side-menu-parent,
+  .side-menu-closed .side-menu-parent {
+    display: none;
+  }
 }
 
 .side-menu-container .menu-h1,
