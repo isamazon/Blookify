@@ -129,6 +129,7 @@
           box-shadow: 5px 0px 100px black;
   -webkit-animation: slidein 0.5s;
           animation: slidein 0.5s;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1360px) {
@@ -143,6 +144,17 @@
   .side-menu-closed {
     width: 100%;
   }
+}
+
+.side-menu-container .side-menu-parent,
+.side-menu-closed .side-menu-parent {
+  position: fixed;
+  height: 100%;
+  width: 2000px;
+  z-index: -1;
+  background: none;
+  cursor: pointer;
+  left: 350px;
 }
 
 .side-menu-container .menu-h1,

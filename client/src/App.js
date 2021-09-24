@@ -20,7 +20,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getReadBook());
+    dispatch(getReadBook(), getPosts());
   }, [dispatch]);
   return (
     <div className="app">

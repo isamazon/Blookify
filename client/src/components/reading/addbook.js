@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Fade, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './profile.css';
 import axios from 'axios';
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+import { Button } from '@material-ui/core';
 // Redux
 
 // API url
@@ -11,7 +16,8 @@ import Search from './search';
 
 import Booklist from './booklist';
 import Sidebar from './sidebar';
-
+// imgs
+import book1 from '../../assets/successbook.png';
 function Profile() {
   const [section, setSection] = useState([]);
   const [input, setInput] = useState('');
@@ -42,16 +48,41 @@ function Profile() {
 
   // Toggle the sucess modal
   const [modal, setModal] = useState('false');
+
   const toggleModal = () => {
     setModal(!modal);
   };
   return (
     <Container fluid className="main-container">
       <div className={modal ? 'empty' : 'added-modal'}>
-        <div className="added-inner-modal">
-          <h1>Successfully added book!</h1>
-          <button onClick={toggleModal}>X</button>
-        </div>
+        <Fade>
+          <div className="added-inner-modal">
+            <button className="exit-button" onClick={toggleModal}>
+              X
+            </button>
+            <Zoom>
+              <img src={book1} alt="" className="success-img" />
+            </Zoom>
+            <Slide bottom cascade>
+              <h1 className="successful-h1">Successfully added book!</h1>
+              <p className="successful-p">
+                View your reading book section or add another book?
+              </p>
+              <div className="button-container">
+                <button className="add-button" onClick={toggleModal}>
+                  Add another book
+                </button>
+                <Link
+                  className="link"
+                  to="/currentlyreading"
+                  className="reading-button"
+                >
+                  Go to reading page
+                </Link>
+              </div>
+            </Slide>
+          </div>
+        </Fade>
       </div>
 
       <Row className="profile-row">

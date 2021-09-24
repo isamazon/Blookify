@@ -7,7 +7,8 @@ import moment from 'moment';
 import { Zoom, Slide, Flip } from 'react-reveal';
 import Fade from 'react-reveal/Fade';
 import { FaCheck } from 'react-icons/fa';
-
+import { AiOutlineClose } from 'react-icons/ai';
+import { FaEdit } from 'react-icons/fa';
 // Actions
 import { deletePost } from '../../actions/posts';
 import { createReadBook } from '../../actions/readposts';
@@ -60,7 +61,11 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
                 console.log(post._id);
               }}
             >
-              <MoreHorizon fontSize="large" />
+              {BookEdit ? (
+                <FaEdit size="20px" color="white" />
+              ) : (
+                <AiOutlineClose size="20px" color="white" />
+              )}
             </Button>
             {/* Book edit container */}
             <Fade opposite when={!BookEdit}>
@@ -97,7 +102,6 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
                     onClick={(e) => {
                       handleSubmit();
                       dispatch(deletePost(post._id));
-                      window.location.reload(false);
                     }}
                   >
                     yes
@@ -121,7 +125,6 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
                     className="yes-btn"
                     onClick={() => {
                       dispatch(deletePost(post._id));
-                      window.location.reload(false);
                     }}
                   >
                     yes

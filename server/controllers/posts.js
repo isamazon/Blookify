@@ -30,19 +30,23 @@ export const createreadingPost = async (req, res) => {
 // Updating the posts
 export const updatePost = async (req, res) => {
   const { id: _id } = req.params;
-  const { title, author, pageLength, selectedFile, description } = req.body;
+  const post = req.body;
+  // const { title, author, pageLength, selectedFile, description } = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(_id))
-    return res.status(404).send(`No post with Id: ${id}`);
+    return res.status(404).send(`No post with Id: `);
 
-  const updatedPost = {
-    title,
-    author,
-    pageLength,
-    selectedFile,
-    description,
-    _id: id,
-  };
+  // const updatedPost = {
+  //   title,
+  //   author,
+  //   pageLength,
+  //   selectedFile,
+  //   description,
+  //   _id: id,
+  // };
+  const updatedPost = await PostBook.findByIdAndUpdate(_id, post, {
+    new: true,
+  });
   res.json(updatedPost);
 };
 

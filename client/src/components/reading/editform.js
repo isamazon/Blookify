@@ -12,6 +12,7 @@ const EditForm = ({ currentId, setCurrentId }) => {
     author: '',
     pageLength: '',
     selectedFile: '',
+    description: '',
   });
   ///////////////////////////////// UPDATING POSTS
   // Selecting posts from backend
@@ -27,7 +28,9 @@ const EditForm = ({ currentId, setCurrentId }) => {
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
-    dispatch(updatePost(currentId, bookData));
+    e.preventDefault();
+    console.log(bookData);
+    dispatch(updatePost(bookData));
   };
   //
   return (
@@ -74,8 +77,20 @@ const EditForm = ({ currentId, setCurrentId }) => {
           setBookData({ ...bookData, pageLength: e.target.value })
         }
       />
+      <label className="update-title" type="text" name="pageLength">
+        Update description:
+      </label>
+      <input
+        className="input-description"
+        type="text"
+        name="author"
+        value={bookData.description}
+        onChange={(e) =>
+          setBookData({ ...bookData, description: e.target.value })
+        }
+      />
       <button className="update-button" type="submit">
-        Submit
+        Update book
       </button>
     </form>
   );

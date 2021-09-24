@@ -17,6 +17,7 @@ $font3: 'Pacifico', cursive;
   display: flex;
   align-items: center;
   justify-content: center;
+
   .menu-link {
     position: absolute;
     left: 20px;
@@ -73,6 +74,7 @@ $font3: 'Pacifico', cursive;
     border-radius: 10px;
     background: #7f5539;
     transition: 0.5s;
+
     &:hover {
       text-decoration: none;
       background: #ede0d4;
@@ -97,12 +99,23 @@ $font3: 'Pacifico', cursive;
   background: #533826;
   box-shadow: 5px 0px 100px black;
   animation: slidein 0.5s;
+  overflow-x: hidden;
 
   @media screen and (max-width: 1360px) {
     width: 50%;
   }
   @media screen and (max-width: 600px) {
     width: 100%;
+  }
+
+  .side-menu-parent {
+    position: fixed;
+    height: 100%;
+    width: 2000px;
+    z-index: -1;
+    background: none;
+    cursor: pointer;
+    left: 350px;
   }
   .menu-h1 {
     position: absolute;
@@ -142,6 +155,7 @@ $font3: 'Pacifico', cursive;
     }
   }
 }
+
 .side-menu-closed {
   position: absolute;
   left: -100%;

@@ -55,7 +55,6 @@ const ReadPost = ({ post }) => {
                     className="yes-btn"
                     onClick={() => {
                       dispatch(deleteReadBook(post._id));
-                      window.location.reload(false);
                     }}
                   >
                     yes

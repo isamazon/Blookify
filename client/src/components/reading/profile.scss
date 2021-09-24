@@ -5,7 +5,10 @@ $font1: 'Recursive', sans-serif;
 $font2: 'Lobster', cursive;
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 $font3: 'Pacifico', cursive;
-
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Marvel&display=swap');
+$font4: 'Leckerli One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+$font5: 'Marvel', sans-serif;
 .main-container {
   position: relative;
   background: #ede0d4;
@@ -34,19 +37,124 @@ $font3: 'Pacifico', cursive;
     padding: 0px 0px;
     left: 0px;
     z-index: 2000;
-    background: rgba(255, 0, 0, 0.568);
+    backdrop-filter: blur(15px);
     // animation: fadeIn 1.5s;
     display: flex;
     align-items: center;
     justify-content: center;
     .added-inner-modal {
       position: relative;
-      height: 50%;
-      width: 30%;
+      height: 320px;
+      width: 500px;
       background: #7f5539;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.521);
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      @media screen and (max-width: 530px) {
+        width: 350px;
+      }
+      .success-img {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        top: -45%;
+      }
+      .successful-h1 {
+        position: relative;
+        font-family: $font2;
+        color: #e6ccb2;
+        top: -0px;
+        padding: 20px 0px;
+        text-shadow: 0px 12px 20px rgba(0, 0, 0, 0.473);
+        @media screen and (max-width: 1070px) {
+          font-size: 30px;
+        }
+      }
+      .successful-p {
+        position: relative;
+        font-family: $font5;
+        color: #e6ccb2;
+        font-size: 20px;
+        width: 60%;
+        height: 100px;
+        text-align: center;
+        top: 5%;
+        @media screen and (max-width: 1050px) {
+          width: 100%;
+          padding: 0px 20px;
+        }
+      }
+      .exit-button {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        height: 35px;
+        width: 35px;
+        background: #e5bd95;
+        border: 2px solid #7f5539;
+        border-radius: 50%;
+      }
+      .button-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 530px) {
+          height: 200px;
+          flex-direction: column;
+        }
+        .add-button {
+          background: #9c6644;
+          color: #e5bd95;
+          transition: 0.5s;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+          margin-right: 10px;
+          border-radius: 5px;
+          border: none;
+          height: 40px;
+          padding: 5px 10px;
+          @media screen and (max-width: 530px) {
+            margin-right: 0px;
+          }
+          &:hover {
+            background: #7c4c2f;
+            color: rgb(250, 204, 158);
+            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.445);
+          }
+        }
+        .reading-button {
+          background: #e5bd95;
+          color: #9c6644;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
+          transition: 0.5s;
+          margin-left: 10px;
+          height: 40px;
+          padding: 5px 10px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          @media screen and (max-width: 530px) {
+            margin-left: 0px;
+            margin-top: 10px;
+          }
+          &:hover {
+            background: rgb(250, 204, 158);
+            color: #7c4c2f;
+            box-shadow: 05px 15px 10px rgba(0, 0, 0, 0.445);
+            text-decoration: none;
+          }
+          .link {
+            position: relative;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 
@@ -316,6 +424,9 @@ $font3: 'Pacifico', cursive;
               display: flex;
               align-items: center;
               justify-content: center;
+              @media screen and (max-width: 720px) {
+                width: 80%;
+              }
               .closebutton {
                 position: absolute;
                 top: -20px;
@@ -344,9 +455,12 @@ $font3: 'Pacifico', cursive;
                 display: flex;
                 background: none;
                 flex-direction: column;
+                @media screen and (max-width: 720px) {
+                  width: 100%;
+                }
                 .main-header {
                   position: absolute;
-                  top: -38%;
+                  top: -30%;
                   margin: 0%;
                   text-align: center;
                   width: 100%;
@@ -389,6 +503,9 @@ $font3: 'Pacifico', cursive;
                     &:focus {
                       outline: none;
                     }
+                    @media screen and (max-width: 720px) {
+                      width: 70%;
+                    }
                   }
                 }
                 .submit-button {
@@ -408,6 +525,9 @@ $font3: 'Pacifico', cursive;
                     background: #e6ccb2;
                     color: #492710;
                     transform: translateY(-5px);
+                  }
+                  @media screen and (max-width: 720px) {
+                    width: 70%;
                   }
                 }
               }
@@ -514,5 +634,16 @@ $font3: 'Pacifico', cursive;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }

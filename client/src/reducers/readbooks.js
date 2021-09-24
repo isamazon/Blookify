@@ -5,7 +5,7 @@ export default (read = [], action) => {
     case 'CREATE_READ_BOOK':
       return [...read, action.payload];
     case 'DELETE_READ_BOOK':
-      return read.filter((post) => read._id !== action.payload);
+      return read.filter((readpost) => readpost._id !== action.payload);
     default:
       return read;
   }

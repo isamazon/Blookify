@@ -36,7 +36,12 @@ function Nav() {
         )}
         {/* NAV items */}
       </nav>
+
       <div className={click ? 'side-menu-container' : 'side-menu-closed'}>
+        <div
+          className={click ? 'side-menu-parent' : 'side-menu-closed'}
+          onClick={handleClick}
+        ></div>
         <h1 onClick={handleClick} className="close-btn">
           X
         </h1>
