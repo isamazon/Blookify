@@ -2,6 +2,7 @@ import React from 'react';
 import { TextField, Grid, InputAdornment, IconButton } from '@material-ui/core';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import './login.css';
 const Input = ({
   name,
   handleChange,
@@ -11,29 +12,17 @@ const Input = ({
   type,
   handleShowPassword,
 }) => (
-  <Grid item xs={12} sm={half ? 6 : 12}>
-    <TextField
-      name={name}
-      onChange={handleChange}
-      variant="outline"
-      required
-      fullWidth
-      label={label}
-      autoFocus={autoFocus}
-      type={type}
-      InputProps={
-        name === 'password' && {
-          endAdornment: (
-            <InputAdornment position="end">
-              <IconButton onClick={handleShowPassword}>
-                {type === 'password' ? <Visibility /> : <VisibilityOff />}
-              </IconButton>
-            </InputAdornment>
-          ),
-        }
-      }
-    ></TextField>
-  </Grid>
+  <Row className="input-row">
+    <Col xl={6}>
+      <input type="text" />
+    </Col>
+    <Col xl={6}>
+      <input type="text" />
+    </Col>
+    <Col xl={12}>
+      <input type="text" />
+    </Col>
+  </Row>
 );
 
 export default Input;

@@ -14,7 +14,6 @@
   width: 50%;
   height: 100%;
   left: 0%;
-  background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,15 +41,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-y: hidden;
 }
 
 .form-cont-main .form-container .form h1 {
   position: relative;
   text-align: center;
-  margin-top: 20px;
   color: #ede0d4;
   font-family: "Lobster", cursive;
   font-size: 55px;
+  text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.582);
 }
 
 .form-cont-main .form-container .form .signup-signin {
@@ -77,7 +77,8 @@
   color: #ede0d4;
   font-family: "Marvel", sans-serif;
   text-align: center;
-  margin: 0px 3px;
+  margin: 10px 3px;
+  font-size: 20px;
 }
 
 .form-cont-main .form-container .form .signup-signin .sign-p {
@@ -95,11 +96,71 @@
   font-size: 30px;
 }
 
-.form-cont-main .form-container .form .input-container {
+.form-cont-main .form-container .form .input-row {
   position: relative;
-  height: 300px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-cont-main .form-container .form .input-row .input-column {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 10px;
+}
+
+.form-cont-main .form-container .form .input-row .input-column .input {
+  position: relative;
+  border: none;
+  border-radius: 10px;
   width: 100%;
-  background: red;
+  height: 35px;
+  padding-left: 20px;
+  background: #e6ccb2;
+  color: #362316;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.582);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.582);
+}
+
+.form-cont-main .form-container .form .input-row .input-column .input::-webkit-input-placeholder {
+  color: #362316;
+}
+
+.form-cont-main .form-container .form .input-row .input-column .input:-ms-input-placeholder {
+  color: #362316;
+}
+
+.form-cont-main .form-container .form .input-row .input-column .input::-ms-input-placeholder {
+  color: #362316;
+}
+
+.form-cont-main .form-container .form .input-row .input-column .input::placeholder {
+  color: #362316;
+}
+
+.form-cont-main .form-container .form .input-row .input-column .input:focus {
+  outline: none;
+}
+
+.form-cont-main .form-container .form .input-row .input-column .show-password {
+  position: absolute;
+  right: 20px;
+}
+
+.form-cont-main .form-container .form .input-row .input-column .show-password:hover {
+  cursor: pointer;
 }
 
 @-webkit-keyframes zoomin {

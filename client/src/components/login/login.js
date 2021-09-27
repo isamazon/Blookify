@@ -1,94 +1,122 @@
 import React, { useState } from 'react';
 import './login.css';
-import useStyles from './styles';
 import Input from './input';
-import { Grid } from '@material-ui/core';
-import { Button, Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Slide from 'react-reveal/Slide';
 import Svg2 from '../svgs/reading2';
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
+import { IconButton, InputAdornment } from '@material-ui/core';
 function Login() {
-  const [signUp, setSign] = useState('');
   // Password toggle
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () =>
     setShowPassword((prevShowPassword) => !prevShowPassword);
 
-  const isSignUp = false;
+  const isSignUp = true;
 
   // const handleSubmit = () => {};
 
   // const handleChange = () => {};
-
-  const handleClick = () => {
-    setSign(!signUp);
-  };
 
   const handleChange = () => {};
 
   return (
     <Container fluid className="form-cont-main ">
       <div className="form-container">
-        <form className="form" action="">
-          <h1>{signUp ? 'Sign up to blookify!' : 'Login to Blookify'}</h1>
-          <div className="signup-signin">
-            <p>
-              {signUp
-                ? 'Already have an account?'
-                : 'Dont have an account yet?'}
-            </p>
-            <p className="sign-p" onClick={handleClick}>
-              {signUp ? 'Sign in here' : 'Sign up here'}
-            </p>
-          </div>
-          <p className="or">--------- or ---------</p>
-          <Grid container spacing={2}>
-            {isSignUp && (
-              <>
-                <Input
+        <form className="form" onSubmit={'handleSubmit'}>
+          <Slide top cascade>
+            <h1>{isSignUp ? 'Sign up to blookify!' : 'Login to Blookify'}</h1>
+
+            <div className="signup-signin">
+              <p>
+                {isSignUp
+                  ? 'Already have an account?'
+                  : 'Dont have an account yet?'}
+              </p>
+              <p className="sign-p" onClick={'handleSubmit'}>
+                {isSignUp ? 'Sign in here' : 'Sign up here'}
+              </p>
+            </div>
+
+            <p className="or">------------- or -------------</p>
+          </Slide>
+          {/* Input fields */}
+          {isSignUp ? (
+            <Row className="input-row">
+              <Col xl={6} className="input-column">
+                <input
+                  className="input"
+                  placeholder="First Name*"
                   name="firstName"
                   label="First Name"
-                  handleChange={handleChange}
-                  autoFocus
-                  half
+                  onChange={'handleChange'}
+                  type="text"
+                  required
                 />
-                <Input
+              </Col>
+              <Col xl={6} className="input-column">
+                <input
+                  className="input"
+                  placeholder="Last Name*"
+                  type="text"
+                  required
+                />
+              </Col>
+              <Col xl={12} className="input-column">
+                <input
+                  className="input"
+                  placeholder="Email*"
+                  type="text"
+                  required
+                />
+              </Col>
+              <Col xl={12} className="input-column">
+                <input
+                  className="input"
+                  placeholder="Password*"
+                  type="password"
+                  required
+                />
+                <i className="show-password">
+                  <MdVisibility color="#7f5539" size="25px" />
+                </i>
+              </Col>
+              <Col xl={12} className="input-column">
+                <input
+                  className="input"
+                  placeholder="Confirm password*"
+                  type="text"
+                  required
+                />
+                <i className="show-password">
+                  <MdVisibility color="#7f5539" size="25px" />
+                </i>
+              </Col>
+            </Row>
+          ) : (
+            <Row className="input-row">
+              <Col xl={12} className="input-column">
+                <input
+                  className="input"
+                  placeholder="Email"
                   name="firstName"
                   label="First Name"
-                  handleChange={handleChange}
-                  half
+                  onChange={'handleChange'}
+                  type="password"
                 />
-              </>
-            )}
-            <Input
-              name="email"
-              label="Email Address"
-              handleChange={handleChange}
-              type="email"
-            />
-            <Input
-              name="password"
-              label="Password"
-              handleChange={handleChange}
-              type={showPassword ? 'text' : 'password'}
-              handleShowPassword={handleShowPassword}
-            />
-            {isSignUp && (
-              <Input
-                name=" confirmPassword"
-                label="Repeat password"
-                handleChange={handleChange}
-                type="password"
-              />
-            )}
-          </Grid>
-          {/* Submit button */}
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            className="button"
-          >
-            {isSignUp ? 'Sign up' : 'Sign in'}
-          </Button>
+              </Col>
+              <Col xl={12} className="input-column">
+                <input
+                  className="input"
+                  placeholder="Password*"
+                  type="password"
+                />
+                <i className="show-password">
+                  <MdVisibility color="#7f5539" size="25px" />
+                </i>
+              </Col>
+            </Row>
+          )}
         </form>
       </div>
     </Container>
