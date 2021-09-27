@@ -1,34 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&family=Marvel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marvel&display=swap");
 .form-cont-main {
   position: relative;
   height: 100vh;
-  background: #9c6644;
+  background: #362316;
 }
 
-.form-cont-main .form-cont {
-  top: 10%;
+.form-cont-main .form-container {
   position: relative;
-  height: 80%;
-  width: 70%;
+  width: 50%;
+  height: 100%;
+  left: 0%;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.form-cont-main .form-cont .row-1 {
-  position: relative;
-  top: 0%;
+.form-cont-main .form-container .form {
   height: 100%;
-  width: 40%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,37 +36,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #7f5539;
-  border-radius: 20px;
-  -webkit-animation: zoomin 0.6s;
-          animation: zoomin 0.6s;
-  -webkit-box-shadow: 0px 0px 20px #000000;
-          box-shadow: 0px 0px 20px #000000;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 {
-  position: relative;
-  background: none;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.form-cont-main .form-cont .row-1 .col-1 .select-h1 {
-  position: absolute;
-  background: none;
-  width: 100%;
+.form-cont-main .form-container .form h1 {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  color: #ede0d4;
+  font-family: "Lobster", cursive;
+  font-size: 55px;
+}
+
+.form-cont-main .form-container .form .signup-signin {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,140 +62,44 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  top: 5%;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .select-h1 .login-h1,
-.form-cont-main .form-cont .row-1 .col-1 .select-h1 .sign-h1 {
-  color: #ddb892;
-  cursor: pointer;
-  font-family: "Lobster", cursive;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  margin: 0px 20px;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .select-h1 .login-h1:hover,
-.form-cont-main .form-cont .row-1 .col-1 .select-h1 .sign-h1:hover {
-  color: #dba269;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .select-h1 .selected-h1 {
-  border-bottom: 2px solid #ede0d4;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .form-1 {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  justify-self: flex-end;
-  background: none;
-  height: 80%;
   width: 100%;
-  top: 10%;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 90px;
-  top: 0%;
-  background: none;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: none;
-  height: 20%;
-  bottom: 0;
-  width: 100%;
+  background: none;
 }
 
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input .custom-field-2 {
+.form-cont-main .form-container .form .signup-signin p {
+  color: #ede0d4;
+  font-family: "Marvel", sans-serif;
+  text-align: center;
+  margin: 0px 3px;
+}
+
+.form-cont-main .form-container .form .signup-signin .sign-p {
+  color: #ddb892;
+}
+
+.form-cont-main .form-container .form .signup-signin .sign-p:hover {
+  cursor: pointer;
+}
+
+.form-cont-main .form-container .form .or {
+  color: #ede0d4;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-size: 30px;
+}
+
+.form-cont-main .form-container .form .input-container {
   position: relative;
-  font-size: 15px;
-  padding-top: 20px;
-  bottom: 10%;
-  width: 70%;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input .custom-field-2 input:valid + .placeholder,
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input .custom-field-2 input:focus + .placeholder {
-  top: 10px;
-  font-size: 10px;
-  color: black;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input .custom-field-2 input {
-  border: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: -webkit-gradient(linear, left top, right top, from(#7f5539), to(#7f5539)) center bottom/0 2px no-repeat, -webkit-gradient(linear, left top, right top, from(#b08968), to(#b08968)) left bottom/100% 2px no-repeat, -webkit-gradient(linear, left top, right top, from(#ede0d4), to(#ede0d4)) left bottom/100% 100% no-repeat;
-  background: linear-gradient(90deg, #7f5539, #7f5539) center bottom/0 2px no-repeat, linear-gradient(90deg, #b08968, #b08968) left bottom/100% 2px no-repeat, linear-gradient(90deg, #ede0d4, #ede0d4) left bottom/100% 100% no-repeat;
-  -webkit-transition: background-size 0.3s ease;
-  transition: background-size 0.3s ease;
-  padding: 12px;
-  border-radius: 0;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  height: 300px;
   width: 100%;
-  outline: none;
-  font-size: 15px;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input .custom-field-2 input:valid, .form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input .custom-field-2 input:focus {
-  background-size: 100% 2px, 100% 2px, 100%;
-}
-
-.form-cont-main .form-cont .row-1 .col-1 .form-1 .email-container .email-input .custom-field-2 .placeholder {
-  position: absolute;
-  left: 12px;
-  letter-spacing: 5px;
-  top: calc(50% + 10px);
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: black;
-  font-family: "Recursive", sans-serif;
-  -webkit-transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
-  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
-}
-
-.form-cont-main .form-cont .row-1 .col-2 {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: #b08968;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -webkit-box-shadow: -2px 0px 15px 0px #000000;
-          box-shadow: -2px 0px 15px 0px #000000;
-  padding: 0px 0px;
+  background: red;
 }
 
 @-webkit-keyframes zoomin {

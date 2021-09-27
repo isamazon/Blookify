@@ -453,6 +453,12 @@ $font5: 'Marvel', sans-serif;
             color: white;
             font-family: $font2;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.39);
+            &:hover {
+              cursor: pointer;
+            }
+            &:active {
+              scale: 0.98;
+            }
             @media screen and (max-width: 1200px) {
               height: 32px;
               width: 150px;
@@ -461,10 +467,6 @@ $font5: 'Marvel', sans-serif;
               width: 150px;
               font-size: 15px;
               border: none;
-            }
-
-            &:hover {
-              cursor: pointer;
             }
           }
           .modal {
@@ -523,7 +525,7 @@ $font5: 'Marvel', sans-serif;
                 }
                 .main-header {
                   position: absolute;
-                  top: -30%;
+                  top: -70%;
                   margin: 0%;
                   text-align: center;
                   width: 100%;

@@ -721,6 +721,14 @@
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.39);
 }
 
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button:hover {
+  cursor: pointer;
+}
+
+.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button:active {
+  scale: 0.98;
+}
+
 @media screen and (max-width: 1200px) {
   .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button {
     height: 32px;
@@ -734,10 +742,6 @@
     font-size: 15px;
     border: none;
   }
-}
-
-.main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button:hover {
-  cursor: pointer;
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal {
@@ -836,7 +840,7 @@
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form .main-header {
   position: absolute;
-  top: -30%;
+  top: -70%;
   margin: 0%;
   text-align: center;
   width: 100%;

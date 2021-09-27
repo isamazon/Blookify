@@ -1,155 +1,74 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap");
-$font1: "Recursive", sans-serif;
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-$font2: "Lobster", cursive;
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-$font3: "Pacifico", cursive;
-
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
+$font1: 'Recursive', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+$font2: 'Lobster', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+$font3: 'Pacifico', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Marvel&display=swap');
+$font4: 'Leckerli One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+$font5: 'Marvel', sans-serif;
 .form-cont-main {
   position: relative;
   height: 100vh;
-  background: #9c6644;
-  .form-cont {
-    top: 10%;
+  background: #362316;
+  .form-container {
     position: relative;
-    height: 80%;
-    width: 70%;
+    width: 50%;
+    height: 100%;
+    left: 0%;
     background: none;
     display: flex;
-    justify-content: center;
     align-items: center;
-    .row-1 {
-      position: relative;
-      top: 0%;
+    justify-content: center;
+    .form {
       height: 100%;
-      width: 40%;
+      width: 60%;
       display: flex;
       flex-direction: column;
-      background: #7f5539;
-      border-radius: 20px;
-      animation: zoomin 0.6s;
-      box-shadow: 0px 0px 20px #000000;
-      .col-1 {
+      align-items: center;
+      justify-content: center;
+      h1 {
         position: relative;
-        background: none;
-        height: 100%;
+        text-align: center;
+        margin-top: 20px;
+        color: #ede0d4;
+        font-family: $font2;
+        font-size: 55px;
+      }
+      .signup-signin {
+        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        height: 30px;
         align-items: center;
-        .select-h1 {
-          position: absolute;
-          background: none;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-
-          top: 5%;
-          .login-h1,
-          .sign-h1 {
-            color: #ddb892;
-            cursor: pointer;
-            font-family: $font2;
-            transition: 0.5s;
-            margin: 0px 20px;
-            &:hover {
-              color: #dba269;
-            }
-          }
-          .selected-h1 {
-            border-bottom: 2px solid #ede0d4;
-          }
+        justify-content: center;
+        background: none;
+        p {
+          color: #ede0d4;
+          font-family: $font5;
+          text-align: center;
+          margin: 0px 3px;
         }
-        .form-1 {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          justify-self: flex-end;
-          background: none;
-          height: 80%;
-          width: 100%;
-          top: 10%;
-          .email-container {
-            position: relative;
-            display: flex;
-
-            justify-content: center;
-            width: 100%;
-            height: 90px;
-            top: 0%;
-            background: none;
-            .email-input {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              background-color: none;
-              height: 20%;
-              bottom: 0;
-              width: 100%;
-
-              .custom-field-2 {
-                position: relative;
-                font-size: 15px;
-                padding-top: 20px;
-                bottom: 10%;
-                width: 70%;
-                input:valid + .placeholder,
-                input:focus + .placeholder {
-                  top: 10px;
-                  font-size: 10px;
-                  color: black;
-                }
-                input {
-                  border: none;
-                  appearance: none;
-                  background: linear-gradient(90deg, #7f5539, #7f5539) center
-                      bottom/0 2px no-repeat,
-                    linear-gradient(90deg, #b08968, #b08968) left bottom/100%
-                      2px no-repeat,
-                    linear-gradient(90deg, #ede0d4, #ede0d4) left bottom/100%
-                      100% no-repeat;
-                  transition: background-size 0.3s ease;
-                  padding: 12px;
-                  border-radius: 0;
-                  border-top-left-radius: 3px;
-                  border-top-right-radius: 3px;
-                  width: 100%;
-                  outline: none;
-                  font-size: 15px;
-                  &:valid,
-                  &:focus {
-                    background-size: 100% 2px, 100% 2px, 100%;
-                  }
-                }
-
-                .placeholder {
-                  position: absolute;
-                  left: 12px;
-                  letter-spacing: 5px;
-                  top: calc(50% + 10px);
-                  transform: translateY(-50%);
-                  color: black;
-                  font-family: $font1;
-                  transition: top 0.3s ease, font-size 0.3s ease,
-                    color 0.3s ease;
-                }
-              }
-            }
+        .sign-p {
+          color: #ddb892;
+          &:hover {
+            cursor: pointer;
           }
         }
       }
-      .col-2 {
+      .or {
+        color: #ede0d4;
+        font-family: $font2;
+        text-align: center;
+        font-size: 30px;
+      }
+      .input-container {
         position: relative;
-        height: 100%;
+        height: 300px;
         width: 100%;
-        background: #b08968;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        box-shadow: -2px 0px 15px 0px #000000;
-        padding: 0px 0px;
+        background: red;
       }
     }
   }
