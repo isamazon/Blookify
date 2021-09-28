@@ -83,13 +83,13 @@ function Nav() {
           Currently reading
         </Link>
         <Link
-          to="/read"
+          to={user ? '/read' : '/login'}
           onClick={closeMobileMenu}
           className="menu-link-1 link-mid"
         >
           My finished books
         </Link>
-        <Link className="menu-link-1">About</Link>
+        {/* <Link className="menu-link-1">About</Link> */}
       </div>
     </div>
   );
