@@ -7,13 +7,16 @@
   position: relative;
   height: 100vh;
   background: #362316;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form-cont-main .form-container {
   position: relative;
   width: 50%;
   height: 100%;
-  left: 0%;
+  left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,11 +26,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-cont-main .form-container {
+    width: 100%;
+    left: 0px;
+  }
 }
 
 .form-cont-main .form-container .form {
-  height: 100%;
-  width: 60%;
+  height: 80%;
+  width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,7 +52,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 20px;
   overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .form-cont-main .form-container .form {
+    width: 500px;
+  }
 }
 
 .form-cont-main .form-container .form h1 {
@@ -49,8 +68,14 @@
   text-align: center;
   color: #ede0d4;
   font-family: "Lobster", cursive;
-  font-size: 55px;
+  font-size: 65px;
   text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.582);
+}
+
+@media screen and (max-width: 600px) {
+  .form-cont-main .form-container .form h1 {
+    font-size: 50px;
+  }
 }
 
 .form-cont-main .form-container .form .signup-signin {
@@ -89,6 +114,28 @@
   cursor: pointer;
 }
 
+.form-cont-main .form-container .form .google-button {
+  width: 450px;
+  background: #8f6848;
+  color: #e6ccb2;
+  margin: 20px;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.form-cont-main .form-container .form .google-button:hover {
+  cursor: pointer;
+  background: #664932;
+  -webkit-box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.685);
+          box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.685);
+}
+
 .form-cont-main .form-container .form .or {
   color: #ede0d4;
   font-family: "Lobster", cursive;
@@ -98,13 +145,16 @@
 
 .form-cont-main .form-container .form .input-row {
   position: relative;
-  width: 75%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form-cont-main .form-container .form .input-row .input-column {
@@ -161,6 +211,99 @@
 
 .form-cont-main .form-container .form .input-row .input-column .show-password:hover {
   cursor: pointer;
+}
+
+.form-cont-main .form-container .form .input-row .submit-button {
+  position: relative;
+  width: 95%;
+  border-radius: 10px;
+  border: none;
+  margin: 10px 0px;
+  height: 40px;
+  background: #8f6848;
+  color: #e6ccb2;
+  font-family: "Lobster", cursive;
+  font-size: 25px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form-cont-main .form-container .form .input-row .submit-button:hover {
+  background: #664932;
+  -webkit-box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.685);
+          box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.685);
+}
+
+.form-cont-main .bookimg-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  right: 0%;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-cont-main .bookimg-container {
+    display: none;
+  }
+}
+
+.form-cont-main .bookimg-container .img {
+  position: absolute;
+  height: 1000px;
+  width: 1400px;
+  left: -30%;
+  top: 0%;
+  -webkit-animation: updown 6s ease-in-out infinite;
+          animation: updown 6s ease-in-out infinite;
+}
+
+@media screen and (max-width: 1500px) {
+  .form-cont-main .bookimg-container .img {
+    height: 800px;
+    width: 1000px;
+    left: -26%;
+  }
+}
+
+@-webkit-keyframes updown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes updown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 @-webkit-keyframes zoomin {

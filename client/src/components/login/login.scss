@@ -12,30 +12,43 @@ $font5: 'Marvel', sans-serif;
   position: relative;
   height: 100vh;
   background: #362316;
+  display: flex;
   .form-container {
     position: relative;
     width: 50%;
     height: 100%;
-    left: 0%;
+    left: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      left: 0px;
+    }
     .form {
-      height: 100%;
-      width: 60%;
+      height: 80%;
+      width: 600px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      // background: #ddb892;
+      border-radius: 20px;
       overflow-y: hidden;
+      overflow-x: hidden;
+      @media screen and (max-width: 600px) {
+        width: 500px;
+      }
       h1 {
         position: relative;
         text-align: center;
         color: #ede0d4;
         font-family: $font2;
-        font-size: 55px;
+        font-size: 65px;
         text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.582);
+        @media screen and (max-width: 600px) {
+          font-size: 50px;
+        }
       }
       .signup-signin {
         position: relative;
@@ -60,6 +73,23 @@ $font5: 'Marvel', sans-serif;
           }
         }
       }
+      .google-button {
+        width: 450px;
+        background: #8f6848;
+        color: #e6ccb2;
+        margin: 20px;
+        border: none;
+        height: 40px;
+        border-radius: 5px;
+        transition: 0.5s;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        z-index: 5;
+        &:hover {
+          cursor: pointer;
+          background: #664932;
+          box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.685);
+        }
+      }
       .or {
         color: #ede0d4;
         font-family: $font2;
@@ -68,13 +98,13 @@ $font5: 'Marvel', sans-serif;
       }
       .input-row {
         position: relative;
-        width: 75%;
-
+        width: 80%;
         display: flex;
         align-items: center;
+        justify-content: center;
+
         .input-column {
           position: relative;
-
           display: flex;
           align-items: center;
           justify-content: center;
@@ -104,11 +134,67 @@ $font5: 'Marvel', sans-serif;
             }
           }
         }
+        .submit-button {
+          position: relative;
+          width: 95%;
+          border-radius: 10px;
+          border: none;
+          margin: 10px 0px;
+          height: 40px;
+          background: #8f6848;
+          color: #e6ccb2;
+          font-family: $font2;
+          font-size: 25px;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          transition: 0.5s;
+          &:hover {
+            background: #664932;
+            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.685);
+          }
+        }
+      }
+    }
+  }
+  .bookimg-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    right: 0%;
+    background: none;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+    .img {
+      position: absolute;
+      height: 1000px;
+      width: 1400px;
+      left: -30%;
+      top: 0%;
+      animation: updown 6s ease-in-out infinite;
+      @media screen and (max-width: 1500px) {
+        height: 800px;
+        width: 1000px;
+        left: -26%;
       }
     }
   }
 }
-
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 @keyframes zoomin {
   from {
     transform: scale(0);
