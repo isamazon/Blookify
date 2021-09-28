@@ -16,6 +16,7 @@ function Nav() {
     dispatch({ type: 'LOGOUT' });
     history.push('/');
     setUser(null);
+    window.location.reload(false);
   };
 
   const handleClick = () => setClick(!click);

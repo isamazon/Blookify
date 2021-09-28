@@ -11,6 +11,7 @@ import Svg1 from './components/svgs/reading1';
 
 import Test from './components/test';
 function Home() {
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   return (
     <div>
       <Container fluid className="landingpage-fl-cnt">
@@ -22,7 +23,11 @@ function Home() {
         <Row className="row-1">
           <div className="text-container">
             <Slide bottom cascade>
-              <h1>Welcome to Blookify,</h1>
+              <h1>
+                {user
+                  ? `Welcome to blookify, ${user.result.name}`
+                  : 'Welcome to Blookify,'}
+              </h1>
               <p>
                 Utilize over 7 million books and store the books youre currently
                 reading and the books that youve finished into your own personal
@@ -31,11 +36,13 @@ function Home() {
             </Slide>
             <Slide bottom cascade>
               <div className="button-cont">
-                <Link to="/Login" className="btn-1 b-1">
-                  Login
-                </Link>
+                {user ? null : (
+                  <Link to="/Login" className="btn-1 b-1">
+                    Login
+                  </Link>
+                )}
 
-                <Link to="/Addbook" className="btn-1 b-2">
+                <Link to={user ? '/Addbook' : '/login'} className="btn-1 b-2">
                   Get started
                 </Link>
               </div>
