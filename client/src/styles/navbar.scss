@@ -1,10 +1,14 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap');
-$font1: 'Recursive', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Marvel&family=Merriweather:wght@300&display=swap');
+$font1: 'Merriweather', serif;
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 $font2: 'Lobster', cursive;
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 $font3: 'Pacifico', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Marvel&display=swap');
+$font4: 'Leckerli One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');
+$font5: 'Marvel', sans-serif;
 
 .nav-bar {
   position: fixed;
@@ -46,14 +50,14 @@ $font3: 'Pacifico', cursive;
   }
   .user-profile {
     position: absolute;
-    right: 20px;
+    right: 0px;
     height: 100%;
-    width: 150px;
+    width: 350px;
     background: none;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     .user-img {
       position: relative;
       height: 50px;
@@ -61,6 +65,31 @@ $font3: 'Pacifico', cursive;
       border: 3px solid #7f5539;
       border-radius: 50%;
       background: #ddb892;
+    }
+    p {
+      position: relative;
+      color: #291b13;
+      text-align: center;
+      background: none;
+      font-family: $font2;
+      font-size: 20px;
+      top: 10%;
+    }
+    .logout-button {
+      position: relative;
+      right: 0px;
+      color: white;
+      font-family: $font2;
+      font-size: 20px;
+      border: 2px solid #ede0d4;
+      padding: 5px 30px;
+      border-radius: 10px;
+      background: #7f5539;
+      transition: 0.5s;
+      z-index: 5;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .loginlink {

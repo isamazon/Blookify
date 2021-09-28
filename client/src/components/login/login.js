@@ -10,7 +10,7 @@ import bookpic from '../../assets/bookbackground.png';
 // icons
 import { GoogleLogin } from 'react-google-login';
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
-
+import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
 function Login() {
   // Password toggle
@@ -24,6 +24,7 @@ function Login() {
     setSignUp((prevIsSignup) => !prevIsSignup);
   };
   const dispatch = useDispatch();
+  const history = useHistory();
   // const handleSubmit = () => {};
 
   // const handleChange = () => {};\
@@ -34,6 +35,8 @@ function Login() {
 
     try {
       dispatch({ type: 'AUTH', data: { result, token } });
+      history.push('/');
+      window.location.reload(false);
     } catch (error) {
       console.log(error);
     }

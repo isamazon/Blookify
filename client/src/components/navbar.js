@@ -1,17 +1,33 @@
-import React, { useState, Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
+import { Button } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
+
 import '../styles/navbar.css';
 
 function Nav() {
   const [click, setClick] = useState(false);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const logout = () => {
+    dispatch({ type: 'LOGOUT' });
+    history.push('/');
+    setUser(null);
+  };
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  // User
-  const user = null;
+  // useEffect(() => {
+  //   const token = user?.token;
 
+  //   // JWT
+
+  //   setUser(JSON.parse(localStorage.getItem('profile')));
+  // }, []);
   return (
     <div>
       <nav className="nav-bar">
@@ -26,8 +42,11 @@ function Nav() {
         {/* User logged in/out logic */}
         {user ? (
           <div className="user-profile">
-            <img src="{user.result.imageUrl} " alt="" className="user-img" />
-            {/* <p> {user.result.name} </p> */}
+            <img src={user.result.imageUrl} alt="" className="user-img" />
+            <p> {user.result.name} </p>
+            <Button className="logout-button" onClick={logout}>
+              Logout
+            </Button>
           </div>
         ) : (
           <Link to="/Login" className="loginlink">
@@ -50,14 +69,14 @@ function Nav() {
           Home
         </Link>
         <Link
-          to="/Addbook"
+          to={user ? '/Addbook' : '/login'}
           onClick={closeMobileMenu}
           className="menu-link-1 link-mid"
         >
           Add a book!
         </Link>
         <Link
-          to="/currentlyreading"
+          to={user ? '/currentlyreading' : '/login'}
           onClick={closeMobileMenu}
           className="menu-link-1"
         >
