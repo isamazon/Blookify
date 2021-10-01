@@ -1,33 +1,54 @@
 import React, { useState } from 'react';
 import './login.css';
 import Icon from './icon';
-import Input from './input';
 import { Container, Row, Col } from 'react-bootstrap';
-import Slide from 'react-reveal/Slide';
-import Fade from 'react-reveal/Fade';
-import Svg2 from '../svgs/reading2';
 import bookpic from '../../assets/bookbackground.png';
 // icons
 import { GoogleLogin } from 'react-google-login';
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
 import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
+import { signin, signup } from '../../actions/auth';
+const initialState = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+};
+
 function Login() {
   // Password toggle
   const [showPassword, setShowPassword] = useState(false);
   const handleShowPassword = () =>
     setShowPassword((prevShowPassword) => !prevShowPassword);
 
+  // Sign in/Sign up toggle
   const [isSignUp, setSignUp] = useState(false);
-
   const switchMode = () => {
     setSignUp((prevIsSignup) => !prevIsSignup);
   };
+  // Dispatch and useHistory
   const dispatch = useDispatch();
   const history = useHistory();
-  // const handleSubmit = () => {};
 
-  // const handleChange = () => {};\
+  const [formData, setFormData] = useState(initialState);
+  // JWT functions
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isSignUp) {
+      dispatch(signup(formData, history));
+    } else {
+      dispatch(signin(formData, history));
+    }
+  };
+  // Change/updating input values
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Google login success logic
   const googleSuccess = async (res) => {
     console.log(res);
     const result = res?.profileObj;
@@ -49,7 +70,7 @@ function Login() {
   return (
     <Container fluid className="form-cont-main ">
       <div className="form-container">
-        <form className="form" onSubmit={'handleSubmit'}>
+        <form className="form" onSubmit={handleSubmit}>
           <h1>{isSignUp ? 'Sign up to Blookify!' : 'Login to Blookify'}</h1>
 
           <div className="signup-signin">
@@ -91,8 +112,8 @@ function Login() {
                     className="input"
                     placeholder="First Name*"
                     name="firstName"
-                    label="First Name"
-                    onChange={'handleChange'}
+                    label="firstName"
+                    onChange={handleChange}
                     type="text"
                     required
                   />
@@ -101,6 +122,9 @@ function Login() {
                   <input
                     className="input"
                     placeholder="Last Name*"
+                    name="lastName"
+                    label="lastName"
+                    onChange={handleChange}
                     type="text"
                     required
                   />
@@ -111,14 +135,19 @@ function Login() {
               <input
                 className="input"
                 placeholder="Email*"
-                type="text"
-                required
+                name="email"
+                label="Email Address"
+                onChange={handleChange}
+                type="email"
               />
             </Col>
             <Col xl={12} className="input-column">
               <input
                 className="input"
                 placeholder="Password*"
+                name="password"
+                label="password"
+                onChange={handleChange}
                 type={showPassword ? 'text' : 'password'}
                 required
               />
@@ -134,6 +163,9 @@ function Login() {
               <Col xl={12} className="input-column">
                 <input
                   className="input"
+                  name="confirmPassword"
+                  label="confirmPassword"
+                  onChange={handleChange}
                   placeholder="Confirm password*"
                   type={showPassword ? 'text' : 'password'}
                   required

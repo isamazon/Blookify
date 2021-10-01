@@ -5,7 +5,7 @@ import cors from 'cors';
 
 import readingRoutes from './routes/reading.js';
 import readRoutes from './routes/read.js';
-
+import userRoutes from './routes/users.js';
 const app = express();
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
@@ -15,6 +15,7 @@ app.use(cors());
 // Endpoints
 app.use('/reading', readingRoutes);
 app.use('/read', readRoutes);
+app.use('/user', userRoutes);
 
 const CONNECTION_URL =
   'mongodb+srv://isamazon:Bighead0622@cluster0.si8ft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';

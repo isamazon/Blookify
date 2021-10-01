@@ -5,9 +5,10 @@ import {
   createReadPost,
   deleteReadBook,
 } from '../controllers/readposts.js';
+import auth from '../middleware/auth.js';
 const router = express.Router();
 
 router.get('/', readPosts);
-router.post('/', createReadPost);
-router.delete('/:id', deleteReadBook);
+router.post('/', auth, createReadPost);
+router.delete('/:id', auth, deleteReadBook);
 export default router;

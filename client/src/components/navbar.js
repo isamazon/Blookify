@@ -3,12 +3,13 @@ import { Link, useHistory } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Button } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
-
+import pic1 from '../assets/noimage.png';
 import '../styles/navbar.css';
 
 function Nav() {
   const [click, setClick] = useState(false);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+  const [profileDrop, setProfileDrop] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -21,6 +22,7 @@ function Nav() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const ToggleProfile = () => setProfileDrop(!profileDrop);
 
   // useEffect(() => {
   //   const token = user?.token;
@@ -43,11 +45,18 @@ function Nav() {
         {/* User logged in/out logic */}
         {user ? (
           <div className="user-profile">
-            <img src={user.result.imageUrl} alt="" className="user-img" />
-            <p> {user.result.name} </p>
-            <Button className="logout-button" onClick={logout}>
-              Logout
-            </Button>
+            <img
+              src={user.result.imageUrl ? user.result.imageUrl : pic1}
+              alt="ss"
+              className="user-img"
+              onClick={ToggleProfile}
+            />
+            <div className={profileDrop ? 'dropdownmenu' : 'hiddenmenu'}>
+              <p className="user-p">User: {user.result.name}</p>
+              <Button className="logout-button" onClick={logout}>
+                Logout
+              </Button>
+            </div>
           </div>
         ) : (
           <Link to="/Login" className="loginlink">
