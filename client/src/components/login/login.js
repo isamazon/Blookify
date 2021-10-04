@@ -180,7 +180,7 @@ function Login() {
               </Col>
             )}
             <button type="submit" className="submit-button">
-              {isSignUp ? 'Login' : 'Sign up'}
+              {isSignUp ? 'Sign up' : 'Login'}
             </button>
           </Row>
         </form>
