@@ -4,7 +4,7 @@ import PostBook from '../model/postBook.js';
 // function to retrieving posts
 export const readingPosts = async (req, res) => {
   try {
-    const postBooks = await PostBook.find();
+    const postBooks = await PostBook.find({ creator: req.userId });
     console.log(postBooks);
     res.status(200).json(postBooks);
   } catch (error) {
