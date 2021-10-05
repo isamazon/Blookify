@@ -6,7 +6,7 @@ import axios from 'axios';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
-import { Button } from '@material-ui/core';
+
 // Redux
 
 // API url
@@ -21,7 +21,7 @@ import book1 from '../../assets/successbook.png';
 function Profile() {
   const [section, setSection] = useState([]);
   const [input, setInput] = useState('');
-
+  const [error, setError] = useState();
   const changeInput = (e) => {
     setInput(e.target.value);
     // setInput2(e.target.value);
@@ -38,7 +38,9 @@ function Profile() {
             setSection(book.data.items);
             // console.log(book.data.items);
           })
-          .catch((error) => console.log(error));
+          .catch((error) => {
+            setError(error);
+          });
       } else {
         setSection([]);
       }
@@ -52,6 +54,10 @@ function Profile() {
   const toggleModal = () => {
     setModal(!modal);
   };
+
+  if (error || !Array.isArray(section)) {
+    window.location.reload(false);
+  }
   return (
     <Container fluid className="main-container">
       <div className={modal ? 'empty' : 'added-modal'}>
