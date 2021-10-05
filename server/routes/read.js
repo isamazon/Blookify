@@ -8,7 +8,7 @@ import {
 import auth from '../middleware/auth.js';
 const router = express.Router();
 
-router.get('/', readPosts);
+router.get('/', auth, readPosts);
 router.post('/', auth, createReadPost);
 router.delete('/:id', auth, deleteReadBook);
 export default router;
