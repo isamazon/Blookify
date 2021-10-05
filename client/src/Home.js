@@ -28,10 +28,12 @@ function Home() {
                   ? `Welcome to blookify, ${user.result.name}`
                   : 'Welcome to Blookify,'}
               </h1>
+            </Slide>
+            <Slide bottom>
               <p>
-                Utilize over 7 million books and store the books youre currently
-                reading and the books that youve finished into your own personal
-                library.
+                Utilize over 7 million books and store the books you're
+                currently reading and the books that youve finished into your
+                own personal library.
               </p>
             </Slide>
             <Slide bottom cascade>
