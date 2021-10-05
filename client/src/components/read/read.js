@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 
 import ReadPost from './readpost';
 import Sidebar from '../reading/sidebar';
+import Emptybook from '../reading/emptybook';
 // CSS
 import '../reading/profile.css';
 import '../reading/bookpost.css';
@@ -14,7 +15,13 @@ const Read = () => {
   const readBooks = useSelector((state) => state.read);
   // console.log(readBooks);
 
-  return (
+  return !readBooks.length ? (
+    <Emptybook
+      emptybookp="You have no finished books here yet!"
+      routeto="/currentlyreading"
+      linktext="Go to reading page here"
+    />
+  ) : (
     <Container fluid className="main-container">
       <Row className="profile-row">
         <Sidebar />
