@@ -8,6 +8,7 @@ export const signin = (formData, history) => async (dispatch) => {
     dispatch({ type: 'AUTH', data });
 
     history.push('/');
+    window.location.reload(false);
   } catch (error) {
     console.log(error);
   }
@@ -21,6 +22,7 @@ export const signup = (formData, history) => async (dispatch) => {
     dispatch({ type: 'AUTH', data });
 
     history.push('/');
+    window.location.reload(false);
   } catch (error) {
     console.log(error);
   }

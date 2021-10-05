@@ -36,7 +36,7 @@ function Profile() {
           )
           .then((book) => {
             setSection(book.data.items);
-            console.log(book.data.items);
+            // console.log(book.data.items);
           })
           .catch((error) => console.log(error));
       } else {

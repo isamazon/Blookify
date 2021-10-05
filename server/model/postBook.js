@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const postBookSchema = mongoose.Schema({
   title: String,
   author: String,
+  name: String,
   pageLength: String,
   selectedFile: String,
   description: String,

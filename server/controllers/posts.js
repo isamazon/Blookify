@@ -16,7 +16,11 @@ export const readingPosts = async (req, res) => {
 export const createreadingPost = async (req, res) => {
   const bookPost = req.body;
 
-  const newBookPost = new PostBook(bookPost);
+  const newBookPost = new PostBook({
+    ...bookPost,
+    creator: req.userId,
+    createdAt: new Date().toISOString(),
+  });
 
   try {
     await newBookPost.save();
