@@ -541,8 +541,9 @@
 
 .main-container .profile-row .profile-cont .search-bar {
   position: relative;
-  width: 90%;
+  width: 70%;
   height: 80px;
+  right: 65px;
   margin-bottom: 20px;
   margin-top: 100px;
   border-radius: 20px;
@@ -564,6 +565,12 @@
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
 }
 
+@media screen and (max-width: 1500px) {
+  .main-container .profile-row .profile-cont .search-bar {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .main-container .profile-row .profile-cont .search-bar {
     width: 100%;
@@ -573,6 +580,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    right: 0px;
   }
 }
 
@@ -580,6 +588,8 @@
   .main-container .profile-row .profile-cont .search-bar {
     padding: 50px 0px;
     padding-left: 0px;
+    top: 0px;
+    height: 100px;
   }
 }
 
@@ -605,18 +615,16 @@
 
 @media screen and (max-width: 830px) {
   .main-container .profile-row .profile-cont .search-bar h1 {
-    margin-left: 0px;
-    margin-right: 10px;
     font-size: 25px;
     position: absolute;
-    top: -40%;
+    top: -35%;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
   }
 }
 
 @media screen and (max-width: 610px) {
   .main-container .profile-row .profile-cont .search-bar h1 {
     font-size: 25px;
-    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.514);
   }
 }
 
@@ -625,21 +633,19 @@
   right: 2%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
   .main-container .profile-row .profile-cont .search-bar .search-cont {
-    width: 50%;
     left: 0px;
   }
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .book-search,
-.main-container .profile-row .profile-cont .search-bar .search-cont .author-search {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search {
   border-radius: 20px;
   border: 3px solid #e6ccb2;
   background: #7f5539;
   margin: 0px 10px;
   text-align: center;
-  width: 200px;
+  width: 300px;
   font-family: "Lobster", cursive;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -647,44 +653,50 @@
 }
 
 @media screen and (max-width: 1105px) {
-  .main-container .profile-row .profile-cont .search-bar .search-cont .book-search,
-  .main-container .profile-row .profile-cont .search-bar .search-cont .author-search {
+  .main-container .profile-row .profile-cont .search-bar .search-cont .book-search {
     width: 150px;
     right: 0px;
   }
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .book-search:focus,
-.main-container .profile-row .profile-cont .search-bar .search-cont .author-search:focus {
+@media screen and (max-width: 1700px) {
+  .main-container .profile-row .profile-cont .search-bar .search-cont .book-search {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main-container .profile-row .profile-cont .search-bar .search-cont .book-search {
+    width: 350px;
+  }
+}
+
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search:focus {
   outline: none;
   color: white;
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::-webkit-input-placeholder,
-.main-container .profile-row .profile-cont .search-bar .search-cont .author-search::-webkit-input-placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::-webkit-input-placeholder {
   color: white;
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .book-search:-ms-input-placeholder,
-.main-container .profile-row .profile-cont .search-bar .search-cont .author-search:-ms-input-placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search:-ms-input-placeholder {
   color: white;
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::-ms-input-placeholder,
-.main-container .profile-row .profile-cont .search-bar .search-cont .author-search::-ms-input-placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::-ms-input-placeholder {
   color: white;
 }
 
-.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::placeholder,
-.main-container .profile-row .profile-cont .search-bar .search-cont .author-search::placeholder {
+.main-container .profile-row .profile-cont .search-bar .search-cont .book-search::placeholder {
   color: white;
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt {
   position: absolute;
-  right: 20%;
+  right: 10%;
   height: 100%;
-  width: 200px;
+  width: 300px;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -712,6 +724,12 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt {
+    display: none;
+  }
+}
+
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button {
   position: absolute;
   z-index: 1;
@@ -719,12 +737,10 @@
   height: 50%;
   border: none;
   border-radius: 20px;
-  border: 3px solid #e6ccb2;
-  background: #7f5539;
-  color: white;
+  border: 3px solid #7f5539;
+  background: #e6ccb2;
+  color: #573a27;
   font-family: "Lobster", cursive;
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.39);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.39);
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button:hover {
@@ -733,6 +749,13 @@
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button:active {
   scale: 0.98;
+}
+
+@media screen and (max-width: 1700px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal-button {
+    width: 150px;
+    right: 0%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -794,6 +817,12 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box {
+    width: 95%;
+  }
+}
+
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .closebutton {
   position: absolute;
   top: -20px;
@@ -824,6 +853,17 @@
   color: white;
 }
 
+@media screen and (max-width: 420px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .closebutton {
+    right: 0px;
+    top: 0px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 25px;
+  }
+}
+
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form {
   position: relative;
   height: 100%;
@@ -845,14 +885,22 @@
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form .main-header {
-  top: -70%;
-  margin: 0%;
+  position: relative;
+  height: 100px;
+  top: 0%;
   text-align: center;
   width: 100%;
   background: none;
   color: #ede0d4;
   font-size: 50px;
   text-shadow: 0px 5px 15px #442d1e;
+}
+
+@media screen and (max-width: 850px) {
+  .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form .main-header {
+    font-size: 40px;
+    top: 0%;
+  }
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form .file-base-cnt {
@@ -874,7 +922,7 @@
   position: relative;
   background: none;
   width: 100%;
-  height: 100px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,6 +952,7 @@
   background: #e6ccb2;
   color: #1d130d;
   font-size: 15px;
+  overflow-x: scroll;
 }
 
 .main-container .profile-row .profile-cont .search-bar .modal-btn-cnt .modal .modal-box .form .label-cnt .input:focus {

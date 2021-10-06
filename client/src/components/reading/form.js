@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import FileBase from 'react-file-base64';
 // Redux dispatch
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
 // CSS
 import './profile.css';
 //
@@ -13,14 +14,18 @@ function Form() {
     author: '',
     pageLength: '',
     selectedFile: '',
+    description: '',
   });
   const dispatch = useDispatch();
+  const history = useHistory();
 
   // This handle submit function will be able to handle the dispatch actions
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createPost(bookData));
+    history.push('/currentlyreading');
   };
+
   return (
     <div className="book-form-cont">
       <form className="form" onSubmit={handleSubmit}>
@@ -70,6 +75,18 @@ function Form() {
             value={bookData.pageLength}
             onChange={(e) =>
               setBookData({ ...bookData, pageLength: e.target.value })
+            }
+          />
+        </label>
+        <label className="label-cnt">
+          Description
+          <input
+            className="input"
+            type="text"
+            name="description"
+            value={bookData.description}
+            onChange={(e) =>
+              setBookData({ ...bookData, description: e.target.value })
             }
           />
         </label>
