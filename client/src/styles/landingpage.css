@@ -115,6 +115,7 @@
   font-family: "Lobster", cursive;
   color: black;
   font-size: 70px;
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 1360px) {
@@ -153,6 +154,12 @@
   font-family: "Recursive", sans-serif;
   font-size: 20px;
   color: #b08968;
+}
+
+@media screen and (max-width: 1600px) {
+  .landingpage-fl-cnt .row-1 .text-container p {
+    margin: 50px 0px;
+  }
 }
 
 @media screen and (max-width: 1360px) {

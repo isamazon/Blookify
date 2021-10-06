@@ -72,6 +72,8 @@ $font3: 'Pacifico', cursive;
         font-family: $font2;
         color: black;
         font-size: 70px;
+        margin-bottom: 0px;
+
         @media screen and (max-width: 1360px) {
           position: relative;
           width: 100%;
@@ -97,6 +99,10 @@ $font3: 'Pacifico', cursive;
         font-family: $font1;
         font-size: 20px;
         color: #b08968;
+
+        @media screen and (max-width: 1600px) {
+          margin: 50px 0px;
+        }
         @media screen and (max-width: 1360px) {
           width: 100%;
         }

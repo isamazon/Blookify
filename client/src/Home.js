@@ -22,10 +22,10 @@ function Home() {
         </Fade>
         <Row className="row-1">
           <div className="text-container">
-            <Slide bottom cascade>
+            <Slide bottom>
               <h1>
                 {user
-                  ? `Welcome to blookify, ${user.result.name}`
+                  ? `Welcome to blookify,  ${user.result.name}`
                   : 'Welcome to Blookify,'}
               </h1>
             </Slide>

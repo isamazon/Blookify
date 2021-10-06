@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 //
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 // Components
 
 import ReadPost from './readpost';
 import Sidebar from '../reading/sidebar';
 import Emptybook from '../reading/emptybook';
+import Slide from 'react-reveal/Slide';
 // CSS
 import '../reading/profile.css';
 import '../reading/bookpost.css';
@@ -23,6 +24,9 @@ const Read = () => {
     />
   ) : (
     <Container fluid className="main-container">
+      <Slide bottom cascade>
+        <h1 className="currently-reading-h1">Read books</h1>
+      </Slide>
       <Row className="profile-row">
         <Sidebar />
         <div className="reading-container">

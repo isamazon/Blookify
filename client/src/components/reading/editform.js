@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import FileBase from 'react-file-base64';
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { createPost, updatePost } from '../../actions/posts';
+import { createPost, updatePost, deletePost } from '../../actions/posts';
 import './bookpost.css';
 
 const EditForm = ({ currentId, setCurrentId }) => {
@@ -17,7 +17,7 @@ const EditForm = ({ currentId, setCurrentId }) => {
   ///////////////////////////////// UPDATING POSTS
   // Selecting posts from backend
   const post = useSelector((state) =>
-    currentId ? state.posts.find((p) => p._id === currentId) : null
+    currentId ? state.posts.find((post) => post._id === currentId) : null
   );
 
   useEffect(() => {
@@ -30,7 +30,11 @@ const EditForm = ({ currentId, setCurrentId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(bookData);
-    dispatch(updatePost(bookData));
+    if (currentId === 0) {
+      dispatch(createPost(bookData));
+    } else {
+      dispatch(updatePost(currentId, bookData));
+    }
   };
   //
   return (

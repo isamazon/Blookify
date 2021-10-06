@@ -1,20 +1,20 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import axios from "axios";
+import React, { useRef, useState, useEffect } from 'react';
+import { Container } from 'react-bootstrap';
+import axios from 'axios';
 
 function Test() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/books").then((response) => {
+    axios.get('http://localhost:5000/books').then((response) => {
       setResults(response.data);
     });
   }, []);
 
-  const tempTitle = useRef("");
+  const tempTitle = useRef('');
 
   const createEntry = () => {
-    axios.post("http://localhost:5000/addBook", {
+    axios.post('http://localhost:5000/addBook', {
       title: tempTitle,
       finished: false,
     });

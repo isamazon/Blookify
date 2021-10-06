@@ -20,8 +20,9 @@ app.use('/read', readRoutes);
 app.use('/user', userRoutes);
 
 app.get('/', (req, res) => {
-  res.send('Hello to blookify');
+  res.send('Hello to blookify, if you see this its working!!');
 });
+app.get('/favicon.ico', (req, res) => res.status(200));
 
 const PORT = process.env.PORT || 5000;
 

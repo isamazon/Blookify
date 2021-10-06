@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-
+import { Container, Row } from 'react-bootstrap';
+import Slide from 'react-reveal/Slide';
 // Components
 
 import Sidebar from './sidebar';
@@ -35,6 +35,9 @@ const CurrentlyReading = () => {
     />
   ) : (
     <Container fluid className="main-container">
+      <Slide bottom cascade>
+        <h1 className="currently-reading-h1">Currently reading</h1>
+      </Slide>
       <Row className="profile-row">
         {/* <h1 className='currently-reading-h1'>Currently reading:</h1> */}
         <Sidebar />

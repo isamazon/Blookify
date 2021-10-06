@@ -39,6 +39,39 @@
   }
 }
 
+.main-container .currently-reading-h1 {
+  position: absolute;
+  top: 6%;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  font-family: "Lobster", cursive;
+  font-size: 80px;
+  color: #492710;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.185);
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container .currently-reading-h1 {
+    font-size: 65px;
+    top: 7%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main-container .currently-reading-h1 {
+    font-size: 50px;
+    top: 8%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .main-container .currently-reading-h1 {
+    font-size: 40px;
+    top: 8%;
+  }
+}
+
 .main-container .empty {
   display: none;
 }
@@ -265,18 +298,6 @@
   }
 }
 
-.main-container .profile-row .currently-reading-h1 {
-  position: absolute;
-  top: 8%;
-  text-align: center;
-  width: 100%;
-  z-index: 10;
-  font-family: "Lobster", cursive;
-  font-size: 50px;
-  color: #492710;
-  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.349);
-}
-
 .main-container .profile-row .sidebar-container {
   position: relative;
   -webkit-box-orient: vertical;
@@ -300,15 +321,7 @@
 
 @media screen and (max-width: 1200px) {
   .main-container .profile-row .sidebar-container {
-    position: absolute;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    height: 60px;
-    width: 100%;
-    top: 8%;
-    background: none;
+    display: none;
   }
 }
 
@@ -336,16 +349,9 @@
           align-items: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .main-container .profile-row .sidebar-container .nav-side-bar {
-    height: 100%;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    display: none;
   }
 }
 
@@ -943,11 +949,11 @@
 
 .main-container .profile-row .reading-container {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   width: 90%;
-  top: 3%;
+  top: 10%;
   border-radius: 20px;
-  padding: 75px 20px;
+  padding: 50px 20px;
   overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -969,11 +975,17 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
-    top: 0%;
-    padding: 85px 10px;
+    top: 7%;
+    padding: 20px 20px;
     padding-bottom: 0px;
     padding-left: 20px;
-    height: 90%;
+    height: 85%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-container .profile-row .reading-container {
+    padding-top: 100px;
   }
 }
 

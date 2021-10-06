@@ -53,7 +53,7 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
       <Zoom>
         <div className="inner-card">
           <div className="top-info">
-            <Button
+            {/* <Button
               className="edit-button"
               onClick={() => {
                 ToggleEdit();
@@ -66,14 +66,14 @@ const BookPost = ({ post, currentId, setCurrentId }) => {
               ) : (
                 <AiOutlineClose size="20px" color="white" />
               )}
-            </Button>
+            </Button> */}
             {/* Book edit container */}
-            <Fade opposite when={!BookEdit}>
+            {/* <Fade opposite when={!BookEdit}>
               <div className={BookEdit ? 'blank' : 'edit-container'}>
                 <h3>Edit book info!</h3>
                 <EditForm currentId={currentId} />
               </div>
-            </Fade>
+            </Fade> */}
             <h4>{post.title}</h4>
             <img className="post-image" src={post.selectedFile} alt="" />
           </div>
