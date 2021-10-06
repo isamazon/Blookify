@@ -31,7 +31,7 @@ $font3: 'Pacifico', cursive;
       height: 50%;
       top: 50%;
     }
-    @media screen and (max-height: 800px) {
+    @media screen and (max-width: 800px) {
       top: 60%;
     }
   }

@@ -389,6 +389,7 @@ $font5: 'Marvel', sans-serif;
           margin-left: 50px;
           display: flex;
           align-items: center;
+
           @media screen and (max-width: 1105px) {
             font-size: 30px;
           }
@@ -400,6 +401,10 @@ $font5: 'Marvel', sans-serif;
           }
           @media screen and (max-width: 610px) {
             font-size: 25px;
+            width: 100%;
+            justify-content: center;
+            margin-right: 0px;
+            margin-left: 0px;
           }
         }
         .search-cont {
@@ -428,6 +433,9 @@ $font5: 'Marvel', sans-serif;
             }
             @media screen and (max-width: 700px) {
               width: 350px;
+            }
+            @media screen and (max-width: 400px) {
+              width: 260px;
             }
 
             &:focus {
