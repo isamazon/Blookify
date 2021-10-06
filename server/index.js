@@ -19,12 +19,17 @@ app.use('/reading', readingRoutes);
 app.use('/read', readRoutes);
 app.use('/user', userRoutes);
 
-const CONNECTION_URL =
-  'mongodb+srv://isamazon:Bighead0622@cluster0.si8ft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+app.get('/', (req, res) => {
+  res.send('Hello to blookify');
+});
+
 const PORT = process.env.PORT || 5000;
 
 mongoose
-  .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() =>
     app.listen(PORT, () =>
       console.log(`Server Running on Port: http://localhost:${PORT}`)
