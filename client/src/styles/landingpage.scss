@@ -17,6 +17,9 @@ $font3: 'Pacifico', cursive;
     height: 100vh;
     overflow-y: hidden;
   }
+  @media screen and (max-height: 800px) {
+    overflow-y: hidden;
+  }
   .svg-cont {
     position: absolute;
     height: 100%;
@@ -33,6 +36,10 @@ $font3: 'Pacifico', cursive;
     }
     @media screen and (max-width: 800px) {
       top: 60%;
+    }
+    @media screen and (max-height: 800px) {
+      height: 60%;
+      top: 30%;
     }
   }
 

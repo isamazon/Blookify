@@ -21,6 +21,12 @@
   }
 }
 
+@media screen and (max-height: 800px) {
+  .landingpage-fl-cnt {
+    overflow-y: hidden;
+  }
+}
+
 .landingpage-fl-cnt .svg-cont {
   position: absolute;
   height: 100%;
@@ -49,6 +55,13 @@
 @media screen and (max-width: 800px) {
   .landingpage-fl-cnt .svg-cont {
     top: 60%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .landingpage-fl-cnt .svg-cont {
+    height: 60%;
+    top: 30%;
   }
 }
 

@@ -670,6 +670,7 @@ $font5: 'Marvel', sans-serif;
         padding-bottom: 0px;
         padding-left: 20px;
         height: 85%;
+        justify-content: center;
       }
       @media screen and (max-width: 600px) {
         padding-top: 100px;
@@ -688,10 +689,20 @@ $font5: 'Marvel', sans-serif;
       align-items: center;
       background: #b08968;
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.411);
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        justify-self: center;
+      }
+
       p {
         color: #e6ccb2;
         font-size: 40px;
         font-family: $font2;
+        text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.24);
+        @media screen and (max-width: 600px) {
+          font-size: 35px;
+          text-align: center;
+        }
       }
       .link-to-add {
         position: relative;
@@ -707,12 +718,14 @@ $font5: 'Marvel', sans-serif;
         border-radius: 20px;
         background: #7f5539;
         transition: 0.5s;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.199);
         &:hover {
           text-decoration: none;
           color: #7f5539;
           background: #e6ccb2;
           border: 2px solid #7f5539;
           transform: translateY(-5px);
+          box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.349);
         }
       }
     }
