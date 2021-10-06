@@ -352,7 +352,6 @@ $font5: 'Marvel', sans-serif;
         position: relative;
         width: 70%;
         height: 80px;
-        right: 65px;
         margin-bottom: 20px;
         margin-top: 100px;
         border-radius: 20px;
@@ -364,6 +363,7 @@ $font5: 'Marvel', sans-serif;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.397);
         @media screen and (max-width: 1500px) {
           width: 90%;
+          left: 0px;
         }
         @media screen and (max-width: 1200px) {
           width: 100%;
@@ -410,9 +410,9 @@ $font5: 'Marvel', sans-serif;
             left: 0px;
           }
           .book-search {
-            border-radius: 20px;
-            border: 3px solid #e6ccb2;
-            background: #7f5539;
+            border-radius: 10px;
+            border: 2px solid #e6ccb2;
+            background: #503624;
             margin: 0px 10px;
             text-align: center;
             width: 300px;

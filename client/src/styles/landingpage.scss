@@ -83,6 +83,7 @@ $font3: 'Pacifico', cursive;
         }
         @media screen and (max-width: 450px) {
           font-size: 40px;
+          top: 20%;
         }
         @media screen and (max-width: 350px) {
           font-size: 30px;
@@ -108,14 +109,15 @@ $font3: 'Pacifico', cursive;
         }
         @media screen and (max-width: 550px) {
           padding: 0px 20px;
-          margin-bottom: 50px;
+          margin-bottom: 30px;
         }
         @media screen and (max-width: 450px) {
           font-size: 15px;
+          top: 10%;
         }
         @media screen and (max-width: 350px) {
-          font-size: 12px;
-          top: 10%;
+          font-size: 15px;
+          padding: 0px 10px;
         }
       }
       .button-cont {
@@ -137,6 +139,9 @@ $font3: 'Pacifico', cursive;
           justify-content: center;
           align-items: center;
           width: 100%;
+        }
+        @media screen and (max-width: 280px) {
+          top: 20%;
         }
         .btn-1 {
           border-radius: 20px;

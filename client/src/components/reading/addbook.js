@@ -98,7 +98,7 @@ function Profile() {
             inputvalue={input}
             //   author={input2}
             onChange={changeInput}
-            placeholder="Book title"
+            placeholder="Search title here..."
             placeholder2="Author"
             //   submit={changeInput}
           />

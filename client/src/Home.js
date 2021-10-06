@@ -24,7 +24,7 @@ function Home() {
             <Slide bottom>
               <h1>
                 {user
-                  ? `Welcome to blookify,  ${user.result.name}`
+                  ? `Welcome,  ${user.result.name}`
                   : 'Welcome to Blookify,'}
               </h1>
             </Slide>
