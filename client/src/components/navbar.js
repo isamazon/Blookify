@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Button } from '@material-ui/core';
+import { FiLogOut } from 'react-icons/fi';
 import { useDispatch } from 'react-redux';
-import pic1 from '../assets/noimage.png';
+import pic1 from '../assets/user.png';
 import '../styles/navbar.css';
 
 function Nav() {
@@ -54,7 +55,7 @@ function Nav() {
             <div className={profileDrop ? 'dropdownmenu' : 'hiddenmenu'}>
               <p className="user-p">User: {user.result.name}</p>
               <Button className="logout-button" onClick={logout}>
-                Logout
+                Logout <FiLogOut className="logout-btn" />
               </Button>
             </div>
           </div>
@@ -99,7 +100,11 @@ function Nav() {
         >
           My finished books
         </Link>
-        {/* <Link className="menu-link-1">About</Link> */}
+        {user ? (
+          <Button className="menu-logout" onClick={logout}>
+            Logout <FiLogOut className="logout-btn" />
+          </Button>
+        ) : null}
       </div>
     </div>
   );

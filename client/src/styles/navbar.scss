@@ -58,6 +58,9 @@ $font5: 'Marvel', sans-serif;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    @media screen and (max-width: 600px) {
+      width: 100px;
+    }
     .user-img {
       position: relative;
       height: 55px;
@@ -86,9 +89,13 @@ $font5: 'Marvel', sans-serif;
       flex-direction: column;
       align-items: center;
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.514);
+      @media screen and (max-width: 600px) {
+        right: 0px;
+        border-bottom-right-radius: 0px;
+      }
       .user-p {
         position: relative;
-        padding: 0px 20px;
+        padding: 20px 20px;
         text-align: center;
         font-family: $font2;
         font-size: 20px;
@@ -107,6 +114,9 @@ $font5: 'Marvel', sans-serif;
         &:hover {
           color: #ffdebe;
           background: #4e3622;
+        }
+        .logout-btn {
+          margin-left: 5px;
         }
       }
     }
@@ -209,6 +219,31 @@ $font5: 'Marvel', sans-serif;
     &:hover {
       text-decoration: none;
       background: #291b13;
+      color: #ffdebe;
+    }
+  }
+  .menu-logout {
+    position: absolute;
+    bottom: 0%;
+    color: #ddb892;
+    font-size: 30px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: $font2;
+    width: 100%;
+    background: #4b3322;
+    transition: 0.5s;
+    text-transform: none;
+    &:hover {
+      text-decoration: none;
+      background: #291b13;
+      color: #ffdebe;
+    }
+    .logout-btn {
+      margin-left: 10px;
     }
   }
 }

@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
-import axios from 'axios';
+import React, { useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
+
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
+
 import { Link } from 'react-router-dom';
 import './styles/landingpage.css';
 
 import Svg1 from './components/svgs/reading1';
 
-import Test from './components/test';
 function Home() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   return (

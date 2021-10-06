@@ -77,6 +77,12 @@
           justify-content: space-evenly;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-bar .user-profile {
+    width: 100px;
+  }
+}
+
 .nav-bar .user-profile .user-img {
   position: relative;
   height: 55px;
@@ -119,9 +125,16 @@
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.514);
 }
 
+@media screen and (max-width: 600px) {
+  .nav-bar .user-profile .dropdownmenu {
+    right: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
 .nav-bar .user-profile .dropdownmenu .user-p {
   position: relative;
-  padding: 0px 20px;
+  padding: 20px 20px;
   text-align: center;
   font-family: "Lobster", cursive;
   font-size: 20px;
@@ -144,6 +157,10 @@
 .nav-bar .user-profile .dropdownmenu .logout-button:hover {
   color: #ffdebe;
   background: #4e3622;
+}
+
+.nav-bar .user-profile .dropdownmenu .logout-button .logout-btn {
+  margin-left: 5px;
 }
 
 .nav-bar .loginlink {
@@ -288,6 +305,44 @@
 .side-menu-closed .menu-link-1:hover {
   text-decoration: none;
   background: #291b13;
+  color: #ffdebe;
+}
+
+.side-menu-container .menu-logout,
+.side-menu-closed .menu-logout {
+  position: absolute;
+  bottom: 0%;
+  color: #ddb892;
+  font-size: 30px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  width: 100%;
+  background: #4b3322;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: none;
+}
+
+.side-menu-container .menu-logout:hover,
+.side-menu-closed .menu-logout:hover {
+  text-decoration: none;
+  background: #291b13;
+  color: #ffdebe;
+}
+
+.side-menu-container .menu-logout .logout-btn,
+.side-menu-closed .menu-logout .logout-btn {
+  margin-left: 10px;
 }
 
 .side-menu-closed {
