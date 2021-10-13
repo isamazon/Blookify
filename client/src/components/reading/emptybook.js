@@ -8,8 +8,8 @@ import Sidebar from './sidebar';
 
 function Emptybook(props) {
   return (
-    <Container fluid className="main-container">
-      <Nav />
+    <div className="main-container">
+      <Nav menuicon="menu-link-hidden" />
       <Row className="profile-row">
         <Sidebar />
         <Fade>
@@ -21,7 +21,7 @@ function Emptybook(props) {
           </div>
         </Fade>
       </Row>
-    </Container>
+    </div>
   );
 }
 

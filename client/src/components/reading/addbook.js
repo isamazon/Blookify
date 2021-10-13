@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './profile.css';
 import axios from 'axios';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
-
+import Nav from '../navbar';
 // Redux
 
 // API url
@@ -59,7 +59,8 @@ function Profile() {
     window.location.reload(false);
   }
   return (
-    <Container fluid className="main-container">
+    <div className="main-container">
+      <Nav menuicon="menu-link-hidden" />
       <div className={modal ? 'empty' : 'added-modal'}>
         <Fade>
           <div className="added-inner-modal">
@@ -134,7 +135,7 @@ function Profile() {
           </div>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 // Components
-
+import Nav from '../navbar';
 import ReadPost from './readpost';
 import Sidebar from '../reading/sidebar';
 import Emptybook from '../reading/emptybook';
@@ -23,7 +23,8 @@ const Read = () => {
       linktext="Go to reading page here"
     />
   ) : (
-    <Container fluid className="main-container">
+    <div className="main-container">
+      <Nav menuicon="menu-link-hidden" />
       <Slide bottom cascade>
         <h1 className="currently-reading-h1">Read books</h1>
       </Slide>
@@ -41,7 +42,7 @@ const Read = () => {
           ))}
         </div>
       </Row>
-    </Container>
+    </div>
   );
 };
 

@@ -21,7 +21,7 @@ $font5: 'Marvel', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.212);
+
   .menu-link {
     position: absolute;
     left: 20px;
@@ -31,6 +31,20 @@ $font5: 'Marvel', sans-serif;
     transition: 0.5s;
     &:hover {
       color: #7f5539;
+    }
+  }
+  .menu-link-hidden {
+    display: none;
+    @media screen and (max-width: 1200px) {
+      position: absolute;
+      left: 20px;
+      color: #ede0d4;
+      z-index: 10;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        color: #7f5539;
+      }
     }
   }
   .homepagelink {

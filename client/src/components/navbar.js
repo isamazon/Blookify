@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import pic1 from '../assets/user.png';
 import '../styles/navbar.css';
 
-function Nav() {
+function Nav(props) {
   const [click, setClick] = useState(false);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const [profileDrop, setProfileDrop] = useState(false);
@@ -35,11 +35,14 @@ function Nav() {
   return (
     <div>
       <nav className="nav-bar">
-        <AiOutlineMenu
-          onClick={handleClick}
-          className="menu-link"
-          size="40px"
-        />
+        {user ? (
+          <AiOutlineMenu
+            onClick={handleClick}
+            className={props.menuicon}
+            size="40px"
+          />
+        ) : null}
+
         <Link to="/" className="homepagelink">
           Blookify
         </Link>

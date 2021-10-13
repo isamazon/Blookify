@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Col } from 'react-bootstrap';
 import { Button } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
-import MoreHorizon from '@material-ui/icons/MoreHoriz';
 import moment from 'moment';
 import { Zoom, Slide, Flip } from 'react-reveal';
 import Fade from 'react-reveal/Fade';

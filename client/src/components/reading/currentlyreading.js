@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import Slide from 'react-reveal/Slide';
 // Components
-
+import Nav from '../navbar';
 import Sidebar from './sidebar';
 import BookPost from './bookpost';
 import Emptybook from './emptybook';
@@ -34,7 +34,8 @@ const CurrentlyReading = () => {
       linktext="Add a book here!"
     />
   ) : (
-    <Container fluid className="main-container">
+    <div className="main-container">
+      <Nav menuicon="menu-link-hidden" />
       <Slide bottom cascade>
         <h1 className="currently-reading-h1">Currently reading</h1>
       </Slide>
@@ -53,7 +54,7 @@ const CurrentlyReading = () => {
           ))}
         </div>
       </Row>
-    </Container>
+    </div>
   );
 };
 

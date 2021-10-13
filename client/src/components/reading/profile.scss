@@ -20,6 +20,7 @@ $font5: 'Marvel', sans-serif;
   justify-content: center;
   overflow-y: hidden;
   overflow-x: hidden;
+
   // Added Modal
   @media screen and (max-width: 1200px) {
     flex-direction: column;
@@ -209,17 +210,18 @@ $font5: 'Marvel', sans-serif;
       height: 100%;
       background: #5a3e2d00;
       z-index: 1;
+      padding-left: 0px;
+      padding-right: 0px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
       @media screen and (max-width: 1200px) {
         display: none;
       }
       .nav-side-bar {
         position: relative;
-        height: 85%;
-        width: 80px;
-        border-radius: 30px;
+        height: 100%;
+        width: 90%;
         background: #573a27;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
         top: 3%;
@@ -249,6 +251,9 @@ $font5: 'Marvel', sans-serif;
           .home-icon {
             color: #e6ccb2;
             transition: 0.5s;
+            position: absolute;
+            top: -130px;
+            font-size: 50px;
             &:hover {
               transform: translateY(-5px);
               color: #e5bd95;
@@ -257,13 +262,13 @@ $font5: 'Marvel', sans-serif;
         }
         .nav-list {
           position: relative;
-          height: 80%;
+          height: 50%;
           width: 100%;
           background-color: none;
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
+          justify-content: space-evenly;
           padding: 0px;
           @media screen and (max-width: 1200px) {
             height: 100%;
@@ -301,16 +306,25 @@ $font5: 'Marvel', sans-serif;
                 transform: translateY(-5px);
                 text-decoration: none;
               }
+              .icons {
+                color: #b08968;
+                transition: 0.5s;
+                margin-bottom: 10px;
+                font-size: 50px;
+                &:hover {
+                  color: #e6ccb2;
+                }
+              }
 
               p {
                 position: relative;
-                color: #e6ccb2;
+                color: #ede0d4;
                 bottom: 0;
                 background: none;
                 font-family: $font2;
                 transition: 0.5s;
                 margin-top: 0px;
-
+                font-size: 20px;
                 &:hover {
                   color: #cc955e;
                 }

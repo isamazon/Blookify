@@ -308,15 +308,17 @@
   height: 100%;
   background: #5a3e2d00;
   z-index: 1;
+  padding-left: 0px;
+  padding-right: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media screen and (max-width: 1200px) {
@@ -327,9 +329,8 @@
 
 .main-container .profile-row .sidebar-container .nav-side-bar {
   position: relative;
-  height: 85%;
-  width: 80px;
-  border-radius: 30px;
+  height: 100%;
+  width: 90%;
   background: #573a27;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
@@ -388,6 +389,9 @@
   color: #e6ccb2;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  position: absolute;
+  top: -130px;
+  font-size: 50px;
 }
 
 .main-container .profile-row .sidebar-container .nav-side-bar .home-link .home-icon:hover {
@@ -398,7 +402,7 @@
 
 .main-container .profile-row .sidebar-container .nav-side-bar .nav-list {
   position: relative;
-  height: 80%;
+  height: 50%;
   width: 100%;
   background-color: none;
   display: -webkit-box;
@@ -411,9 +415,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 0px;
 }
 
@@ -481,15 +485,28 @@
   text-decoration: none;
 }
 
+.main-container .profile-row .sidebar-container .nav-side-bar .nav-list .nav-items .link-area .icons {
+  color: #b08968;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+.main-container .profile-row .sidebar-container .nav-side-bar .nav-list .nav-items .link-area .icons:hover {
+  color: #e6ccb2;
+}
+
 .main-container .profile-row .sidebar-container .nav-side-bar .nav-list .nav-items .link-area p {
   position: relative;
-  color: #e6ccb2;
+  color: #ede0d4;
   bottom: 0;
   background: none;
   font-family: "Lobster", cursive;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   margin-top: 0px;
+  font-size: 20px;
 }
 
 .main-container .profile-row .sidebar-container .nav-side-bar .nav-list .nav-items .link-area p:hover {

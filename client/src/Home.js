@@ -3,7 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
-
+import Nav from './components/navbar';
 import { Link } from 'react-router-dom';
 import './styles/landingpage.css';
 
@@ -13,6 +13,7 @@ function Home() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   return (
     <div>
+      <Nav menuicon="menu-link" />
       <Container fluid className="landingpage-fl-cnt">
         <Fade>
           <div className="svg-cont">
