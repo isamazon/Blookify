@@ -41,6 +41,13 @@
           align-items: center;
 }
 
+@media screen and (max-height: 800px) {
+  .landingpage-fl-cnt .svg-cont {
+    height: 50%;
+    top: 40%;
+  }
+}
+
 @media screen and (max-width: 1360px) {
   .landingpage-fl-cnt .svg-cont {
     width: 100%;
@@ -55,13 +62,6 @@
 @media screen and (max-width: 800px) {
   .landingpage-fl-cnt .svg-cont {
     top: 60%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .landingpage-fl-cnt .svg-cont {
-    height: 60%;
-    top: 30%;
   }
 }
 
@@ -154,7 +154,7 @@
 @media screen and (max-width: 350px) {
   .landingpage-fl-cnt .row-1 .text-container h1 {
     font-size: 30px;
-    top: 20%;
+    top: 30%;
   }
 }
 
@@ -200,6 +200,8 @@
   .landingpage-fl-cnt .row-1 .text-container p {
     font-size: 15px;
     padding: 0px 10px;
+    margin-bottom: 50px;
+    top: 5%;
   }
 }
 

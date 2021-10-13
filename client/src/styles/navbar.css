@@ -43,6 +43,9 @@
 @media screen and (max-width: 1200px) {
   .nav-bar .menu-link-hidden {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     left: 20px;
     color: #ede0d4;
     z-index: 10;

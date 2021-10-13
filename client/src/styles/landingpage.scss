@@ -28,6 +28,10 @@ $font3: 'Pacifico', cursive;
     background: none;
     display: flex;
     align-items: center;
+    @media screen and (max-height: 800px) {
+      height: 50%;
+      top: 40%;
+    }
     @media screen and (max-width: 1360px) {
       width: 100%;
       justify-content: center;
@@ -36,10 +40,6 @@ $font3: 'Pacifico', cursive;
     }
     @media screen and (max-width: 800px) {
       top: 60%;
-    }
-    @media screen and (max-height: 800px) {
-      height: 60%;
-      top: 30%;
     }
   }
 
@@ -94,7 +94,7 @@ $font3: 'Pacifico', cursive;
         }
         @media screen and (max-width: 350px) {
           font-size: 30px;
-          top: 20%;
+          top: 30%;
         }
       }
       p {
@@ -125,6 +125,8 @@ $font3: 'Pacifico', cursive;
         @media screen and (max-width: 350px) {
           font-size: 15px;
           padding: 0px 10px;
+          margin-bottom: 50px;
+          top: 5%;
         }
       }
       .button-cont {

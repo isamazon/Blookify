@@ -37,6 +37,7 @@ $font5: 'Marvel', sans-serif;
     display: none;
     @media screen and (max-width: 1200px) {
       position: absolute;
+      display: flex;
       left: 20px;
       color: #ede0d4;
       z-index: 10;
