@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './login.css';
 import Icon from './icon';
+import Nav from '../navbar';
 import { Container, Row, Col } from 'react-bootstrap';
 import bookpic from '../../assets/bookbackground.png';
 // icons
@@ -69,6 +70,7 @@ function Login() {
 
   return (
     <Container fluid className="form-cont-main ">
+      <Nav menuicon="menu-link" />
       <div className="form-container">
         <form className="form" onSubmit={handleSubmit}>
           <h1>{isSignUp ? 'Sign up to Blookify!' : 'Login to Blookify'}</h1>
