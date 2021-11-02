@@ -252,6 +252,9 @@ $font5: 'Marvel', sans-serif;
     background: #4b3322;
     transition: 0.5s;
     text-transform: none;
+    @media screen and (max-width: 500px) {
+      position: relative;
+    }
     &:hover {
       text-decoration: none;
       background: #291b13;

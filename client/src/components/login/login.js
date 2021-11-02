@@ -140,7 +140,7 @@ function Login() {
                 name="email"
                 label="Email Address"
                 onChange={handleChange}
-                type="email"
+                name="email"
               />
             </Col>
             <Col xl={12} className="input-column">

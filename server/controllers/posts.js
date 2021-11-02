@@ -43,9 +43,11 @@ export const updatePost = async (req, res) => {
   const updatedPost = {
     title,
     author,
+    name,
     pageLength,
     selectedFile,
     description,
+    creator,
     _id: id,
   };
 

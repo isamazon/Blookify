@@ -4,7 +4,7 @@
 .booklist-cont {
   position: relative;
   height: 100%;
-  width: 90%;
+  width: 100%;
   background: none;
   overflow-x: auto;
   display: -webkit-box;
@@ -38,10 +38,10 @@
   height: 150px;
   width: 100%;
   background: #d1a880;
-  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.363);
-          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.363);
-  border-radius: 20px;
-  margin: 10px 0px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  margin: 2px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,17 +67,15 @@
 }
 
 .booklist-cont .booklist:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0px 10px 10px #442d1e81;
-          box-shadow: 0px 10px 10px #442d1e81;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 .booklist-cont .booklist .img {
   position: relative;
   height: 150px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
   border-right: 3px solid #ebc9a7;
   margin: 5px 0px;
   left: 0;

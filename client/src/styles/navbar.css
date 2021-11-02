@@ -353,6 +353,13 @@
   text-transform: none;
 }
 
+@media screen and (max-width: 500px) {
+  .side-menu-container .menu-logout,
+  .side-menu-closed .menu-logout {
+    position: relative;
+  }
+}
+
 .side-menu-container .menu-logout:hover,
 .side-menu-closed .menu-logout:hover {
   text-decoration: none;
