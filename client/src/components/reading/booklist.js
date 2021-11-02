@@ -25,7 +25,7 @@ function Booklist(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(bookData);
+    // console.log(bookData);
     dispatch(createPost(bookData));
   };
 

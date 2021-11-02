@@ -62,7 +62,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 405px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 30px 0px;
   }
 }
 
@@ -238,10 +240,27 @@
   transition: 0.5s;
 }
 
+@media screen and (max-width: 800px) {
+  .booklist-cont .booklist .add-book .popup {
+    left: 25%;
+    margin-left: 0px;
+  }
+}
+
 .booklist-cont .booklist .add-book .popup .caretdown {
   position: relative;
   color: #7f5539;
   top: -3px;
+}
+
+@media screen and (max-width: 800px) {
+  .booklist-cont .booklist .add-book .popup .caretdown {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    position: absolute;
+    right: -9px;
+    top: 30%;
+  }
 }
 
 .booklist-cont .booklist .add-book .none {
