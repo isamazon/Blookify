@@ -67,8 +67,8 @@
 }
 
 .booklist-cont .booklist:hover {
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  -webkit-box-shadow: 0px 10px 10px #442d1ea4;
+          box-shadow: 0px 10px 10px #442d1ea4;
 }
 
 .booklist-cont .booklist .img {
@@ -188,7 +188,7 @@
 .booklist-cont .booklist .add-book {
   position: relative;
   height: 100%;
-  padding-right: 30px;
+  margin: 0px 50px;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,12 +211,41 @@
   }
 }
 
-.booklist-cont .booklist .add-book p {
-  color: black;
+.booklist-cont .booklist .add-book .popup {
+  position: absolute;
+  width: 120px;
+  top: 0px;
+  margin-left: 15px;
+  border-radius: 10px;
+  height: 40px;
+  background: #7f5539;
+  color: #ebc9a7;
   font-size: 15px;
   padding-top: 10px;
   text-align: center;
   font-family: "Lobster", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.booklist-cont .booklist .add-book .popup .caretdown {
+  position: relative;
+  color: #7f5539;
+  top: -3px;
+}
+
+.booklist-cont .booklist .add-book .none {
+  display: none;
 }
 
 .booklist-cont .booklist .add-book .check-mark {
@@ -224,12 +253,13 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding-left: 10px;
+  font-size: 50px;
 }
 
 .booklist-cont .booklist .add-book .check-mark:hover {
   color: #1d130d;
   cursor: pointer;
-  -webkit-animation: upandshake 1s infinite ease-in-out;
-          animation: upandshake 1s infinite ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 /*# sourceMappingURL=booklist.css.map */
