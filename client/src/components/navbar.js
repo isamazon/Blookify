@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import decode from 'jwt-decode';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Button } from '@material-ui/core';
 import { FiLogOut } from 'react-icons/fi';
@@ -13,7 +14,7 @@ function Nav(props) {
   const [profileDrop, setProfileDrop] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
-
+  const location = useLocation();
   const logout = () => {
     dispatch({ type: 'LOGOUT' });
     history.push('/');
@@ -25,13 +26,17 @@ function Nav(props) {
   const closeMobileMenu = () => setClick(false);
   const ToggleProfile = () => setProfileDrop(!profileDrop);
 
-  // useEffect(() => {
-  //   const token = user?.token;
+  useEffect(() => {
+    const token = user?.token;
 
-  //   // JWT
+    // JWT
+    if (token) {
+      const decodedToken = decode(token);
 
-  //   setUser(JSON.parse(localStorage.getItem('profile')));
-  // }, []);
+      if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+    }
+    setUser(JSON.parse(localStorage.getItem('profile')));
+  }, [location]);
   return (
     <div>
       <nav className="nav-bar">
@@ -51,7 +56,7 @@ function Nav(props) {
           <div className="user-profile">
             <img
               src={user.result.imageUrl ? user.result.imageUrl : pic1}
-              alt="ss"
+              alt=""
               className="user-img"
               onClick={ToggleProfile}
             />
