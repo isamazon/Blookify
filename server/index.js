@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 import readingRoutes from './routes/reading.js';
 import readRoutes from './routes/read.js';
 import userRoutes from './routes/users.js';
-
+import tbrRoutes from './routes/tbr.js';
 const app = express();
 dotenv.config();
 
@@ -18,6 +18,7 @@ app.use(cors());
 app.use('/reading', readingRoutes);
 app.use('/read', readRoutes);
 app.use('/user', userRoutes);
+app.use('/tbr', tbrRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello to blookify, if you see this its working!!');
