@@ -61,3 +61,43 @@ export const signup = async (req, res) => {
     res.status(500).json({ error });
   }
 };
+
+// User settings
+export const getBackground = async (req, res) => {
+  try {
+    const backgrounds = await User.find({ creator: req.userId });
+    console.log(backgrounds);
+    res.status(200).json(backgrounds);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+export const changeBG = async (req, res) => {
+  const background = req.body;
+
+  const newBackgroundColor = new User({
+    ...background,
+    creator: req.userId,
+    createdAt: new Date().toISOString(),
+  });
+
+  try {
+    await newBackgroundColor.save();
+
+    res.status(201).json(newBackgroundColor);
+  } catch (error) {
+    res.status(409).json({ message: error });
+  }
+};
+
+export const deleteBG = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id))
+    return res.status(404).send(`No post with id: ${id}`);
+
+  await User.findByIdAndRemove(id);
+
+  res.json({ message: 'Post deleted successfully.' });
+};
