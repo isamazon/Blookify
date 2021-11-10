@@ -1,7 +1,8 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaBook, FaBookReader, FaSearchPlus } from 'react-icons/fa';
+import { FaBookMedical } from 'react-icons/fa';
+import { GiBookshelf, GiBurningBook, GiBookCover } from 'react-icons/gi';
 import { AiFillHome } from 'react-icons/ai';
 import Booksvg from '../svgs/booksvg';
 import Readsvg from '../svgs/read';
@@ -25,7 +26,7 @@ class Sidebar extends React.Component {
               <Fade top>
                 <li className="nav-items">
                   <Link to="/currentlyreading" className="link-area">
-                    <FaBookReader className="icons" />
+                    <GiBookCover className="icons" />
                     <p>Reading</p>
                   </Link>
                 </li>
@@ -33,15 +34,23 @@ class Sidebar extends React.Component {
               <Slide top>
                 <li className="nav-items">
                   <Link to="/read" className="link-area">
-                    <FaBook className="icons" />
+                    <GiBookshelf className="icons" />
                     <p>Read</p>
                   </Link>
                 </li>
               </Slide>
               <Slide top>
                 <li className="nav-items">
+                  <Link to="/read" className="link-area">
+                    <GiBurningBook className="icons" />
+                    <p>To be read</p>
+                  </Link>
+                </li>
+              </Slide>
+              <Slide top>
+                <li className="nav-items">
                   <Link to="/Addbook" className="link-area">
-                    <FaSearchPlus className="icons" />
+                    <FaBookMedical className="icons" />
                     <p>Add book</p>
                   </Link>
                 </li>

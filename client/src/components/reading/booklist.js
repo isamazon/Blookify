@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './booklist.css';
-import {
-  FaCheckSquare,
-  FaBook,
-  FaBookReader,
-  FaCaretDown,
-} from 'react-icons/fa';
-
+import { GiBookshelf, GiBurningBook, GiBookCover } from 'react-icons/gi';
+import { FaCaretDown, FaBook } from 'react-icons/fa';
 //
 import { createPost } from '../../actions/posts';
 import { createReadBook } from '../../actions/readposts';
@@ -36,11 +31,15 @@ function Booklist(props) {
 
   const [popup, setPopup] = useState(false);
   const [popup2, setPopup2] = useState(false);
+  const [popup3, setPopup3] = useState(false);
   const TogglePopup = () => {
     setPopup(!popup);
   };
   const TogglePopup2 = () => {
     setPopup2(!popup2);
+  };
+  const TogglePopup3 = () => {
+    setPopup3(!popup3);
   };
 
   return (
@@ -66,7 +65,7 @@ function Booklist(props) {
             <FaCaretDown className="caretdown" />
           </span>
         </p>
-        <FaBookReader
+        <GiBookCover
           onMouseEnter={TogglePopup}
           onMouseLeave={TogglePopup}
           onClick={(e) => {
@@ -83,9 +82,26 @@ function Booklist(props) {
             <FaCaretDown className="caretdown" />
           </span>
         </p>
-        <FaBook
+        <GiBookshelf
           onMouseEnter={TogglePopup2}
           onMouseLeave={TogglePopup2}
+          onClick={(e) => {
+            readSubmit(e);
+            props.Toggle(e);
+          }}
+          className="check-mark"
+        />
+      </div>
+      <div className="add-book">
+        <p className={popup3 ? 'popup' : 'none'}>
+          Send to TBR
+          <span>
+            <FaCaretDown className="caretdown" />
+          </span>
+        </p>
+        <GiBurningBook
+          onMouseEnter={TogglePopup3}
+          onMouseLeave={TogglePopup3}
           onClick={(e) => {
             readSubmit(e);
             props.Toggle(e);
