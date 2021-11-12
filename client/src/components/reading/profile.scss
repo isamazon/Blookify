@@ -191,6 +191,7 @@ $font5: 'Marvel', sans-serif;
     display: flex;
     align-items: center;
     margin: 0px;
+    padding: 0px;
     @media screen and (max-width: 1200px) {
       position: relative;
       width: 90%;
@@ -220,7 +221,7 @@ $font5: 'Marvel', sans-serif;
       .nav-side-bar {
         position: relative;
         height: 100%;
-        width: 90%;
+        width: 100%;
         background: #573a27;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
         top: 3%;
@@ -662,6 +663,7 @@ $font5: 'Marvel', sans-serif;
         }
       }
     }
+    // Reading container
     .reading-container {
       position: relative;
       height: 90vh;
@@ -742,7 +744,96 @@ $font5: 'Marvel', sans-serif;
         }
       }
     }
+    // Tbr-container
+    .tbr-container {
+      position: relative;
+      height: 100%;
+      width: 90%;
+      padding-top: 100px;
+      right: 0px;
+      background: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+      }
+      .header-tbr {
+        position: relative;
+        width: 100%;
+        height: 10%;
+        background: none;
+        display: flex;
+        align-items: center;
+        font-family: $font2;
+        font-size: 80px;
+        color: #e5bd95;
+        padding-left: 40px;
+      }
+      .tbr-books-cnt {
+        position: relative;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px 0px;
+        box-shadow: inset 0px 0px 20px #1d130d;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        .tbr-book-post-cnt {
+          position: relative;
+          height: 650px;
+          padding: 20px 0px;
+          display: flex;
+          justify-content: center;
+          .tbr-book {
+            position: relative;
+            height: 100%;
+            width: 80%;
+            background: #b08968;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.267);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title-p {
+              position: relative;
+              height: 15%;
+              width: 100%;
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              font-size: 20px;
+              padding: 0px 20px;
+              text-align: center;
+              font-family: $font2;
+              color: #492710;
+            }
+            .bookimg-cnt {
+              position: relative;
+              height: 40%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: red;
+              .inner-book-cnt {
+                position: relative;
+                height: 80%;
+                width: 66%;
+                background: blue;
+              }
+            }
+          }
+        }
+      }
+    }
   }
+}
+.tbr {
+  background: #442d1e;
 }
 
 // Currently reading

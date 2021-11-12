@@ -279,6 +279,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0px;
+  padding: 0px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -329,7 +330,7 @@
 .main-container .profile-row .sidebar-container .nav-side-bar {
   position: relative;
   height: 100%;
-  width: 90%;
+  width: 100%;
   background: #573a27;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
@@ -1150,6 +1151,148 @@
           transform: translateY(-5px);
   -webkit-box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.349);
           box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.349);
+}
+
+.main-container .profile-row .tbr-container {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  padding-top: 100px;
+  right: 0px;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container .profile-row .tbr-container {
+    width: 100%;
+  }
+}
+
+.main-container .profile-row .tbr-container .header-tbr {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Lobster", cursive;
+  font-size: 80px;
+  color: #e5bd95;
+  padding-left: 40px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt {
+  position: relative;
+  height: 90%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 0px;
+  -webkit-box-shadow: inset 0px 0px 20px #1d130d;
+          box-shadow: inset 0px 0px 20px #1d130d;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt {
+  position: relative;
+  height: 650px;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  background: #b08968;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.267);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.267);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .title-p {
+  position: relative;
+  height: 15%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  padding: 0px 20px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  color: #492710;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookimg-cnt {
+  position: relative;
+  height: 40%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: red;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookimg-cnt .inner-book-cnt {
+  position: relative;
+  height: 80%;
+  width: 66%;
+  background: blue;
+}
+
+.tbr {
+  background: #442d1e;
 }
 
 @-webkit-keyframes upandshake {
