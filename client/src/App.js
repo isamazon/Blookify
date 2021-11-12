@@ -9,6 +9,7 @@ import Login from './components/login/login';
 import Addbook from './components/reading/addbook';
 import Currently from './components/reading/currentlyreading';
 import Read from './components/read/read.js';
+import ToBeRead from './components/tbr/toberead';
 // Nav
 import Nav from './components/navbar';
 // redux
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/Addbook" component={Addbook} />
         <Route exact path="/currentlyreading" component={Currently} />
         <Route exact path="/read" component={Read} />
+        <Route exact path="/toberead" component={ToBeRead} />
         <Route path="*"></Route>
       </Switch>
     </div>

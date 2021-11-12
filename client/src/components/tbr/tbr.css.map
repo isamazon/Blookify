@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,OAAO,CAAC,gFAAI;AAEZ,OAAO,CAAC,oEAAI;AAEZ,OAAO,CAAC,qEAAI",
+    "sources": [
+        "tbr.scss"
+    ],
+    "names": [],
+    "file": "tbr.css"
+}

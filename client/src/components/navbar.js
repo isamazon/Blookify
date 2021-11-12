@@ -21,6 +21,12 @@ function Nav(props) {
     setUser(null);
     window.location.reload(false);
   };
+  const logoutExpire = () => {
+    dispatch({ type: 'LOGOUT' });
+    history.push('/Login');
+    setUser(null);
+    window.location.reload(false);
+  };
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -33,7 +39,7 @@ function Nav(props) {
     if (token) {
       const decodedToken = decode(token);
 
-      if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+      if (decodedToken.exp * 1000 < new Date().getTime()) logoutExpire();
     }
     setUser(JSON.parse(localStorage.getItem('profile')));
   }, [location]);
@@ -107,6 +113,13 @@ function Nav(props) {
           className="menu-link-1 link-mid"
         >
           My finished books
+        </Link>
+        <Link
+          to={user ? '/toberead' : '/login'}
+          onClick={closeMobileMenu}
+          className="menu-link-1 link-mid"
+        >
+          To be read
         </Link>
         {user ? (
           <Button className="menu-logout" onClick={logout}>

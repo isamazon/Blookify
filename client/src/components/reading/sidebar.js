@@ -41,7 +41,7 @@ class Sidebar extends React.Component {
               </Slide>
               <Slide top>
                 <li className="nav-items">
-                  <Link to="/read" className="link-area">
+                  <Link to="/toberead" className="link-area">
                     <GiBurningBook className="icons" />
                     <p>To be read</p>
                   </Link>
