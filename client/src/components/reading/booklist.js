@@ -6,6 +6,7 @@ import { FaCaretDown, FaBook } from 'react-icons/fa';
 //
 import { createPost } from '../../actions/posts';
 import { createReadBook } from '../../actions/readposts';
+import { createTbrBook } from '../../actions/tbr';
 // img
 import pic1 from '../../assets/noimage.png';
 function Booklist(props) {
@@ -27,6 +28,12 @@ function Booklist(props) {
   const readSubmit = (e) => {
     e.preventDefault();
     dispatch(createReadBook(bookData));
+  };
+
+  const tbrSubmit = (e) => {
+    e.preventDefault();
+    console.log(bookData);
+    dispatch(createTbrBook(bookData));
   };
 
   const [popup, setPopup] = useState(false);
@@ -103,7 +110,7 @@ function Booklist(props) {
           onMouseEnter={TogglePopup3}
           onMouseLeave={TogglePopup3}
           onClick={(e) => {
-            readSubmit(e);
+            tbrSubmit(e);
             props.Toggle(e);
           }}
           className="check-mark"

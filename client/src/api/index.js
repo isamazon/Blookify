@@ -25,9 +25,9 @@ export const createReadBook = (newReadBook) => API.post('/read', newReadBook);
 export const deleteReadBook = (id2) => API.delete(`/read/${id2}`);
 
 // To be read route functions
-export const fetchTbrBook = () => API.get('/read');
-export const createTbrBook = (newTbrBook) => API.post('/read', newTbrBook);
-export const deleteTbrBook = (id3) => API.delete(`/read/${id3}`);
+export const fetchTbrBook = () => API.get('/tbr');
+export const createTbrBook = (newTbrBook) => API.post('/tbr', newTbrBook);
+export const deleteTbrBook = (id3) => API.delete(`/tbr/${id3}`);
 
 // Auth sign in and sign out
 export const signIn = (formData) => API.post('/user/signin', formData);
