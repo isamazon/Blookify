@@ -1206,9 +1206,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 20px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 0px;
   -webkit-box-shadow: inset 0px 0px 20px #1d130d;
           box-shadow: inset 0px 0px 20px #1d130d;
   -ms-flex-wrap: wrap;
@@ -1298,6 +1299,13 @@
   width: 100%;
   background: #503624;
   border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookimg-cnt .inner-book-cnt .book-img:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .pagecount-p {
@@ -1319,7 +1327,7 @@
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .author-header {
   position: relative;
-  height: 100px;
+  height: 120px;
   width: 90%;
   background: none;
   font-size: 30px;
@@ -1347,10 +1355,53 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .description-p .desc-icons {
+  font-size: 25px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .desc-box {
+  position: absolute;
+  height: 150px;
+  width: 95%;
+  top: 45%;
+  background: #e6ccb2;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.39);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.39);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: pointer;
+  padding: 0px 0px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .desc-box .desc-caret {
+  position: absolute;
+  font-size: 30px;
+  bottom: -18px;
+  color: #e6ccb2;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .desc-box .desc-p {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px 0px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .none {
+  display: none;
 }
 
 .tbr {

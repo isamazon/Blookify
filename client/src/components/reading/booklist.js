@@ -32,7 +32,6 @@ function Booklist(props) {
 
   const tbrSubmit = (e) => {
     e.preventDefault();
-    console.log(bookData);
     dispatch(createTbrBook(bookData));
   };
 
