@@ -4,6 +4,8 @@ import '../reading/profile.css';
 // Dependencies
 import { FaCaretUp, FaCaretDown, FaWindowClose } from 'react-icons/fa';
 import { Col } from 'react-bootstrap';
+// components
+import TbrBookBg from './tbrbookbg';
 function TbrPost({ post }) {
   // Data for the tbr books
 
@@ -13,7 +15,7 @@ function TbrPost({ post }) {
   };
   return (
     <Col xl={2} className="tbr-book-post-cnt">
-      <div className="tbr-book-background"></div>
+      <TbrBookBg />
       <div className="tbr-book">
         <p className="title-p">{post.title} </p>
         <div className="bookimg-cnt">
@@ -25,18 +27,18 @@ function TbrPost({ post }) {
         <h1 className="author-header">{post.author}</h1>
         {descModal ? (
           <div className="description-p" onClick={ToggleDescModal}>
-            <FaWindowClose className="desc-icons" /> Close Description
-            <FaWindowClose className="desc-icons" />
+            <FaWindowClose className="desc-icons close" /> Close Description
+            <FaWindowClose className="desc-icons close" />
           </div>
         ) : (
-          <div className="description-p" onMouseEnter={ToggleDescModal}>
-            <FaCaretDown className="desc-icons" /> Description
-            <FaCaretDown className="desc-icons" />
+          <div className="description-p" onClick={ToggleDescModal}>
+            <FaCaretDown className="desc-icons " /> Description
+            <FaCaretDown className="desc-icons " />
           </div>
         )}
         <div
           className={descModal ? 'desc-box' : 'none'}
-          onMouseLeave={ToggleDescModal}
+          //   onMouseLeave={ToggleDescModal}
         >
           <FaCaretDown className="desc-caret" />
           <p className="desc-p">{post.description}</p>

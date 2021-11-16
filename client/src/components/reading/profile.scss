@@ -770,6 +770,7 @@ $font5: 'Marvel', sans-serif;
         font-size: 80px;
         color: #e5bd95;
         padding-left: 40px;
+        text-shadow: 0px 5px 10px #1d130d;
       }
       .tbr-books-cnt {
         position: relative;
@@ -779,7 +780,7 @@ $font5: 'Marvel', sans-serif;
         flex-direction: row;
         justify-content: center;
         padding: 0px 0px;
-        box-shadow: inset 0px 0px 20px #1d130d;
+        // box-shadow: inset 0px 0px 20px #1d130d;
         flex-wrap: wrap;
         overflow-y: auto;
         .tbr-book-post-cnt {
@@ -788,13 +789,17 @@ $font5: 'Marvel', sans-serif;
           padding: 20px 0px;
           display: flex;
           justify-content: center;
+          transition: 0.5s;
+          &:hover {
+            transform: translateY(-5px);
+          }
           .tbr-book {
             position: relative;
             height: 100%;
             width: 70%;
             background: #b08968;
             border-radius: 5px;
-            box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.733);
+            z-index: 2;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -872,8 +877,18 @@ $font5: 'Marvel', sans-serif;
               align-items: center;
               justify-content: space-evenly;
               cursor: pointer;
+              font-family: $font2;
+              color: #442d1e;
+              font-size: 20px;
               .desc-icons {
                 font-size: 25px;
+                color: #1d130d;
+              }
+              .close {
+                transition: 0.5s;
+                &:hover {
+                  transform: rotate(-90deg);
+                }
               }
             }
             .desc-box {
@@ -905,6 +920,38 @@ $font5: 'Marvel', sans-serif;
             }
             .none {
               display: none;
+            }
+          }
+          .tbr-book-background {
+            position: absolute;
+            height: 90%;
+            width: 65%;
+            background: #e6ccb2;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.733);
+            top: 14px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .line {
+              position: relative;
+              height: 100%;
+              width: 0.3px;
+              background: black;
+            }
+            .book-line,
+            .book-line-2 {
+              position: absolute;
+              background: #b08968;
+              width: 15px;
+              height: 100%;
+              top: -2px;
+              right: -7px;
+              border-radius: 5px;
+              z-index: 1;
+            }
+            .book-line-2 {
+              left: -7px;
             }
           }
         }
