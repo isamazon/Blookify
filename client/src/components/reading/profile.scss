@@ -779,7 +779,7 @@ $font5: 'Fira Sans Condensed', sans-serif;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        padding: 0px 0px;
+        padding: 20px 0px;
         // box-shadow: inset 0px 0px 20px #1d130d;
         flex-wrap: wrap;
         overflow-x: auto;
@@ -805,6 +805,37 @@ $font5: 'Fira Sans Condensed', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            .bookmark-curve {
+              position: absolute;
+              width: 35px;
+              height: 30px;
+              border-top-left-radius: 35px;
+              border-bottom: none;
+              background: #ddb892;
+              box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.253);
+              top: -30px;
+              right: 20px;
+            }
+            .bookmark {
+              position: absolute;
+              height: 100px;
+              width: 41px;
+              top: -30px;
+              right: -15px;
+              z-index: 4;
+              border-left: none;
+              box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.281);
+              background: #ddb892;
+              border-top-right-radius: 50px;
+              .bookmark-icon {
+                position: relative;
+                bottom: -60%;
+                font-size: 55px;
+                color: #ddb892;
+
+                left: -7px;
+              }
+            }
             .tbr-book-shadow-line {
               position: absolute;
               height: 101.5%;
@@ -910,7 +941,7 @@ $font5: 'Fira Sans Condensed', sans-serif;
               height: 50px;
               display: flex;
               align-items: center;
-              justify-content: space-evenly;
+              justify-content: center;
               cursor: pointer;
               font-family: $font2;
               color: #442d1e;
@@ -921,9 +952,10 @@ $font5: 'Fira Sans Condensed', sans-serif;
               }
               .close {
                 transition: 0.5s;
-                &:hover {
-                  transform: rotate(-90deg);
-                }
+                transform: rotate(-180deg);
+              }
+              .open {
+                transition: 0.5s;
               }
             }
             .desc-box {
@@ -972,22 +1004,12 @@ $font5: 'Fira Sans Condensed', sans-serif;
             height: 90%;
             width: 93%;
             background: white;
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.733);
+
             top: 14px;
             border-radius: 5px;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
-            .line {
-              position: relative;
-              height: 100%;
-              width: 0.3px;
-              background: black;
-            }
-
-            .book-line-2 {
-              left: -7px;
-            }
           }
         }
       }

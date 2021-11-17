@@ -25,6 +25,11 @@ function TbrPost({ post }) {
     <div className="tbr-book-post-cnt">
       <TbrBookBg />
       <div className="tbr-book" onMouseLeave={TurnOffDescModal}>
+        <div className="bookmark-curve"></div>
+        <div className="bookmark">
+          <FaBookmark className="bookmark-icon" />
+        </div>
+
         <div className="tbr-book-shadow-line"></div>
         <div className="tbr-book-shadow-line-right"></div>
         <p className="title-p">{post.title} </p>
@@ -37,13 +42,13 @@ function TbrPost({ post }) {
         <h1 className="author-header">{post.author}</h1>
         {descModal ? (
           <div className="description-p" onClick={ToggleDescModal}>
-            <FaWindowClose className="desc-icons close" /> Close Description
-            <FaWindowClose className="desc-icons close" />
+            <FaCaretDown className="desc-icons close" /> Close Description
+            <FaCaretDown className="desc-icons close" />
           </div>
         ) : (
           <div className="description-p" onClick={ToggleDescModal}>
-            <FaCaretDown className="desc-icons " /> Description
-            <FaCaretDown className="desc-icons " />
+            <FaCaretDown className="desc-icons open" /> Description
+            <FaCaretDown className="desc-icons open" />
           </div>
         )}
         <div

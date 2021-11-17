@@ -1210,7 +1210,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 0px 0px;
+  padding: 20px 0px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-x: auto;
@@ -1254,6 +1254,41 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookmark-curve {
+  position: absolute;
+  width: 35px;
+  height: 30px;
+  border-top-left-radius: 35px;
+  border-bottom: none;
+  background: #ddb892;
+  -webkit-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.253);
+          box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.253);
+  top: -30px;
+  right: 20px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookmark {
+  position: absolute;
+  height: 100px;
+  width: 41px;
+  top: -30px;
+  right: -15px;
+  z-index: 4;
+  border-left: none;
+  -webkit-box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.281);
+          box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.281);
+  background: #ddb892;
+  border-top-right-radius: 50px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookmark .bookmark-icon {
+  position: relative;
+  bottom: -60%;
+  font-size: 55px;
+  color: #ddb892;
+  left: -7px;
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .tbr-book-shadow-line {
@@ -1399,9 +1434,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   font-family: "Lobster", cursive;
   color: #442d1e;
@@ -1416,11 +1451,13 @@
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .description-p .close {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
-.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .description-p .close:hover {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .description-p .open {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .desc-box {
@@ -1480,8 +1517,6 @@
   height: 90%;
   width: 93%;
   background: white;
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.733);
-          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.733);
   top: 14px;
   border-radius: 5px;
   display: -webkit-box;
@@ -1494,17 +1529,6 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book-background .line {
-  position: relative;
-  height: 100%;
-  width: 0.3px;
-  background: black;
-}
-
-.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book-background .book-line-2 {
-  left: -7px;
 }
 
 .tbr {
