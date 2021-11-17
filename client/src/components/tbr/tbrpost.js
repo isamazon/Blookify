@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 // CSS
 import '../reading/profile.css';
 // Dependencies
-import { FaCaretUp, FaCaretDown, FaWindowClose } from 'react-icons/fa';
+import {
+  FaCaretUp,
+  FaCaretDown,
+  FaWindowClose,
+  FaBookmark,
+} from 'react-icons/fa';
 import { Col } from 'react-bootstrap';
 // components
 import TbrBookBg from './tbrbookbg';
@@ -13,10 +18,15 @@ function TbrPost({ post }) {
   const ToggleDescModal = () => {
     setDescModal(!descModal);
   };
+  const TurnOffDescModal = () => {
+    setDescModal(false);
+  };
   return (
-    <Col xl={2} className="tbr-book-post-cnt">
+    <div className="tbr-book-post-cnt">
       <TbrBookBg />
-      <div className="tbr-book">
+      <div className="tbr-book" onMouseLeave={TurnOffDescModal}>
+        <div className="tbr-book-shadow-line"></div>
+        <div className="tbr-book-shadow-line-right"></div>
         <p className="title-p">{post.title} </p>
         <div className="bookimg-cnt">
           <div className="inner-book-cnt">
@@ -44,7 +54,7 @@ function TbrPost({ post }) {
           <p className="desc-p">{post.description}</p>
         </div>
       </div>
-    </Col>
+    </div>
   );
 }
 

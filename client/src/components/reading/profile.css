@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&family=Marvel&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Marvel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap");
 .main-container {
   position: relative;
   background: #ede0d4;
@@ -145,7 +145,7 @@
 
 .main-container .added-modal .added-inner-modal .successful-p {
   position: relative;
-  font-family: "Marvel", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   color: #e6ccb2;
   font-size: 20px;
   width: 60%;
@@ -1207,18 +1207,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 0px 0px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt {
   position: relative;
   height: 750px;
+  width: 200px;
+  margin: 0px 10px;
   padding: 20px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1238,7 +1240,7 @@
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book {
   position: relative;
   height: 100%;
-  width: 70%;
+  width: 100%;
   background: #b08968;
   border-radius: 5px;
   z-index: 2;
@@ -1254,10 +1256,45 @@
           align-items: center;
 }
 
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .tbr-book-shadow-line {
+  position: absolute;
+  height: 101.5%;
+  top: -11px;
+  width: 20px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  left: 0px;
+  background: #b08968;
+  border: 2px solid #b08968;
+  border-right: none;
+  border-bottom: none;
+  -webkit-box-shadow: inset 3px 0px 12px rgba(0, 0, 0, 0.39);
+          box-shadow: inset 3px 0px 12px rgba(0, 0, 0, 0.39);
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .tbr-book-shadow-line-right {
+  position: absolute;
+  height: 101.5%;
+  top: -11px;
+  width: 20px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  right: 0px;
+  background: #b08968;
+  border: 2px solid #b08968;
+  border-left: none;
+  border-bottom: none;
+  -webkit-box-shadow: inset -3px 0px 12px rgba(0, 0, 0, 0.39);
+          box-shadow: inset -3px 0px 12px rgba(0, 0, 0, 0.39);
+}
+
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .title-p {
   position: relative;
-  height: 80px;
+  height: 90px;
   width: 100%;
+  top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1267,11 +1304,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 25px;
   padding: 0px 20px;
   text-align: center;
-  font-family: "Lobster", cursive;
-  color: #492710;
+  font-family: "Fira Sans Condensed", sans-serif;
+  color: #1d130d;
+  overflow-y: auto;
+  line-height: 25px;
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookimg-cnt {
@@ -1294,7 +1336,7 @@
   position: relative;
   height: 90%;
   width: 66%;
-  border: 2px solid #e6ccb2;
+  border: 2px solid #442d1e;
   padding: 5px;
 }
 
@@ -1308,20 +1350,16 @@
   transition: 0.5s;
 }
 
-.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .bookimg-cnt .inner-book-cnt .book-img:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-}
-
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .pagecount-p {
   position: relative;
   height: 30px;
   width: 100%;
-  font-family: "Lobster", cursive;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #1d130d;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1346,8 +1384,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  font-family: "Lobster", cursive;
-  color: #492710;
+  font-family: "Fira Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #1d130d;
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .description-p {
@@ -1387,7 +1426,7 @@
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .desc-box {
   position: absolute;
   height: 150px;
-  width: 95%;
+  width: 120%;
   top: 45%;
   background: #e6ccb2;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.39);
@@ -1416,7 +1455,20 @@
   height: 100%;
   width: 100%;
   overflow-y: auto;
-  padding: 10px 0px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  color: #1d130d;
+  padding: 10px 5px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .desc-box ::-webkit-scrollbar {
+  width: 5px;
+  border-top-right-radius: 10px;
+}
+
+.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .desc-box ::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #573a27;
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book .none {
@@ -1426,8 +1478,8 @@
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book-background {
   position: absolute;
   height: 90%;
-  width: 65%;
-  background: #e6ccb2;
+  width: 93%;
+  background: white;
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.733);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.733);
   top: 14px;
@@ -1449,18 +1501,6 @@
   height: 100%;
   width: 0.3px;
   background: black;
-}
-
-.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book-background .book-line,
-.main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book-background .book-line-2 {
-  position: absolute;
-  background: #b08968;
-  width: 15px;
-  height: 100%;
-  top: -2px;
-  right: -7px;
-  border-radius: 5px;
-  z-index: 1;
 }
 
 .main-container .profile-row .tbr-container .tbr-books-cnt .tbr-book-post-cnt .tbr-book-background .book-line-2 {
