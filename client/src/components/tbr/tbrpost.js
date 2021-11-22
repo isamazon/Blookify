@@ -8,7 +8,7 @@ import {
   FaWindowClose,
   FaBookmark,
 } from 'react-icons/fa';
-import { Col } from 'react-bootstrap';
+
 // components
 import TbrBookBg from './tbrbookbg';
 function TbrPost({ post }) {
@@ -24,12 +24,12 @@ function TbrPost({ post }) {
   return (
     <div className="tbr-book-post-cnt">
       <TbrBookBg />
+
       <div className="tbr-book" onMouseLeave={TurnOffDescModal}>
         <div className="bookmark-curve"></div>
         <div className="bookmark">
           <FaBookmark className="bookmark-icon" />
         </div>
-
         <div className="tbr-book-shadow-line"></div>
         <div className="tbr-book-shadow-line-right"></div>
         <p className="title-p">{post.title} </p>

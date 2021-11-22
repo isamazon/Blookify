@@ -7,6 +7,7 @@ import { Row } from 'react-bootstrap';
 import Nav from '../navbar';
 import Sidebar from '../reading/sidebar';
 import TbrPost from './tbrpost';
+import Zoom from 'react-reveal/Zoom';
 // Actions
 import { getTbrBook } from '../../actions/tbr';
 import { useDispatch } from 'react-redux';
